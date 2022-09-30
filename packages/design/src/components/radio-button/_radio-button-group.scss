@@ -1,0 +1,46 @@
+@use "../../core/size";
+@import "./radio-button";
+
+$RADIO_BUTTON_GROUP_SELECTOR: ".radio-button-group" !default;
+
+#{$RADIO_BUTTON_GROUP_SELECTOR} {
+    border: 0;
+    margin: var(--f-margin-component);
+    padding: 0;
+    width: var(--f-width-full);
+
+    &__label {
+        padding: 0;
+        margin-bottom: size.$margin-075;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__indent {
+        border-left: var(--f-border-width-medium) solid var(--f-border-color-separator);
+        margin-bottom: size.$margin-100;
+        margin-left: size.$margin-050;
+        padding-left: size.$padding-150;
+    }
+
+    &--horizontal {
+        #{$RADIO_BUTTON_GROUP_SELECTOR}__content {
+            flex-direction: row;
+
+            #{$RADIO_BUTTON_SELECTOR} {
+                margin-bottom: 0;
+            }
+
+            @include breakpoint-down(sm) {
+                flex-direction: column;
+
+                #{$RADIO_BUTTON_SELECTOR} {
+                    margin-bottom: size.$margin-100;
+                }
+            }
+        }
+    }
+}

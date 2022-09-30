@@ -1,0 +1,109 @@
+@use "../../core/size";
+@use "../../core/mixins/breakpoints";
+
+$MESSAGE_BOX_SELECTOR: ".message-box" !default;
+
+@mixin make-box-variant($MESSAGE_BOX_SELECTOR, $background-color, $border-color) {
+    border: var(--f-border-width-medium) solid;
+    border-color: $border-color;
+    border-top: size.$padding-100 solid $border-color;
+    background-color: $background-color;
+    border-radius: var(--f-border-radius-small);
+    > p {
+        margin-bottom: 0;
+    }
+
+    #{$MESSAGE_BOX_SELECTOR} {
+        &__icon {
+            float: left;
+            height: var(--f-icon-size-large);
+            margin: 0 0.4rem 0 0;
+            width: var(--f-icon-size-large);
+
+            @include breakpoints.breakpoint-up(md) {
+                margin-top: 0.2rem;
+            }
+
+            .icon {
+                height: var(--f-icon-size-large);
+                width: var(--f-icon-size-large);
+                &-stack {
+                    height: var(--f-icon-size-large);
+                    width: var(--f-icon-size-large);
+                }
+                &__exclamation {
+                    transform: translateY(-0.05rem);
+                }
+                &__success {
+                    color: var(--f-icon-color-success);
+                }
+                &__banner {
+                    fill: var(--f-icon-color-error);
+                    color: white;
+                }
+            }
+        }
+        &__icon__banner {
+            margin-top: 0;
+        }
+    }
+}
+
+@mixin messagebox-banner-variant($selector) {
+    @include make-box-variant($selector, var(--f-background-error), var(--f-border-color-error));
+
+    width: var(--f-width-full);
+    box-shadow: var(--f-box-modal-shadow);
+    border-collapse: separate;
+    padding: size.$padding-100;
+
+    > p {
+        margin-bottom: 0;
+    }
+}
+
+#{$MESSAGE_BOX_SELECTOR} {
+    padding: size.$padding-150;
+    margin: size.$margin-050 0 size.$margin-200 0;
+
+    &__heading {
+        font-size: var(--f-font-size-h3);
+        font-weight: var(--f-font-weight-medium);
+        color: var(--f-text-color-default);
+        display: flex;
+        line-height: var(--f-line-height-medium);
+        align-items: flex-start;
+        margin-bottom: size.$margin-050;
+        margin-top: 0;
+
+        @include breakpoints.breakpoint-only(sm) {
+            font-size: var(--f-font-size-large);
+        }
+    }
+
+    &--info {
+        @include make-box-variant($MESSAGE_BOX_SELECTOR, var(--f-background-info), var(--f-border-color-info));
+    }
+
+    &--error {
+        @include make-box-variant($MESSAGE_BOX_SELECTOR, var(--f-background-error), var(--f-border-color-error));
+    }
+
+    &--warning {
+        @include make-box-variant($MESSAGE_BOX_SELECTOR, var(--f-background-warning), var(--f-border-color-warning));
+    }
+
+    &--success {
+        @include make-box-variant($MESSAGE_BOX_SELECTOR, var(--f-background-success), var(--f-border-color-success));
+    }
+
+    &--banner {
+        @include messagebox-banner-variant($MESSAGE_BOX_SELECTOR);
+    }
+
+    @include breakpoints.breakpoint-down(sm) {
+        margin-bottom: size.$margin-150;
+        margin-top: size.$margin-150;
+        padding: size.$padding-100;
+    }
+}

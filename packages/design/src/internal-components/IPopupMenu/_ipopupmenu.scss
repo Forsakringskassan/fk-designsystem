@@ -1,0 +1,48 @@
+@use "../../core/size";
+@use "../../core/mixins/breakpoints";
+@import "../../core/config-variables";
+
+$IPOPUPMENU_SELECTOR: ".ipopupmenu" !default;
+
+#{$IPOPUPMENU_SELECTOR} {
+    background-color: var(--f-background-menu);
+
+    &__list {
+        margin: 0;
+        padding: 0;
+
+        &__item {
+            cursor: pointer;
+            list-style-type: none;
+            white-space: nowrap;
+
+            a,
+            a:visited,
+            a:active {
+                color: var(--f-text-color-menu);
+            }
+
+            a:hover {
+                color: var(--f-text-color-menu-hover);
+            }
+        }
+    }
+}
+
+#{$IPOPUPMENU_SELECTOR}--vertical {
+    .ipopupmenu__list {
+        display: block;
+
+        &__item {
+            padding: 0.8rem;
+            display: block;
+            &:hover {
+                background-color: var(--f-background-menu-vertical-hover);
+            }
+            &.ipopupmenu__list__item--highlight {
+                background-color: var(--f-background-menu-vertical-highlight);
+                font-weight: var(--f-font-weight-medium);
+            }
+        }
+    }
+}

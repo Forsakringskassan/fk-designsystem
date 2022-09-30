@@ -1,0 +1,46 @@
+@use "../../core/size";
+@use "../../core/mixins/breakpoints";
+@import "../../core/config-variables";
+
+$POPUP_SELECTOR: ".popup" !default;
+
+#{$POPUP_SELECTOR} {
+    position: absolute;
+
+    @include breakpoints.breakpoint-down(sm) {
+        position: static;
+    }
+
+    &__wrapper {
+        left: -4000px;
+
+        // when desktop overlay popup
+        @include breakpoints.breakpoint-up(md) {
+            /* render off-screen to get correct height and width */
+            max-width: fit-content;
+            border-radius: var(--f-border-radius-small);
+            position: absolute;
+            z-index: 10000;
+            box-shadow: var(--f-box-modal-shadow);
+        }
+
+        // when mobile inline popup
+        @include breakpoints.breakpoint-up(sm) {
+            box-sizing: border-box;
+            margin-top: size.$margin-050;
+            margin-bottom: size.$margin-050;
+            position: static;
+        }
+    }
+}
+
+#{$POPUP_SELECTOR}--force-inline {
+    position: static;
+
+    #{$POPUP_SELECTOR}__wrapper {
+        box-sizing: border-box;
+        margin-top: size.$margin-050;
+        margin-bottom: size.$margin-050;
+        position: static;
+    }
+}

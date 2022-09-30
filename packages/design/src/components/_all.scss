@@ -1,0 +1,46 @@
+// Components to be used in standalone mode
+@use "expandable-panel/expandable-panel";
+@use "icon/icon";
+@use "entrypoint/entrypoint";
+
+// Using use syntax
+@use "tooltip/tooltip";
+@use "modal/modal";
+@use "offline/offline";
+
+// These imports can be removed when all components are standalone
+// These imports shall only contain variables and/or functions and not generate any css themselves.
+@import "../core/mixins/all";
+@import "../core/config-variables";
+@import "../core/utils/all";
+
+// Non Standalone Components (i.e using old import syntax)
+@import "z-index";
+@import "label/label";
+
+@import "anchor/anchor";
+@import "button/button";
+@import "calendar/calendar";
+@import "checkbox/all";
+@import "chip/chip";
+@import "crud-dataset/crud-dataset";
+@import "datepicker/datepicker";
+@import "expandable-paragraph/expandable-paragraph";
+@import "list/list";
+@import "loader/loader";
+@import "message-box/message-box";
+@import "output-field/output-field";
+@import "page-header/page-header";
+@import "progressbar/progressbar";
+@import "radio-button/all";
+@import "select-field/select-field";
+@import "sort-filter-dataset/sort-filter-dataset";
+@import "table/table";
+@import "textarea-field/textarea-field";
+@import "text-field/text-field";
+@import "error-list/error-list";
+@import "file-selector/file-selector";
+@import "file-item/file-item";
+@import "file-uploader/file-uploader";
+@import "static-panel/static-panel";
+@import "wizard/all";

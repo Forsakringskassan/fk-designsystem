@@ -1,0 +1,56 @@
+$DATEPICKER_SELECTOR: ".datepicker" !default;
+$CALENDAR_SELECTOR: ".calendar" !default;
+
+@import "../calendar/calendar";
+
+$datepicker-calendar-size: 1.875rem;
+
+#{$DATEPICKER_SELECTOR} {
+    &__select {
+        display: flex;
+    }
+    &__open {
+        background: transparent;
+        border: 0;
+        align-self: flex-end;
+        padding: 0;
+        margin: var(--f-margin-component);
+        margin-left: 0.5rem;
+        min-height: var(--f-height-large); /* Match height to text field */
+        z-index: 1; /* Due to textfield use position relative the textfield will be in front of the button's focus border, therefore we need to set z-index */
+        cursor: pointer;
+
+        .icon {
+            vertical-align: middle;
+            width: $datepicker-calendar-size;
+            height: $datepicker-calendar-size;
+            color: #116a3e;
+        }
+    }
+    &__open:disabled {
+        .icon {
+            color: var(--f-text-color-button-disabled);
+        }
+    }
+    &__calendar {
+        display: flex;
+
+        // when desktop set width 27.5rem
+        @include breakpoint-up(md) {
+            width: 27.5rem;
+        }
+
+        // when mobile set width 100%
+        @include breakpoint-up(sm) {
+            width: 100%;
+        }
+
+        #{$CALENDAR_SELECTOR} {
+            max-width: none;
+        }
+
+        #{$CALENDAR_SELECTOR}__container {
+            margin: 0;
+        }
+    }
+}

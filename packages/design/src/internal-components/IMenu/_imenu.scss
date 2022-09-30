@@ -1,0 +1,72 @@
+@use "../../core/size";
+@use "../../core/mixins/breakpoints";
+@import "../../core/config-variables";
+
+$IMENU_SELECTOR: ".imenu" !default;
+
+#{$IMENU_SELECTOR} {
+    background-color: var(--f-background-menu);
+
+    &__list {
+        margin: 0;
+        padding: 0;
+
+        &__item {
+            cursor: pointer;
+            list-style-type: none;
+            white-space: nowrap;
+
+            a,
+            a:visited,
+            a:active {
+                color: var(--f-text-color-menu);
+            }
+
+            a:hover {
+                color: var(--f-text-color-menu-hover);
+            }
+        }
+    }
+}
+
+#{$IMENU_SELECTOR}--vertical {
+    .imenu__list {
+        display: block;
+
+        &__item {
+            padding: 0.8rem;
+            display: block;
+            &:hover {
+                background-color: var(--f-background-menu-vertical-hover);
+            }
+            &.imenu__list__item--highlight {
+                background-color: var(--f-background-menu-vertical-highlight);
+                font-weight: var(--f-font-weight-medium);
+            }
+        }
+    }
+}
+
+#{$IMENU_SELECTOR}--horizontal {
+    overflow: hidden;
+
+    .imenu__list {
+        display: flex;
+
+        &__item {
+            display: inline-flex;
+            padding: 0.8rem 0.75rem 0.5rem;
+            border-bottom: 5px solid transparent;
+
+            &:hover {
+                border-bottom: 5px solid var(--f-border-color-menu-horizontal-hover);
+            }
+
+            &.imenu__list__item--highlight {
+                color: var(--f-text-color-menu-horizontal-highlight);
+                font-weight: var(--f-font-weight-medium);
+                border-bottom: 5px solid var(--f-border-color-menu-horizontal-highlight);
+            }
+        }
+    }
+}

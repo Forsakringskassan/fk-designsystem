@@ -1,0 +1,15 @@
+@use "../../core/size";
+
+$CHECKBOX_GROUP_SELECTOR: ".checkbox-group" !default;
+
+#{$CHECKBOX_GROUP_SELECTOR} {
+    border: 0;
+    margin: var(--f-margin-component);
+    padding: 0;
+    width: var(--f-width-full);
+
+    &__label {
+        padding: 0;
+        margin-bottom: size.$margin-075;
+    }
+}

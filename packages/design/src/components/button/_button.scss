@@ -1,0 +1,258 @@
+$BUTTON_SELECTOR: ".button" !default;
+
+@use "../../core";
+@use "../../core/size";
+
+/// Button group and button list
+.button-group {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: size.$margin-050;
+    margin-top: size.$margin-025;
+
+    .button-group__item {
+        margin: 0;
+        margin-bottom: size.$margin-100;
+
+        @include core.breakpoint-up(md) {
+            margin-right: size.$margin-150;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    > .button.button--discrete {
+        margin-right: size.$margin-150;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &--end {
+        justify-content: flex-end;
+    }
+}
+
+.button-list {
+    margin-bottom: size.$margin-050;
+    margin-top: size.$margin-025;
+
+    > li button {
+        margin: 0;
+        margin-bottom: size.$margin-100;
+    }
+
+    padding-left: 0;
+}
+
+/// Primary button
+$button--primary: (
+    background-color: var(--f-background-button-primary),
+    background-color--hover: var(--f-background-button-primary-hover),
+    background-color--disabled: var(--f-background-button-primary-disabled),
+    color: var(--f-text-color-button-primary),
+    shadow: var(--f-button-shadow),
+    shadow-hover: var(--f-button-shadow-hover),
+) !default;
+
+/// Secondary button
+$button--secondary: (
+    background-color--hover: var(--f-background-button-secondary-hover),
+    background-color: var(--f-background-button-secondary),
+    border-color: var(--f-border-color-button-secondary),
+    color: var(--f-text-color-button-secondary),
+    shadow: var(--f-button-shadow),
+    shadow-hover: var(--f-button-shadow-hover),
+) !default;
+
+/// Standard button
+$button--standard: (
+    background-color--hover: var(--f-background-button-standard-hover),
+    background-color: var(--f-background-button-standard),
+    border-color: var(--f-border-color-button-standard),
+    color: var(--f-text-color-button-standard),
+    shadow: var(--f-button-shadow),
+    shadow-hover: var(--f-button-shadow-hover),
+) !default;
+
+/// Discrete button
+$button--discrete: (
+    color: var(--f-text-color-button-discrete),
+    color--hover: var(--f-text-color-button-discrete-hover),
+    color--disabled: var(--f-text-color-button-discrete-disabled),
+    background-color--hover: var(--f-background-button-discrete-hover),
+    background-color: transparent,
+    background-color--disabled: transparent,
+    border-color--disabled: transparent,
+    border-width: 0,
+    shadow: none,
+    shadow-hover: var(--f-button-shadow-hover),
+) !default;
+
+/// Discrete inverted button
+$button--discrete-inverted: (
+    color: var(--f-text-color-button-discrete-inverted),
+    color--hover: var(--f-text-color-button-discrete-inverted-hover),
+    color--disabled: var(--f-text-color-button-discrete-inverted-disabled),
+    background-color: transparent,
+    background-color--disabled: transparent,
+    border-color--disabled: transparent,
+    border-width: 0,
+    shadow: none,
+    shadow-hover: var(--f-button-shadow-hover),
+) !default;
+
+/// Button placeholders
+%button-template {
+    border-color: transparent;
+    border-radius: var(--f-border-radius-medium);
+    border-style: solid;
+    border-width: var(--f-border-width-medium);
+    cursor: pointer;
+    display: inline-block;
+    font-size: var(--f-font-size-standard);
+    font-weight: var(--f-font-weight-medium);
+    justify-content: center;
+    line-height: calc(1.25 * var(--f-font-size-standard));
+    margin-bottom: size.$margin-150;
+    margin-top: size.$margin-025;
+    min-width: 196px;
+    padding: 1.125rem;
+    position: relative;
+    text-align: center;
+    transition: background-color var(--f-animation-duration-medium) ease-out;
+
+    @include core.breakpoint-down(sm) {
+        max-width: var(--f-width-full);
+        padding: 1.125rem;
+        width: var(--f-width-full);
+    }
+}
+
+/// Deprecated: Will be removed in next major version (FKUI v4).
+.button--text {
+    /* stylelint-disable-next-line scss/at-extend-no-missing-placeholder -- technical debt */
+    @extend .button--discrete;
+
+    &--black {
+        /* stylelint-disable-next-line scss/at-extend-no-missing-placeholder -- technical debt */
+        @extend .button--discrete--black;
+
+        color: var(--f-text-color-default);
+
+        & > .button__icon {
+            color: var(--f-icon-color-black);
+        }
+    }
+}
+
+#{$BUTTON_SELECTOR} {
+    @extend %button-template;
+    @include core.make-button-variant($BUTTON_SELECTOR, $button--standard...);
+
+    &#{$BUTTON_SELECTOR}--primary {
+        @include core.make-button-variant($BUTTON_SELECTOR, $button--primary...);
+    }
+
+    &#{$BUTTON_SELECTOR}--secondary {
+        @include core.make-button-variant($BUTTON_SELECTOR, $button--secondary...);
+    }
+
+    &#{$BUTTON_SELECTOR}--discrete {
+        @include core.make-button-variant($BUTTON_SELECTOR, $button--discrete...);
+
+        width: inherit;
+        min-width: max-content;
+
+        // workaround for IE11 which has no support for max-content
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            min-width: 0;
+        }
+
+        font-weight: var(--f-font-weight-bold);
+        outline-offset: size.$padding-025;
+        padding: 0;
+        padding: var(--f-button-discrete-padding);
+
+        @include core.breakpoint-down(sm) {
+            width: auto;
+        }
+
+        &--black {
+            color: var(--f-text-color-default);
+
+            & > .button__icon {
+                color: var(--f-icon-color-black);
+            }
+        }
+
+        &:focus,
+        &:active,
+        &:hover {
+            border-radius: var(--f-button-discrete-radius-hover);
+        }
+    }
+
+    &#{$BUTTON_SELECTOR}--discrete-inverted {
+        @include core.make-button-variant($BUTTON_SELECTOR, $button--discrete-inverted...);
+
+        width: inherit;
+        min-width: max-content;
+
+        // workaround for IE11 which has no support for max-content
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+            min-width: 0;
+        }
+
+        font-weight: var(--f-font-weight-bold);
+        outline-offset: size.$padding-025;
+        padding: var(--f-button-discrete-padding);
+
+        @include core.breakpoint-down(sm) {
+            width: auto;
+        }
+
+        &:focus,
+        &:active,
+        &:hover {
+            border-radius: var(--f-button-discrete-radius-hover);
+        }
+    }
+
+    &#{$BUTTON_SELECTOR}--full-width {
+        display: flex;
+        min-width: var(--f-width-full);
+    }
+
+    &#{$BUTTON_SELECTOR}--margin-bottom-0 {
+        margin-bottom: 0;
+    }
+
+    & > .button__icon {
+        margin-right: size.$margin-025;
+        transform: translate(0, 15%);
+
+        &:not(:first-child) {
+            margin-left: size.$margin-025;
+            margin-right: 0;
+        }
+    }
+
+    & > .button__icon--end {
+        position: absolute;
+        right: size.$padding-125;
+    }
+
+    &.disabled,
+    &.disabled:hover,
+    &:disabled,
+    &:disabled:hover,
+    &#{$BUTTON_SELECTOR}--disabled {
+        border-width: var(--f-border-width-medium);
+        box-shadow: none;
+        cursor: default;
+    }
+}

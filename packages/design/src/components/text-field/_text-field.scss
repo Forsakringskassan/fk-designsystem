@@ -1,0 +1,77 @@
+@use "../../core";
+@use "../../core/size";
+
+$TEXT_FIELD_SELECTOR: ".text-field" !default;
+
+#{$TEXT_FIELD_SELECTOR} {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: var(--f-margin-component);
+    position: relative;
+    width: var(--f-width-full);
+
+    &--inline {
+        @include core.label-inline;
+    }
+
+    // remove clear X in IE11, Edge
+    input[type="text"]::-ms-clear {
+        display: none;
+    }
+
+    &__input-wrapper {
+        display: flex;
+        gap: size.$padding-050;
+    }
+
+    &__input {
+        background-color: var(--f-background-input);
+        box-shadow: var(--f-input-shadow-inset);
+        border-radius: var(--f-border-radius-medium);
+        border: var(--f-border-width-medium) solid var(--f-border-color-input);
+        min-height: var(--f-height-large);
+        padding: var(--padding-input-fields);
+        width: var(--f-width-full);
+    }
+
+    &__icon-wrapper {
+        flex: 1 0 auto;
+        position: relative;
+    }
+
+    &__icon {
+        @extend %icon--inset-top-right;
+        &--left {
+            position: relative;
+            top: 3px;
+        }
+    }
+
+    &--valid {
+        #{$TEXT_FIELD_SELECTOR}__input {
+            border-color: var(--f-border-color-success);
+        }
+
+        #{$TEXT_FIELD_SELECTOR}__icon {
+            opacity: 1;
+            color: var(--f-icon-color-success);
+        }
+    }
+
+    &__input:disabled + &__icon {
+        color: var(--f-text-color-button-disabled);
+    }
+
+    &__input:disabled {
+        border-color: var(--f-border-color-input-disabled);
+        color: var(--f-text-color-input-disabled);
+        background-color: var(--f-background-input-disabled);
+    }
+
+    &--error {
+        #{$TEXT_FIELD_SELECTOR}__input {
+            border-color: var(--f-border-color-error);
+        }
+    }
+}

@@ -1,0 +1,15 @@
+$ANIMATE_EXPAND_SELECTOR: ".animate-expand" !default;
+
+#{$ANIMATE_EXPAND_SELECTOR} {
+    transition: var(--f-animation-expand-close);
+    overflow: hidden;
+
+    &--expanded {
+        transition: var(--f-animation-expand-open);
+        opacity: 1;
+    }
+
+    &--opacity {
+        opacity: 0;
+    }
+}

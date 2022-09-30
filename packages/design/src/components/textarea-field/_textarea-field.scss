@@ -1,0 +1,80 @@
+@use "../../core/size";
+@use "../../core";
+
+$TEXTAREA_FIELD_SELECTOR: ".textarea-field" !default;
+
+#{$TEXTAREA_FIELD_SELECTOR} {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    line-height: var(--f-line-height-large);
+    margin: var(--f-margin-component);
+    position: relative;
+    width: var(--f-width-full);
+
+    &--inline {
+        @include core.label-inline;
+    }
+
+    &__textarea {
+        background-color: var(--f-background-input);
+        box-shadow: var(--f-input-shadow-inset);
+        border-radius: var(--f-border-radius-medium);
+        border: var(--f-border-width-medium) solid var(--f-border-color-input);
+        box-sizing: border-box;
+        font-size: var(--f-font-size-standard);
+        min-height: var(--f-height-large);
+        padding: var(--padding-input-fields);
+        padding-top: size.$padding-050;
+        padding-bottom: size.$padding-050;
+        resize: none;
+        width: var(--f-width-full);
+    }
+
+    &__textarea[rows] {
+        height: auto;
+    }
+
+    &__icon-wrapper {
+        position: relative;
+    }
+
+    &__icon {
+        @extend %icon--inset-top-right;
+        &--left {
+            position: relative;
+            top: 3px;
+        }
+        &--scroll {
+            margin-right: size.$margin-075;
+        }
+    }
+
+    &--valid {
+        #{$TEXTAREA_FIELD_SELECTOR}__textarea {
+            border-color: var(--f-border-color-success);
+            padding-right: 2.5rem;
+        }
+        #{$TEXTAREA_FIELD_SELECTOR}__icon {
+            color: var(--f-icon-color-success);
+            opacity: 1;
+        }
+    }
+
+    &__textarea:disabled + &__icon {
+        color: var(--f-text-color-button-disabled);
+    }
+
+    &__textarea:disabled {
+        border-color: var(--f-border-color-input-disabled);
+        color: var(--f-text-color-input-disabled);
+        background-color: var(--f-background-input-disabled);
+    }
+
+    &--error {
+        #{$TEXTAREA_FIELD_SELECTOR}__textarea {
+            border-color: var(--f-border-color-error);
+            padding-right: 2.5rem;
+        }
+    }
+}

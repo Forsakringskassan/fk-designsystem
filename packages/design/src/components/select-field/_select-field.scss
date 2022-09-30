@@ -1,0 +1,63 @@
+@use "../../core";
+
+$SELECT_FIELD_SELECTOR: ".select-field" !default;
+
+#{$SELECT_FIELD_SELECTOR} {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: var(--f-margin-component);
+    position: relative;
+    width: var(--f-width-full);
+
+    &--inline {
+        @include core.label-inline;
+    }
+
+    &__select {
+        appearance: none;
+        background-color: var(--f-background-input);
+        box-shadow: var(--f-input-shadow-inset);
+        border-radius: var(--f-border-radius-medium);
+        border: var(--f-border-width-medium) solid var(--f-border-color-input);
+        cursor: pointer;
+        min-height: var(--f-height-large);
+        padding: var(--padding-input-fields);
+        width: var(--f-width-full);
+
+        &:hover {
+            background-color: var(--f-background-input-hover);
+        }
+
+        &:focus {
+            background-color: var(--f-background-input);
+        }
+
+        &:disabled {
+            border-color: var(--f-border-color-input-disabled);
+            color: var(--f-text-color-input-disabled);
+            background-color: var(--f-background-input-disabled);
+            opacity: 1;
+        }
+    }
+
+    &__select:disabled + &__icon {
+        color: var(--f-text-color-button-disabled);
+    }
+
+    &__icon-wrapper {
+        position: relative;
+    }
+
+    &__icon {
+        @extend %icon--inset-top-right;
+
+        color: var(--f-icon-color-primary);
+    }
+
+    &--error {
+        #{$SELECT_FIELD_SELECTOR}__select {
+            border-color: var(--f-border-color-error);
+        }
+    }
+}

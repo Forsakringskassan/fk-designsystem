@@ -1,0 +1,136 @@
+@use "../../core/size";
+@use "../icon/icon";
+@use "../../core/mixins/arrow-creator";
+@use "../../core/mixins/breakpoints";
+
+$TOOLTIP_SELECTOR: ".tooltip" !default;
+
+#{$TOOLTIP_SELECTOR}-before {
+    display: inline-block;
+
+    &__label {
+        display: block;
+    }
+}
+
+#{$TOOLTIP_SELECTOR} {
+    display: inline;
+    margin-left: size.$margin-025;
+
+    &__container {
+        display: inline;
+    }
+
+    &__button {
+        background: none;
+        border: 0;
+        cursor: pointer;
+        font-size: var(--f-font-size-large);
+        margin-bottom: size.$margin-025;
+        padding: 0.125rem;
+        transform: translateY(0.125rem);
+        height: var(--f-icon-size-large);
+        width: var(--f-icon-size-large);
+
+        #{icon.$ICON_SELECTOR}-stack {
+            height: 100%;
+            width: 100%;
+        }
+
+        #{icon.$ICON_SELECTOR} {
+            height: 100%;
+            width: 100%;
+            left: 0;
+        }
+    }
+
+    &__arrow {
+        @include arrow-creator.arrow-creator(
+            $background: var(--f-border-color-info),
+            $border: var(--f-border-color-info),
+            $position: size.$margin-200,
+            $size: size.$margin-075,
+            $up: true,
+            $width: var(--f-border-width-medium)
+        );
+
+        &--animation {
+            animation-delay: var(--f-animation-duration-medium);
+            animation-duration: var(--f-animation-duration-medium);
+            animation-fill-mode: forwards;
+            animation-name: scale;
+            transform: scaleY(0);
+
+            @keyframes scale {
+                to {
+                    transform: scaleY(-1);
+                }
+            }
+        }
+    }
+
+    /// Content wrapper is placed around everything, i.e.
+    /// arrow, upper close button, Lower close button, header and body.
+    &__content-wrapper {
+        background-color: var(--f-background-info);
+        border: var(--f-border-width-medium) solid var(--f-border-color-info);
+        border-radius: var(--f-border-radius-small);
+        box-sizing: content-box;
+        margin-top: size.$margin-050;
+        margin-bottom: size.$margin-050;
+        position: relative;
+
+        // Lower close button
+        > .iflex {
+            margin: 0;
+
+            .button {
+                margin: var(--f-tooltip-close-button-margin);
+                padding: var(--f-tooltip-close-button-padding);
+            }
+        }
+    }
+
+    /// Content is placed around upper close button, header and body.
+    &__content {
+        display: flex;
+        flex-direction: column-reverse;
+
+        // Upper close button
+        > .iflex {
+            margin: 0;
+            background-color: var(--f-border-color-info);
+
+            .button {
+                margin: var(--f-tooltip-close-button-margin);
+                padding: var(--f-tooltip-close-button-padding);
+            }
+        }
+    }
+
+    /// Body is placed around the header.
+    &__body {
+        margin: size.$margin-150;
+
+        @include breakpoints.breakpoint-down(sm) {
+            margin: size.$margin-100;
+        }
+
+        :last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__header {
+        align-items: flex-start;
+        display: flex;
+        font-size: var(--f-font-size-h3);
+        font-weight: var(--f-font-weight-bold);
+        line-height: var(--f-line-height-medium);
+        margin-bottom: size.$margin-050;
+
+        @include breakpoints.breakpoint-down(sm) {
+            font-size: var(--f-font-size-large);
+        }
+    }
+}

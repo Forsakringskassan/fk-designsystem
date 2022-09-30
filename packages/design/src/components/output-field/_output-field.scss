@@ -1,0 +1,19 @@
+$OUTPUT_FIELD_SELECTOR: ".output-field" !default;
+
+#{$OUTPUT_FIELD_SELECTOR} {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    line-height: var(--f-line-height-large);
+    margin: var(--f-margin-component);
+    position: relative;
+    width: var(--f-width-full);
+
+    &__output {
+        font-size: var(--f-font-size-standard);
+        min-height: var(--f-height-medium);
+        position: relative;
+        width: var(--f-width-full);
+        margin-bottom: 0;
+    }
+}

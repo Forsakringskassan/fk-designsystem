@@ -1,0 +1,58 @@
+@use "../../core/size";
+
+$chip-border-radius: 20px;
+
+// Both classes included here in order to get more specificity
+// to override margins/padding for ordinary radio buttons.
+.radio-button.radio-button--chip {
+    margin: 0;
+    padding: size.$padding-025;
+}
+
+.radio-button--chip {
+    .radio-button__label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        font-weight: var(--f-font-weight-medium);
+        padding: size.$padding-050 size.$padding-100;
+        border-radius: $chip-border-radius;
+        border: var(--f-border-width-medium) solid var(--f-border-color-input);
+        background-color: var(--f-background-chip);
+        color: var(--f-text-color-chip);
+        justify-content: center;
+
+        &::before,
+        &::after {
+            display: none;
+        }
+
+        max-width: 400px;
+        user-select: none;
+
+        svg {
+            margin-right: size.$margin-050;
+        }
+    }
+    .radio-button__label:hover {
+        border-color: var(--f-border-color-chip-hover);
+        background-color: var(--f-background-chip-hover);
+        color: var(--f-text-color-chip-hover);
+    }
+    input[type="radio"]:checked + .radio-button__label {
+        background: var(--f-background-chip-active);
+        border-color: var(--f-border-color-chip-active);
+        color: var(--f-text-color-chip-active);
+    }
+    input[type="radio"]:focus + label.radio-button__label {
+        border-radius: $chip-border-radius;
+    }
+}
+
+.radio-button-group--chip {
+    margin: -0.25rem;
+
+    .radio-button-group__content {
+        flex-flow: row wrap;
+    }
+}
