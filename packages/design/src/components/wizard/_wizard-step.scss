@@ -49,39 +49,39 @@ $icon-size: 30px;
         height: calc(#{$line-down-length} + #{$line-gap-to-circle});
     }
 
-    #{$icon-number-selector} {
-        width: 100%;
-        text-align: center;
-        font-size: 20px;
-        position: absolute;
-        font-weight: bold;
-    }
-
     #{$header-selector} {
         margin-left: -10px;
+
+        #{$icon-stack-selector} {
+            display: block;
+            width: $icon-size;
+            height: $icon-size;
+            margin-right: 8px;
+        }
+
+        #{$icon-number-selector} {
+            width: 100%;
+            text-align: center;
+            font-size: 20px;
+            position: absolute;
+            font-weight: bold;
+        }
+
+        #{$icon-circle-selector} {
+            width: $icon-size;
+            height: $icon-size;
+            transition: color 400ms ease-out, fill 400ms ease-out, opacity 400ms ease-out;
+        }
+
+        #{$icon-success-selector} {
+            display: none;
+        }
     }
 
     #{$step-of-selector} {
         color: var(--f-text-color-discrete);
         font-weight: normal;
         font-size: 1rem;
-    }
-
-    #{$icon-stack-selector} {
-        display: block;
-        width: $icon-size;
-        height: $icon-size;
-        margin-right: 8px;
-    }
-
-    #{$icon-circle-selector} {
-        width: $icon-size;
-        height: $icon-size;
-        transition: color 400ms ease-out, fill 400ms ease-out, opacity 400ms ease-out;
-    }
-
-    #{$icon-success-selector} {
-        display: none;
     }
 
     #{$line-down-selector} {

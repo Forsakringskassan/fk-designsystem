@@ -4,27 +4,48 @@ layout: component
 status: Preliminär
 ---
 
-En popup kommer visas overlay på desktop medans den kommer visas inline i mobil.
+## Användning
+
+Popup-komponenten visas som overlay på desktop och som inline i mobil.
+Popup har bara skuggning som layout. Konsumenten ansvarar för layout av innehållet och
+för att hantera bredden i desktop och mobil, t. ex. 100% i mobilläge.
+Konsumenten ansvarar även för funktioner för att öppna och stänga popupen.
+
+```html raw
+<div class="popup">
+    <div class="popup__wrapper">
+        <!-- Lägg innehåll här -->
+    </div>
+</div>
+```
 
 ## Exempel
 
 ```html
-<div class="popup">
+<script>
+    function togglePopup() {
+        const elStyle = document.getElementById("example1").style;
+        elStyle.display === "none"
+            ? (elStyle.display = "block")
+            : (elStyle.display = "none");
+    }
+</script>
+
+<button type="button" onclick="togglePopup()">Öppna/stäng popup</button>
+<div id="example1" class="popup" style="display: none;">
     <div class="popup__wrapper" style="left: 0px;">
         <div
-            style="margin: 0px; width: 304px; height: 272px; background: white; border: 1px dashed gray; padding: 20px"
+            style="width: 304px; background: white; border: 1px dashed gray; padding: 20px"
         >
             <p>
-                Popup-komponenten har bara skuggning som layout, konsumenten
-                ansvara för layout av innnehållet.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                scelerisque lacus sed mi mollis pulvinar. Donec volutpat neque
+                et iaculis pharetra.
             </p>
             <p>
-                Konusumenten ansvara även för funktioner för att öppna och
-                stänga popupen.
-            </p>
-            <p>
-                Konusumenten ansvara även för att hantera bredden i desktop och
-                mobil, t.ex. 100% in mobilläge.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                scelerisque lacus sed mi mollis pulvinar. Donec volutpat neque
+                et iaculis pharetra.
             </p>
         </div>
     </div>
