@@ -1,5 +1,23 @@
 # CHANGELOG
 
+## 4.10.0 (2022-12-14)
+
+
+### Features
+
+* **@fkui/css-variables, @fkui/design:** add calendar components
+
+
+### Bug Fixes
+
+* **@fkui/design:** remove shadow from `alwaysInline` popup (refs SFKUI-666) a3e5e0f
+
+
+### Dependency upgrades
+
+* **deps:** update dependency @microsoft/api-extractor to v7.33.7 (refs sb-4982) 37390cd
+* **deps:** update dependency dayjs to v1.11.7 (refs sb-4982) e540415
+
 ## 4.9.0 (2022-12-09)
 
 

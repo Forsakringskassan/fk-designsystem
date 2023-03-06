@@ -20,11 +20,13 @@
 
 @import "anchor/anchor";
 @import "button/button";
-@import "calendar/calendar";
+@import "calendar-deprecated/calendar-deprecated";
+@import "calendar-day/calendar-day";
 @import "checkbox/all";
 @import "chip/chip";
 @import "crud-dataset/crud-dataset";
 @import "datepicker/datepicker";
+@import "datepicker-field/datepicker-field";
 @import "expandable-paragraph/expandable-paragraph";
 @import "group/group";
 @import "list/list";

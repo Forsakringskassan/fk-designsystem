@@ -1,7 +1,7 @@
 $DATEPICKER_SELECTOR: ".datepicker" !default;
 $CALENDAR_SELECTOR: ".calendar" !default;
 
-@import "../calendar/calendar";
+@import "../calendar-deprecated/calendar-deprecated";
 
 $datepicker-calendar-size: 1.875rem;
 

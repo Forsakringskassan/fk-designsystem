@@ -1,0 +1,61 @@
+@use "../../core/size";
+@use "../../core/config-variables";
+@use "../../core/mixins/breakpoints";
+
+$DATEPICKER_FIELD_SELECTOR: ".datepicker-field" !default;
+
+// 40px = popup spacing (20px) * 2 https://scm.sfa.se/projects/FKUI/repos/fkui/browse/packages/vue/src/internal-components/IPopup/IPopup.vue#143
+$popup-spacing: 40px;
+$calendar-width: calc(100vw - #{$popup-spacing});
+
+#{$DATEPICKER_FIELD_SELECTOR} {
+    &__button {
+        background: transparent;
+        border: 0;
+        flex: 0 0 auto;
+        padding: 0;
+
+        .icon {
+            color: var(--f-icon-color-primary);
+            height: var(--f-icon-size-x-large);
+            width: var(--f-icon-size-x-large);
+            vertical-align: middle;
+        }
+
+        &:disabled .icon {
+            color: var(--f-icon-color-discrete);
+        }
+    }
+
+    &__popup {
+        // 16px = popup spacing (20px) -4px https://scm.sfa.se/projects/FKUI/repos/fkui/browse/packages/vue/src/internal-components/IPopup/IPopup.vue#143
+        margin-top: -16px;
+        border-radius: var(--f-border-radius-medium);
+        border: var(--f-border-width-small) solid var(--f-border-color-modal);
+        background-color: var(--f-background-content);
+
+        @include breakpoints.breakpoint-up(md) {
+            width: $calendar-width;
+            max-width: 40rem;
+        }
+
+        @include breakpoints.breakpoint-up(sm) {
+            width: 100%;
+        }
+    }
+
+    &__always-inline {
+        width: 100%;
+        max-width: none;
+    }
+
+    &__close {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__close > &__close__button {
+        margin: 0;
+        padding: 1rem;
+    }
+}

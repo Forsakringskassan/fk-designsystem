@@ -42,5 +42,6 @@ $POPUP_SELECTOR: ".popup" !default;
         margin-top: size.$margin-050;
         margin-bottom: size.$margin-050;
         position: static;
+        box-shadow: none;
     }
 }
