@@ -2,6 +2,7 @@
 @use "expandable-panel/expandable-panel";
 @use "icon/icon";
 @use "entrypoint/entrypoint";
+@use "page-header/page-header";
 
 // Using use syntax
 @use "tooltip/tooltip";
@@ -33,7 +34,6 @@
 @import "loader/loader";
 @import "message-box/message-box";
 @import "output-field/output-field";
-@import "page-header/page-header";
 @import "progressbar/progressbar";
 @import "radio-button/all";
 @import "select-field/select-field";

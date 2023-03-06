@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## 4.11.0 (2022-12-20)
+
+
+### Features
+
+* **@fkui/design:** page header converted to standalone component
+
+## 4.10.1 (2022-12-20)
+
+
+### Dependency upgrades
+
+* **deps:** require node v16 (refs SB-4982) 593c78f
+
 ## 4.10.0 (2022-12-14)
 
 
@@ -10,13 +24,7 @@
 
 ### Bug Fixes
 
-* **@fkui/design:** remove shadow from `alwaysInline` popup (refs SFKUI-666) a3e5e0f
-
-
-### Dependency upgrades
-
-* **deps:** update dependency @microsoft/api-extractor to v7.33.7 (refs sb-4982) 37390cd
-* **deps:** update dependency dayjs to v1.11.7 (refs sb-4982) e540415
+* **@fkui/design:** remove shadow from `alwaysInline` popup
 
 ## 4.9.0 (2022-12-09)
 

@@ -1,6 +1,8 @@
 @use "../../core/size";
+@use "../../core/mixins/breakpoints";
+@use "../../core/config-variables";
 
-$assets-primary-logo-path: "#{$asset-path}/infrastructure/web/assets/images" !default;
+$assets-primary-logo-path: "#{config-variables.$asset-path}/infrastructure/web/assets/images" !default;
 $PAGE_HEADER_SELECTOR: ".page-header" !default;
 $page-header-separator-width: 1px !default;
 $page-header-logo-small-size: 0.8rem;
@@ -29,7 +31,7 @@ $fk-logo-large: "fk-logo-primary-large.svg";
             background-repeat: no-repeat;
             background-position: center;
             padding: $page-header-logo-small-size;
-            background-image: url("#{$asset-path-images}/#{$fk-logo-small}");
+            background-image: url("#{config-variables.$asset-path-images}/#{$fk-logo-small}");
         }
         &--large {
             display: inline-block;
@@ -37,7 +39,7 @@ $fk-logo-large: "fk-logo-primary-large.svg";
             background-position: center;
             background-color: var(--f-background-pageheader-primary);
             padding: $page-header-logo-small-size calc($page-header-logo-large-size / 2);
-            background-image: url("#{$asset-path-images}/#{$fk-logo-large}");
+            background-image: url("#{config-variables.$asset-path-images}/#{$fk-logo-large}");
         }
         &--responsive {
             display: inline-block;
@@ -45,12 +47,12 @@ $fk-logo-large: "fk-logo-primary-large.svg";
             background-position: center;
             background-color: var(--f-background-pageheader-primary);
             padding: $page-header-logo-small-size calc($page-header-logo-large-size / 2);
-            background-image: url("#{$asset-path-images}/#{$fk-logo-large}");
+            background-image: url("#{config-variables.$asset-path-images}/#{$fk-logo-large}");
 
-            @include breakpoint-only(sm) {
+            @include breakpoints.breakpoint-only(sm) {
                 min-width: $page-header-logo-small-size;
                 padding: $page-header-logo-small-size;
-                background-image: url("#{$asset-path-images}/#{$fk-logo-small}");
+                background-image: url("#{config-variables.$asset-path-images}/#{$fk-logo-small}");
             }
         }
         & > a {
