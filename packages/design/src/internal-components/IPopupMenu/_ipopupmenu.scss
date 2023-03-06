@@ -5,11 +5,12 @@
 $IPOPUPMENU_SELECTOR: ".ipopupmenu" !default;
 
 #{$IPOPUPMENU_SELECTOR} {
-    background-color: var(--f-background-menu);
+    background-color: var(--f-background-popupmenu);
 
     &__list {
         margin: 0;
-        padding: 0;
+        border: 1px solid var(--f-border-color-popupmenu);
+        padding: size.$padding-050;
 
         &__item {
             cursor: pointer;
@@ -19,11 +20,11 @@ $IPOPUPMENU_SELECTOR: ".ipopupmenu" !default;
             a,
             a:visited,
             a:active {
-                color: var(--f-text-color-menu);
+                color: var(--f-text-color-popupmenu);
             }
 
             a:hover {
-                color: var(--f-text-color-menu-hover);
+                color: var(--f-text-color-popupmenu-hover);
             }
         }
     }
@@ -34,13 +35,14 @@ $IPOPUPMENU_SELECTOR: ".ipopupmenu" !default;
         display: block;
 
         &__item {
-            padding: 0.8rem;
+            padding: size.$padding-075;
             display: block;
             &:hover {
-                background-color: var(--f-background-menu-vertical-hover);
+                background-color: var(--f-background-popupmenu-vertical-hover);
             }
-            &.ipopupmenu__list__item--highlight {
-                background-color: var(--f-background-menu-vertical-highlight);
+
+            &--highlight {
+                background-color: var(--f-background-popupmenu-vertical-highlight);
                 font-weight: var(--f-font-weight-medium);
             }
         }

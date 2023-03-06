@@ -34,13 +34,20 @@ $IMENU_SELECTOR: ".imenu" !default;
         display: block;
 
         &__item {
-            padding: 0.8rem;
+            padding: size.$padding-075;
             display: block;
+
             &:hover {
+                font-weight: var(--f-font-weight-normal);
                 background-color: var(--f-background-menu-vertical-hover);
             }
-            &.imenu__list__item--highlight {
+
+            &--highlight {
                 background-color: var(--f-background-menu-vertical-highlight);
+                font-weight: var(--f-font-weight-medium);
+            }
+
+            &--highlight:hover {
                 font-weight: var(--f-font-weight-medium);
             }
         }
@@ -55,17 +62,39 @@ $IMENU_SELECTOR: ".imenu" !default;
 
         &__item {
             display: inline-flex;
-            padding: 0.8rem 0.75rem 0.5rem;
+            padding-top: size.$padding-100;
+            padding-left: size.$padding-075;
+            padding-right: size.$padding-075;
+        }
+
+        &__anchor {
+            display: inline-flex;
             border-bottom: 5px solid transparent;
+            padding-bottom: size.$padding-050;
 
             &:hover {
+                font-weight: var(--f-font-weight-normal);
                 border-bottom: 5px solid var(--f-border-color-menu-horizontal-hover);
             }
 
-            &.imenu__list__item--highlight {
+            &--highlight {
                 color: var(--f-text-color-menu-horizontal-highlight);
                 font-weight: var(--f-font-weight-medium);
                 border-bottom: 5px solid var(--f-border-color-menu-horizontal-highlight);
+            }
+
+            &--highlight:hover {
+                font-weight: var(--f-font-weight-medium);
+            }
+
+            &-icon-right {
+                flex: 1 0 auto;
+                padding-top: size.$padding-025;
+                color: var(--f-border-color-menu-horizontal-highlight);
+            }
+
+            &-span {
+                padding-right: size.$padding-075;
             }
         }
     }

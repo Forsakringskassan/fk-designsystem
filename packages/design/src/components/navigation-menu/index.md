@@ -1,11 +1,12 @@
 ---
-title: IMenu
+title: Navigeringsmeny
 layout: component
+status: Preliminär
 ---
 
 ## Exempel
 
-### Horisontell
+### Horizontellt läge
 
 ```html
 <nav class="imenu imenu--horizontal">
@@ -38,7 +39,7 @@ layout: component
 </nav>
 ```
 
-### Vertikal
+### Vertikalt läge
 
 ```html
 <nav class="imenu imenu--vertical">
@@ -75,10 +76,10 @@ layout: component
 
 ### Länkar
 
-~~Användargränsnitt, Förvaltningsdokumentation -Startpunkt för komponent~~
+~~Användargränsnitt, Förvaltningsdokumentation - Startpunkt för komponent~~
 
-~~Designriktlinjersjälvbetjäning~~
+~~Designriktlinjer självbetjäning~~
 
 ~~Designriktlinjer interna system~~
 
-~~FKUI Vue - Vue komponent som innehåller logik och interaktion baserad på FKUI Design~~
+[Källkod - Källkod för denna komponent](https://github.com/Forsakringskassan/fk-designsystem/tree/master/packages/design/src/components/FNavigationMenu)
