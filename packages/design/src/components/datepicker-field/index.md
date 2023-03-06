@@ -1,5 +1,5 @@
 ---
-title: Datumväljarfält
+title: Datumväljare
 layout: component
 status: Produktionsklar
 ---
