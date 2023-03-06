@@ -8,7 +8,7 @@ status: Produktionsklar
 
 ```html raw
 <div class="modal">
-    <div class="modal__inner-container" role="dialog" aria-modal="true">
+    <div class="modal__inner-container">
         <div class="modal__dialog-container">
             <div class="modal__dialog">
                 <div class="modal__dialog-inner">
@@ -32,9 +32,9 @@ Modal dialogruta i standardutförande. Inget färgschema och ingen rubrik-ikon.
 ```html
 <div class="modal">
     <!-- Hide backdrop in demos. -->
-    <!-- <div class="modal__backdrop" aria-hidden="false"> -->
-    <!-- <div role="document" class="modal__outer-container" tabindex="-1"> -->
-    <div class="modal__inner-container" role="dialog" aria-modal="true">
+    <!-- <div class="modal__backdrop"> -->
+    <!-- <div class="modal__outer-container" tabindex="-1" role="dialog" aria-modal="true"> -->
+    <div class="modal__inner-container">
         <div class="modal__dialog-container">
             <div class="modal__dialog">
                 <div class="modal__dialog-inner">
@@ -96,9 +96,9 @@ Modal dialogruta i informationsutförande. Använder färgschema och ikon som mo
 ```html
 <div class="modal modal--information">
     <!-- Hide backdrop in demos. -->
-    <!-- <div class="modal__backdrop" aria-hidden="false"> -->
-    <!-- <div role="document" class="modal__outer-container" tabindex="-1"> -->
-    <div class="modal__inner-container" role="dialog" aria-modal="true">
+    <!-- <div class="modal__backdrop"> -->
+    <!-- <div class="modal__outer-container" tabindex="-1" role="dialog" aria-modal="true"> -->
+    <div class="modal__inner-container">
         <div class="modal__dialog-container">
             <div class="modal__dialog">
                 <div class="modal__dialog-inner">
@@ -163,9 +163,9 @@ Modal dialogruta i varningsutförande. Använder färgschema och ikon som motsva
 ```html
 <div class="modal modal--warning">
     <!-- Hide backdrop in demos. -->
-    <!-- <div class="modal__backdrop" aria-hidden="false"> -->
-    <!-- <div role="document" class="modal__outer-container" tabindex="-1"> -->
-    <div class="modal__inner-container" role="dialog" aria-modal="true">
+    <!-- <div class="modal__backdrop"> -->
+    <!-- <div class="modal__outer-container" tabindex="-1" role="dialog" aria-modal="true"> -->
+    <div class="modal__inner-container">
         <div class="modal__dialog-container">
             <div class="modal__dialog">
                 <div class="modal__dialog-inner">
@@ -230,9 +230,9 @@ Modal dialogruta i felmeddelandeutförande. Använder färgschema och ikon som m
 ```html
 <div class="modal modal--error">
     <!-- Hide backdrop in demos. -->
-    <!-- <div class="modal__backdrop" aria-hidden="false"> -->
-    <!-- <div role="document" class="modal__outer-container" tabindex="-1"> -->
-    <div class="modal__inner-container" role="dialog" aria-modal="true">
+    <!-- <div class="modal__backdrop"> -->
+    <!-- <div class="modal__outer-container" tabindex="-1" role="dialog" aria-modal="true"> -->
+    <div class="modal__inner-container">
         <div class="modal__dialog-container">
             <div class="modal__dialog">
                 <div class="modal__dialog-inner">
@@ -305,9 +305,14 @@ Om innehållet i den modala dialogrutan inte får plats på skärmen så kommer 
 </button>
 
 <div id="liveexample" class="modal" style="display: none;">
-    <div class="modal__backdrop" aria-hidden="false">
-        <div role="document" class="modal__outer-container" tabindex="-1">
-            <div class="modal__inner-container" role="dialog" aria-modal="true">
+    <div class="modal__backdrop">
+        <div
+            class="modal__outer-container"
+            tabindex="-1"
+            role="dialog"
+            aria-modal="true"
+        >
+            <div class="modal__inner-container">
                 <div class="modal__dialog-container">
                     <div class="modal__dialog">
                         <div class="modal__dialog-inner">
@@ -536,7 +541,7 @@ För att till exempel använda `large` lägger du till `modal__dialog_content--l
 
 ```diff raw
  <div class="modal">
-     <div class="modal__inner-container" role="dialog" aria-modal="true">
+     <div class="modal__inner-container">
 -        <div class="modal__dialog-container">
 +        <div class="modal__dialog-container modal__dialog-container--large">
              <div class="modal__dialog">
@@ -596,9 +601,14 @@ För att till exempel använda `large` lägger du till `modal__dialog_content--l
 </button>
 
 <div id="size-live-example" class="modal" style="display: none;">
-    <div class="modal__backdrop" aria-hidden="false">
-        <div role="document" class="modal__outer-container" tabindex="-1">
-            <div class="modal__inner-container" role="dialog" aria-modal="true">
+    <div class="modal__backdrop">
+        <div
+            class="modal__outer-container"
+            tabindex="-1"
+            role="dialog"
+            aria-modal="true"
+        >
+            <div class="modal__inner-container">
                 <div
                     class="modal__dialog-container modal__dialog-container--fullscreen modal__dialog-container--large"
                 >

@@ -166,7 +166,7 @@ status: Produktionsklar
 
     <div class="select-field__icon-wrapper">
         <select
-            name="franvaro-anledning"
+            name="franvaro-anledning-inaktivt"
             id="franvaro-anledning-inaktivt"
             class="select-field__select"
             disabled

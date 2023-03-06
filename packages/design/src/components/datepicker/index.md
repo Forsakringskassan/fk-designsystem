@@ -16,7 +16,6 @@ status: Preliminär
             <div class="text-field__icon-wrapper">
                 <input
                     type="text"
-                    name="datepicker-date"
                     id="normal"
                     class="text-field__input"
                     maxlength="10"
@@ -468,7 +467,6 @@ status: Preliminär
                         <div class="text-field__icon-wrapper">
                             <input
                                 type="text"
-                                name="datepicker-date"
                                 maxlength="20"
                                 disabled
                                 class="text-field__input"

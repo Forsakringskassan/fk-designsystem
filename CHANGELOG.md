@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 4.12.0 (2023-01-05)
+
+
+### Bug Fixes
+
+* **@fkui/design:** fix screen reading of modal background
+
 ## 4.11.0 (2022-12-20)
 
 
@@ -12,7 +19,7 @@
 
 ### Dependency upgrades
 
-* **deps:** require node v16 (refs SB-4982) 593c78f
+* **deps:** require node v16
 
 ## 4.10.0 (2022-12-14)
 

@@ -16,8 +16,6 @@ status: Produktionsklar
     <div class="textarea-field__icon-wrapper">
         <textarea
             rows="4"
-            name="berattelse"
-            inputmode="text"
             id="berattelse"
             class="textarea-field__textarea"
         ></textarea>
@@ -36,8 +34,6 @@ status: Produktionsklar
     <div class="textarea-field__icon-wrapper">
         <textarea
             rows="4"
-            name="berattelse"
-            inputmode="text"
             id="giltig-berattelse"
             class="textarea-field__textarea"
             data-required=""
@@ -72,8 +68,6 @@ En inte allt för utförlig berättelse
     <div class="textarea-field__icon-wrapper">
         <textarea
             rows="4"
-            name="berattelse"
-            inputmode="numeric"
             id="ogiltig-berattelse"
             class="textarea-field__textarea"
             aria-invalid="true"
@@ -164,8 +158,6 @@ En inte allt för utförlig berättelse
     <div class="textarea-field__icon-wrapper">
         <textarea
             rows="4"
-            name="berattelse"
-            inputmode="text"
             id="berattelse-tooltip"
             maxlength="100"
             class="textarea-field__textarea"
@@ -184,8 +176,6 @@ En inte allt för utförlig berättelse
     <div class="textarea-field__icon-wrapper">
         <textarea
             rows="4"
-            name="berattelse"
-            inputmode="text"
             id="berattelse-inaktivt"
             class="textarea-field__textarea"
             disabled

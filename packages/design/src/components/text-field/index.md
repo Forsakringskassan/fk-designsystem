@@ -15,8 +15,6 @@ status: Produktionsklar
     <label for="fornamn" class="label"> Förnamn </label>
     <div class="text-field__icon-wrapper">
         <input
-            name="fornamn"
-            inputmode="text"
             id="fornamn"
             type="text"
             class="text-field__input"
@@ -29,8 +27,6 @@ status: Produktionsklar
     <label for="email" class="label"> Mejl </label>
     <div class="text-field__icon-wrapper">
         <input
-            name="email"
-            inputmode="email"
             id="email"
             type="email"
             class="text-field__input"
@@ -48,8 +44,6 @@ status: Produktionsklar
     <div class="text-field__icon-wrapper">
         <input
             value="Anna"
-            name="fornamn"
-            inputmode="text"
             id="giltigt-fornamn"
             type="text"
             class="text-field__input"
@@ -81,7 +75,6 @@ status: Produktionsklar
     <div class="text-field__icon-wrapper">
         <input
             value="Två"
-            name="alder"
             inputmode="numeric"
             id="ogiltig-alder"
             type="text"
@@ -176,7 +169,6 @@ status: Produktionsklar
         </label>
     </div>
     <input
-        name="organisationsnummer"
         inputmode="numeric"
         id="organisationsnummer"
         type="text"
@@ -193,8 +185,6 @@ status: Produktionsklar
     <label for="fornamn-inaktivt" class="label"> Förnamn </label>
     <div class="text-field__icon-wrapper">
         <input
-            name="fornamn"
-            inputmode="text"
             id="fornamn-inaktivt"
             type="text"
             class="text-field__input"

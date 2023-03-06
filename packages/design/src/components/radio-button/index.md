@@ -11,7 +11,7 @@ status: Produktionsklar
 ### Radioknappar med rekommenderade attribut satta
 
 ```html
-<fieldset id="barn-over-18" name="barn-over-18" class="radio-button-group">
+<fieldset id="barn-over-18" class="radio-button-group">
     <legend class="label radio-button-group__label">
         Bor det barn som har fyllt 18 år i bostaden?
     </legend>
@@ -48,11 +48,7 @@ status: Produktionsklar
 ### Inaktiverad radioknapp
 
 ```html
-<fieldset
-    id="barn-over-18-inaktiverat"
-    name="barn-over-18"
-    class="radio-button-group"
->
+<fieldset id="barn-over-18-inaktiverat" class="radio-button-group">
     <legend class="label radio-button-group__label">
         Bor det barn som har fyllt 18 år i bostaden?
     </legend>
@@ -100,7 +96,6 @@ status: Produktionsklar
 ```html
 <fieldset
     id="arbetat-senaste-7-dagar"
-    name="arbetat-senaste-7-dagar"
     class="radio-button-group radio-button-group--horizontal"
 >
     <legend class="label radio-button-group__label">
@@ -142,11 +137,7 @@ status: Produktionsklar
 ### Radioknappar med indentering
 
 ```html
-<fieldset
-    id="arbetat-senaste-7-dagar-indentering"
-    name="arbetat-senaste-7-dagar-indentering"
-    class="radio-button-group"
->
+<fieldset id="arbetat-senaste-7-dagar-indentering" class="radio-button-group">
     <legend class="label radio-button-group__label">
         Har du arbetat de senaste 7 dagarna?
     </legend>
@@ -169,7 +160,6 @@ status: Produktionsklar
         </div>
         <fieldset
             id="fkui-vue-element-0001"
-            name="arbetat-sammanhangande"
             class="radio-button-group radio-button-group__indent"
         >
             <legend class="label radio-button-group__label">
@@ -235,11 +225,7 @@ status: Produktionsklar
 ### Radioknappar med hjälptext
 
 ```html
-<fieldset
-    id="barn-over-18-hjalptext"
-    name="barn-over-18-hjalptext"
-    class="radio-button-group"
->
+<fieldset id="barn-over-18-hjalptext" class="radio-button-group">
     <legend class="label radio-button-group__label">
         Bor det barn som har fyllt 18 år i bostaden?
         <span class="label__description"
@@ -280,11 +266,7 @@ status: Produktionsklar
 ### Radioknappar med tooltip
 
 ```html
-<fieldset
-    id="barn-over-18-tooltip"
-    name="barn-over-18-tooltip"
-    class="radio-button-group"
->
+<fieldset id="barn-over-18-tooltip" class="radio-button-group">
     <legend class="label sr-only">
         Bor det barn som har fyllt 18 år i bostaden?
     </legend>
@@ -388,11 +370,7 @@ status: Produktionsklar
 ### Radioknappar med tooltip och hjälptext
 
 ```html
-<fieldset
-    id="barn-over-18-tooltip-hjalptext"
-    name="barn-over-18-tooltip-hjalptext"
-    class="radio-button-group"
->
+<fieldset id="barn-over-18-tooltip-hjalptext" class="radio-button-group">
     <legend class="label sr-only">
         Bor det barn som har fyllt 18 år i bostaden?
     </legend>
