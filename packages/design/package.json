@@ -1,5 +1,5 @@
 {
-  "version": "4.14.0",
+  "version": "4.15.0",
   "description": "fkui design",
   "repository": {
     "type": "git",
@@ -13,7 +13,8 @@
     "lib",
     "src",
     "stylelint",
-    "!**/*.spec.js"
+    "!**/*.spec.js",
+    "!lib/*.js"
   ],
   "engines": {
     "node": ">= 16",

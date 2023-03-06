@@ -44,5 +44,6 @@ $CONTEXTMENU_SELECTOR: ".contextmenu" !default;
 
     &__lefticon {
         margin-right: 0.75rem;
+        min-width: var(--f-icon-size-small);
     }
 }

@@ -14,7 +14,7 @@ Standard skärmbredd för `sm` är 640px.
 
 ```html
 <div class="page-header__root">
-    <header class="page-header">
+    <div class="page-header">
         <div class="page-header__logo">
             <span
                 aria-label="Försäkringskassan"
@@ -27,7 +27,7 @@ Standard skärmbredd för `sm` är 640px.
         <div class="page-header__right">
             <div class="page-header__right-slot">Namn Namnsson</div>
         </div>
-    </header>
+    </div>
 </div>
 ```
 
@@ -35,7 +35,7 @@ Standard skärmbredd för `sm` är 640px.
 
 ```html
 <div class="page-header__root">
-    <header class="page-header">
+    <div class="page-header">
         <div class="page-header__logo">
             <span
                 aria-label="Försäkringskassan"
@@ -48,7 +48,7 @@ Standard skärmbredd för `sm` är 640px.
         <div class="page-header__right">
             <div class="page-header__right-slot">Namn Namnsson</div>
         </div>
-    </header>
+    </div>
 </div>
 ```
 
@@ -56,7 +56,7 @@ Standard skärmbredd för `sm` är 640px.
 
 ```html
 <div class="page-header__root">
-    <header class="page-header">
+    <div class="page-header">
         <div class="page-header__logo">
             <span
                 aria-label="Försäkringskassan"
@@ -69,7 +69,7 @@ Standard skärmbredd för `sm` är 640px.
         <div class="page-header__right">
             <div class="page-header__right-slot">Namn Namnsson</div>
         </div>
-    </header>
+    </div>
 </div>
 ```
 

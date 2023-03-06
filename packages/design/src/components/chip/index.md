@@ -11,11 +11,7 @@ status: Preliminär
 ### Chip utan ikon
 
 ```html
-<fieldset
-    id="barn-over-18"
-    name="barn-over-18"
-    class="radio-button-group--chip  radio-button-group"
->
+<fieldset class="radio-button-group--chip radio-button-group">
     <legend class="label radio-button-group__label">
         Bor det barn som har fyllt 18 år i bostaden?
     </legend>
@@ -52,11 +48,7 @@ status: Preliminär
 ### Chip med ikon
 
 ```html
-<fieldset
-    id="filtrering"
-    name="filtrering"
-    class="radio-button-group--chip  radio-button-group"
->
+<fieldset class="radio-button-group--chip radio-button-group">
     <legend class="label radio-button-group__label">
         Filtrera ditt sökresultat
     </legend>

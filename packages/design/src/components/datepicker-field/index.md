@@ -185,7 +185,7 @@ Vanlig dag
 ```html
 <div class="calendar-month__cell">
     <button tabindex="-1" type="button" class="calendar-month__button">
-        <span class="calendar__day">
+        <span class="calendar-day">
             <span>1</span>
         </span>
     </button>
@@ -197,7 +197,7 @@ Ickevalbar dag
 ```html
 <div class="calendar-month__cell">
     <button tabindex="-1" type="button" class="calendar-month__button">
-        <span class="calendar__day calendar__day--disabled">
+        <span class="calendar-day calendar-day--disabled">
             <span>2</span>
         </span>
     </button>
@@ -209,7 +209,7 @@ Dagens datum
 ```html
 <div class="calendar-month__cell">
     <button tabindex="-1" type="button" class="calendar-month__button">
-        <span class="calendar__day calendar__day--today">
+        <span class="calendar-day calendar-day--today">
             <span>3</span>
         </span>
     </button>
@@ -221,7 +221,7 @@ Vald dag
 ```html
 <div class="calendar-month__cell">
     <button tabindex="-1" type="button" class="calendar-month__button">
-        <span class="calendar__day calendar__day--selected">
+        <span class="calendar-day calendar-day--selected">
             <span>4</span>
         </span>
     </button>
@@ -400,7 +400,7 @@ Vald dag
                                     type="button"
                                     class="calendar-month__button"
                                 >
-                                    <span class="calendar__day">
+                                    <span class="calendar-day">
                                         <span aria-hidden="true">1</span>
                                         <span class="sr-only"
                                             >tisdag 1 november 2022</span
@@ -418,7 +418,7 @@ Vald dag
                                     class="calendar-month__button"
                                 >
                                     <span
-                                        class="calendar__day calendar__day--disabled"
+                                        class="calendar-day calendar-day--disabled"
                                     >
                                         <span aria-hidden="true">2</span>
                                         <span class="sr-only"
@@ -437,7 +437,7 @@ Vald dag
                                     type="button"
                                     class="calendar-month__button"
                                 >
-                                    <span class="calendar__day">
+                                    <span class="calendar-day">
                                         <span aria-hidden="true">3</span>
                                         <span class="sr-only"
                                             >torsdag 3 november 2022</span
@@ -454,7 +454,7 @@ Vald dag
                                     type="button"
                                     class="calendar-month__button"
                                 >
-                                    <span class="calendar__day">
+                                    <span class="calendar-day">
                                         <span aria-hidden="true">4</span>
                                         <span class="sr-only"
                                             >fredag 4 november 2022</span
@@ -472,7 +472,7 @@ Vald dag
                                     class="calendar-month__button"
                                 >
                                     <span
-                                        class="calendar__day calendar__day--disabled"
+                                        class="calendar-day calendar-day--disabled"
                                     >
                                         <span aria-hidden="true">5</span>
                                         <span class="sr-only"
@@ -492,7 +492,7 @@ Vald dag
                                     class="calendar-month__button"
                                 >
                                     <span
-                                        class="calendar__day calendar__day--disabled"
+                                        class="calendar-day calendar-day--disabled"
                                     >
                                         <span aria-hidden="true">6</span>
                                         <span class="sr-only"
@@ -521,7 +521,7 @@ Vald dag
                                     type="button"
                                     class="calendar-month__button"
                                 >
-                                    <span class="calendar__day">
+                                    <span class="calendar-day">
                                         <span aria-hidden="true">7</span>
                                         <span class="sr-only"
                                             >måndag 7 november 2022</span
@@ -539,7 +539,7 @@ Vald dag
                                     class="calendar-month__button"
                                 >
                                     <span
-                                        class="calendar__day calendar__day--disabled"
+                                        class="calendar-day calendar-day--disabled"
                                     >
                                         <span aria-hidden="true">8</span>
                                         <span class="sr-only"
@@ -558,7 +558,7 @@ Vald dag
                                     type="button"
                                     class="calendar-month__button"
                                 >
-                                    <span class="calendar__day">
+                                    <span class="calendar-day">
                                         <span aria-hidden="true">9</span>
                                         <span class="sr-only"
                                             >onsdag 9 november 2022</span
@@ -575,7 +575,7 @@ Vald dag
                                     type="button"
                                     class="calendar-month__button"
                                 >
-                                    <span class="calendar__day">
+                                    <span class="calendar-day">
                                         <span aria-hidden="true">10</span>
                                         <span class="sr-only"
                                             >torsdag 10 november 2022</span
@@ -593,7 +593,7 @@ Vald dag
                                     class="calendar-month__button"
                                 >
                                     <span
-                                        class="calendar__day calendar__day--disabled"
+                                        class="calendar-day calendar-day--disabled"
                                     >
                                         <span aria-hidden="true">11</span>
                                         <span class="sr-only"
@@ -613,7 +613,7 @@ Vald dag
                                     class="calendar-month__button"
                                 >
                                     <span
-                                        class="calendar__day calendar__day--disabled"
+                                        class="calendar-day calendar-day--disabled"
                                     >
                                         <span aria-hidden="true">12</span>
                                         <span class="sr-only"
@@ -633,7 +633,7 @@ Vald dag
                                     class="calendar-month__button"
                                 >
                                     <span
-                                        class="calendar__day calendar__day--disabled"
+                                        class="calendar-day calendar-day--disabled"
                                     >
                                         <span aria-hidden="true">13</span>
                                         <span class="sr-only"
@@ -662,7 +662,7 @@ Vald dag
                                     type="button"
                                     class="calendar-month__button"
                                 >
-                                    <span class="calendar__day">
+                                    <span class="calendar-day">
                                         <span aria-hidden="true">14</span>
                                         <span class="sr-only"
                                             >måndag 14 november 2022</span
@@ -679,7 +679,7 @@ Vald dag
                                     type="button"
                                     class="calendar-month__button"
                                 >
-                                    <span class="calendar__day">
+                                    <span class="calendar-day">
                                         <span aria-hidden="true">15</span>
                                         <span class="sr-only"
                                             >tisdag 15 november 2022</span
@@ -696,7 +696,7 @@ Vald dag
                                     type="button"
                                     class="calendar-month__button"
                                 >
-                                    <span class="calendar__day">
+                                    <span class="calendar-day">
                                         <span aria-hidden="true">16</span>
                                         <span class="sr-only"
                                             >onsdag 16 november 2022</span
@@ -714,7 +714,7 @@ Vald dag
                                     class="calendar-month__button"
                                 >
                                     <span
-                                        class="calendar__day calendar__day--selected"
+                                        class="calendar-day calendar-day--selected"
                                     >
                                         <span aria-hidden="true">17</span>
                                         <span class="sr-only"
@@ -733,7 +733,7 @@ Vald dag
                                     type="button"
                                     class="calendar-month__button"
                                 >
-                                    <span class="calendar__day">
+                                    <span class="calendar-day">
                                         <span aria-hidden="true">18</span>
                                         <span class="sr-only"
                                             >fredag 18 november 2022</span
@@ -751,7 +751,7 @@ Vald dag
                                     class="calendar-month__button"
                                 >
                                     <span
-                                        class="calendar__day calendar__day--disabled"
+                                        class="calendar-day calendar-day--disabled"
                                     >
                                         <span aria-hidden="true">19</span>
                                         <span class="sr-only"
@@ -771,7 +771,7 @@ Vald dag
                                     class="calendar-month__button"
                                 >
                                     <span
-                                        class="calendar__day calendar__day--disabled"
+                                        class="calendar-day calendar-day--disabled"
                                     >
                                         <span aria-hidden="true">20</span>
                                         <span class="sr-only"
@@ -800,7 +800,7 @@ Vald dag
                                     type="button"
                                     class="calendar-month__button"
                                 >
-                                    <span class="calendar__day">
+                                    <span class="calendar-day">
                                         <span aria-hidden="true">21</span>
                                         <span class="sr-only"
                                             >igår måndag 21 november 2022</span
@@ -818,7 +818,7 @@ Vald dag
                                     class="calendar-month__button"
                                 >
                                     <span
-                                        class="calendar__day calendar__day--today"
+                                        class="calendar-day calendar-day--today"
                                     >
                                         <span aria-hidden="true">22</span>
                                         <span class="sr-only"
@@ -837,7 +837,7 @@ Vald dag
                                     class="calendar-month__button"
                                 >
                                     <span
-                                        class="calendar__day calendar__day--disabled"
+                                        class="calendar-day calendar-day--disabled"
                                     >
                                         <span aria-hidden="true">23</span>
                                         <span class="sr-only"
@@ -856,7 +856,7 @@ Vald dag
                                     type="button"
                                     class="calendar-month__button"
                                 >
-                                    <span class="calendar__day">
+                                    <span class="calendar-day">
                                         <span aria-hidden="true">24</span>
                                         <span class="sr-only"
                                             >torsdag 24 november 2022</span
@@ -873,7 +873,7 @@ Vald dag
                                     type="button"
                                     class="calendar-month__button"
                                 >
-                                    <span class="calendar__day">
+                                    <span class="calendar-day">
                                         <span aria-hidden="true">25</span>
                                         <span class="sr-only"
                                             >fredag 25 november 2022</span
@@ -891,7 +891,7 @@ Vald dag
                                     class="calendar-month__button"
                                 >
                                     <span
-                                        class="calendar__day calendar__day--disabled"
+                                        class="calendar-day calendar-day--disabled"
                                     >
                                         <span aria-hidden="true">26</span>
                                         <span class="sr-only"
@@ -911,7 +911,7 @@ Vald dag
                                     class="calendar-month__button"
                                 >
                                     <span
-                                        class="calendar__day calendar__day--disabled"
+                                        class="calendar-day calendar-day--disabled"
                                     >
                                         <span aria-hidden="true">27</span>
                                         <span class="sr-only"
@@ -940,7 +940,7 @@ Vald dag
                                     type="button"
                                     class="calendar-month__button"
                                 >
-                                    <span class="calendar__day">
+                                    <span class="calendar-day">
                                         <span aria-hidden="true">28</span>
                                         <span class="sr-only"
                                             >måndag 28 november 2022</span
@@ -957,7 +957,7 @@ Vald dag
                                     type="button"
                                     class="calendar-month__button"
                                 >
-                                    <span class="calendar__day">
+                                    <span class="calendar-day">
                                         <span aria-hidden="true">29</span>
                                         <span class="sr-only"
                                             >tisdag 29 november 2022</span
@@ -974,7 +974,7 @@ Vald dag
                                     type="button"
                                     class="calendar-month__button"
                                 >
-                                    <span class="calendar__day">
+                                    <span class="calendar-day">
                                         <span aria-hidden="true">30</span>
                                         <span class="sr-only"
                                             >onsdag 30 november 2022</span

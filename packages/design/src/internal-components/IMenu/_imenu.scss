@@ -65,23 +65,28 @@ $IMENU_SELECTOR: ".imenu" !default;
             padding-top: size.$padding-100;
             padding-left: size.$padding-075;
             padding-right: size.$padding-075;
-        }
-
-        &__anchor {
-            display: inline-flex;
-            border-bottom: 5px solid transparent;
-            padding-bottom: size.$padding-050;
-
-            &:hover {
-                font-weight: var(--f-font-weight-normal);
-                border-bottom: 5px solid var(--f-border-color-menu-horizontal-hover);
-            }
 
             &--highlight {
                 color: var(--f-text-color-menu-horizontal-highlight);
                 font-weight: var(--f-font-weight-medium);
+            }
+        }
+
+        &__anchor-container {
+            padding-bottom: size.$padding-050;
+            border-bottom: 5px solid transparent;
+
+            &--highlight {
                 border-bottom: 5px solid var(--f-border-color-menu-horizontal-highlight);
             }
+
+            &:hover {
+                border-bottom: 5px solid var(--f-border-color-menu-horizontal-hover);
+            }
+        }
+
+        &__anchor {
+            display: inline-flex;
 
             &--highlight:hover {
                 font-weight: var(--f-font-weight-medium);

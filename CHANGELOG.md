@@ -1,5 +1,33 @@
 # CHANGELOG
 
+## 4.15.0 (2023-01-31)
+
+
+### Bug Fixes
+
+* **@fkui/design:** correct anchor underline offset
+
+## 4.14.3 (2023-01-24)
+
+
+### Bug Fixes
+
+* **@fkui/design:** contextmenu icon disapearing
+* **@fkui/design:** fix FNavigationMenu focus
+* **@fkui/design:** remove header tag from `FPageHeader`
+
+## 4.14.2 (2023-01-18)
+
+
+(no changes in public packages)
+
+## 4.14.1 (2023-01-13)
+
+
+### Bug Fixes
+
+* **@fkui/design:** correct FTextField overflow issue
+
 ## 4.14.0 (2023-01-12)
 
 
