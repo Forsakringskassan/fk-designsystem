@@ -4,7 +4,7 @@ layout: component
 status: Preliminär
 ---
 
-För förloppsindikatorn finns olika tillstånd som visualiserar och kommunicerar vilken progress som utförts.
+Förloppsindikatorn finns i olika tillstånd som visualiserar och kommunicerar status. Den visar status för hur mycket av en process som är genomförd.
 
 ## Exempel
 
@@ -28,7 +28,7 @@ För förloppsindikatorn finns olika tillstånd som visualiserar och kommunicera
 
 ### Pågående
 
-Om progressbaren har en parameter som är mer än 0 men mindre än 100, visar progressbaren gult och en uppskattad precentsatts.
+Om förloppsindikatorn har en parameter som är mer än 0 men mindre än 100, visar förloppsindikatorn gult och en uppskattad procentsats.
 
 ```html
 <div class="progress">
@@ -48,7 +48,7 @@ Om progressbaren har en parameter som är mer än 0 men mindre än 100, visar pr
 
 ### Färdig
 
-Om progressbaren har en parameter som är 100% så visar progressbaren grönt.
+Om förloppsindikatorn har en parameter som är 100% så visar förloppsindikatorn grönt.
 
 ```html
 <div class="progress">

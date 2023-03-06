@@ -532,7 +532,7 @@ I desktop kan storleken ändras till någon av:
 I mobil är storleken alltid fullskärm.
 
 Du ändrar storleken genom att lägga till motsvarande CSS-klass `modal__dialog-container--$size`.
-För att för att till exempel använda `large` lägger du till `modal__dialog_content--large`:
+För att till exempel använda `large` lägger du till `modal__dialog_content--large`:
 
 ```diff raw
  <div class="modal">

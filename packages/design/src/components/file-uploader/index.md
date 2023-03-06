@@ -6,7 +6,7 @@ status: Preliminär
 
 ## Exempel
 
-### Filuppladdare button för att visa fil
+### Filuppladdare med knapp för att visa fil
 
 ```html
 <div class="file-uploader">
@@ -112,7 +112,7 @@ status: Preliminär
 </div>
 ```
 
-### Filuppladdare a-tag för att visa fil
+### Filuppladdare med a-tag för att visa fil
 
 ```html
 <div class="file-uploader">

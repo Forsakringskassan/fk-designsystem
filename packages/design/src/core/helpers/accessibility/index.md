@@ -17,7 +17,7 @@ Om man vill dölja ett visst innehåll som enbart skärmläsare kan läsa upp s�
 
 ## Separera element för skärmläsare
 
-Vid uppläsning i NVDA läses element med `display: inline-block` upp tillsammans med föregående HTML-element. Klassen `sr-separator` används för att separera uppläsningen av två element, exempelvis en label som kommer efter en tooltip.
+Vid uppläsning i NVDA läses element med `display: inline-block` upp tillsammans med föregående HTML-element. Klassen `sr-separator` används för att separera uppläsningen av två element, exempelvis en etikett som kommer efter en tooltip.
 
 ```html
 <div class="tooltip-before">

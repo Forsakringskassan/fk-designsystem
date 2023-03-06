@@ -1,19 +1,19 @@
 ---
-title: Listredigerare
+title: Datamängdredigerare
 layout: component
 status: Preliminär
 ---
 
-Grafiska komponenter som används vid redigering av en datamängd som presenteras i t.ex. lista eller tabell.
+Grafiska komponenter som används vid redigering av en datamängd.
 
 ## Exempel
 
-### Lägg till knappen under presentationen av data
+### Lägg till-knappen placerad under presentationen av data
 
 ```html
 <div class="crud-dataset">
     <div class="example-placeholder">
-        Placeholder för lista/tabell eller egen utvecklad presentation av data
+        Platshållare för lista/tabell eller egenutvecklad presentation av data
     </div>
     <div>
         <button
@@ -30,7 +30,7 @@ Grafiska komponenter som används vid redigering av en datamängd som presentera
 </div>
 ```
 
-### Ändra knapp med både ikon och label
+### Ändra-knapp med både ikon och text
 
 ```html
 <button type="button" class="button button--discrete">
@@ -41,7 +41,7 @@ Grafiska komponenter som används vid redigering av en datamängd som presentera
 </button>
 ```
 
-### Radera knapp med både ikon och label
+### Radera-knapp med både ikon och text
 
 ```html
 <button type="button" class="button button--discrete">
@@ -52,7 +52,7 @@ Grafiska komponenter som används vid redigering av en datamängd som presentera
 </button>
 ```
 
-### Modal för lägg till en rad
+### Modal för att lägga till en rad
 
 ```html
 <div class="modal">
@@ -70,7 +70,7 @@ Grafiska komponenter som används vid redigering av en datamängd som presentera
                     </div>
                     <div class="modal__content">
                         <div class="example-placeholder">
-                            Placeholder för imatningsfält
+                            Platshållare för imatningsfält
                         </div>
                     </div>
                     <div class="modal__footer">
@@ -113,7 +113,7 @@ Grafiska komponenter som används vid redigering av en datamängd som presentera
 </div>
 ```
 
-### Modal för ändra en rad
+### Modal för att ändra en rad
 
 ```html
 <div class="modal">
@@ -129,7 +129,7 @@ Grafiska komponenter som används vid redigering av en datamängd som presentera
                     </div>
                     <div class="modal__content">
                         <div class="example-placeholder">
-                            Placeholder för imatningsfält
+                            Platshållare för imatningsfält
                         </div>
                     </div>
                     <div class="modal__footer">
@@ -172,7 +172,7 @@ Grafiska komponenter som används vid redigering av en datamängd som presentera
 </div>
 ```
 
-### Modal för radera en rad
+### Modal för att radera en rad
 
 ```html
 <div class="modal modal--warning">
@@ -198,7 +198,7 @@ Grafiska komponenter som används vid redigering av en datamängd som presentera
                     </div>
                     <div class="modal__content">
                         <div class="example-placeholder">
-                            Placeholder för varningsmeddelande innan borttag
+                            Platshållare för varningsmeddelande innan borttag
                         </div>
                     </div>
                     <div class="modal__footer">

@@ -174,7 +174,7 @@ Grid stödjer dynamisk placering av kolumner både horisontellt och vertikalt.
         </svg>
     </span>
     <h3 class="message-box__heading">Tänk på att...</h3>
-    <p>om du via styling ändrar ordning på kolumner så kommer det inte påverka hur de läses upp av skärmläsare. Vid användning av detta stäm av med tillgänglighetsexpert så det inte påverkar er applikation negativt.</p>
+    <p>om du via styling ändrar ordning på kolumner så kommer det inte påverka hur de läses upp av skärmläsare.</p>
 </div>
 
 #### Hjälpklasser för dynamisk ordning

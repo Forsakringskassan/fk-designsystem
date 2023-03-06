@@ -35,7 +35,7 @@ Klassen `iflex` läggs på en föräldern och `iflex__item` på barn.
 
 ### Storlek
 
-Default är att celler tar upp lika stor yta var.
+Standard är att celler tar upp lika stor yta var.
 
 ```html
 <div class="iflex">
@@ -94,7 +94,7 @@ Används flera shrink eller grow fördelas storleken jämnt mellan dem.
 
 ### Gap (gutter)
 
-Default placeras celler direkt bredvid varandra.
+Som standard placeras celler direkt bredvid varandra.
 Vill man ha mellanrum kan man använda `iflex--gap-*` på container elementet:
 
 ```diff raw
@@ -133,8 +133,8 @@ Storlekarna som finns tillgängliga är:
 
 ### Vertikal positionering
 
-Default är att innehållet är vertikalt positionerat i toppen.
-Varje item kan individuellt positioneras i top, center eller botten med `iflex--align-*`.
+Som standard positioneras innehållet vertikalt i toppen.
+Varje element kan individuellt positioneras i toppen, mitten eller botten med `iflex--align-*`.
 
 ```diff raw
 <div class="iflex">
@@ -165,7 +165,7 @@ Varje item kan individuellt positioneras i top, center eller botten med `iflex--
 
 ### Kollapsa i mobilläge
 
-Genom att lägga till klassen `iflex--collapse` så kommer items ta upp full skärmbredd och läggas under varandra vid brytpunkten `small` (aka mobilläget).
+Genom att lägga till klassen `iflex--collapse` så kommer element ta upp full skärmbredd och läggas under varandra vid brytpunkten `small` (Brytpunkt small motsvarar mobilt läge).
 
 ```html
 <div class="iflex iflex--collapse">

@@ -1,7 +1,7 @@
 ---
 title: Ikon
 layout: component
-status: Preliminär
+status: Produktionsklar
 ---
 
 Se [designelement](designtokens/icons) för lista över tillgängliga ikoner.
@@ -102,7 +102,7 @@ Ikoner kan positioneras över varandra i en stack (overlay) med klassen `icon-st
 
 ### Fördefinierade stackbara ikoner
 
-Vanligt förekommande ihopsatta ikoner är `info`, `warning`, `error` och `tooltip`. För att få rätt färger etc finns det helper-klasser för detta.
+Vanligt förekommande ihopsatta ikoner är `info`, `warning`, `error` och `tooltip`. För att få rätt färger etc finns det hjälpklasser för detta.
 
 #### Exempel
 
@@ -120,7 +120,7 @@ Vanligt förekommande ihopsatta ikoner är `info`, `warning`, `error` och `toolt
 ## Nytt fönster
 
 Ikoner som används i samband med länkar som öppnas i ett nytt fönster används ikonen `f-icon-new-window`.
-Ikonen kan stackas med `icon-stack` och med hjälp av helper-klassen `icon-stack--new-window` positioneras ikonerna korrekt:
+Ikonen kan stackas med `icon-stack` och med hjälp av hjälpklassen `icon-stack--new-window` positioneras ikonerna korrekt:
 
 ```html
 <div class="icon-stack icon-stack--new-window">
@@ -139,11 +139,11 @@ Ikonen kan stackas med `icon-stack` och med hjälp av helper-klassen `icon-stack
 
 -   `.icon`: grundstyling för en ikon.
 -   `.icon-stack`: wrapper runt en stack med ikoner.
--   `.icon-stack--info`: helper klass för att förse info-ikon med färger etc.
--   `.icon-stack--warning`: helper klass för att förse warning-ikon med färger etc.
--   `.icon-stack--error`: helper klass för att förse error-ikon med färger etc.
--   `.icon-stack--tooltip`: helper klass för att förse tooltip-ikon med färger etc.
--   `.icon-stack--new-window`: helper klass för att positionera ikon-stack i samband med nytt fönster.
+-   `.icon-stack--info`: hjälpklass för att förse info-ikon med färger etc.
+-   `.icon-stack--warning`: hjälpklass för att förse warning-ikon med färger etc.
+-   `.icon-stack--error`: hjälpklass för att förse error-ikon med färger etc.
+-   `.icon-stack--tooltip`: hjälpklass för att förse tooltip-ikon med färger etc.
+-   `.icon-stack--new-window`: hjälpklass för att positionera ikon-stack i samband med nytt fönster.
 
 ## Sass
 

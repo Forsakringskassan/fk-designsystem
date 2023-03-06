@@ -83,7 +83,7 @@ status: Produktionsklar
         </div>
     </div>
     <div class="example-placeholder">
-        Placeholder för lista/tabell eller egen utvecklad presentation av data
+        Platshållare för lista/tabell eller egen utvecklad presentation av data
     </div>
 </div>
 ```

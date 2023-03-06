@@ -37,7 +37,7 @@ status: Produktionsklar
 </button>
 ```
 
-### Knapp växer om lång text
+### Knapp växer ifall knappens text är lång
 
 ```html
 <button class="button button--primary" type="button">
@@ -82,12 +82,12 @@ status: Produktionsklar
 </div>
 ```
 
-### Primärknapp Fullberedskap (endast mobil)
+### Primärknapp Fullbredd (endast mobil)
 
 ```html
 <div class="col col--md-6 example-dotted">
     <button class="button button--primary button--full-width" type="button">
-        Fullberedskap
+        Fullbredd
     </button>
 </div>
 ```
