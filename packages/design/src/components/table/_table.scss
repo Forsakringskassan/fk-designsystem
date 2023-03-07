@@ -28,7 +28,6 @@ $table-description-font-weight: var(--f-font-weight-normal) !default;
 $table-row-background: var(--f-background-grid-default) !default;
 $table-row-background-alt: var(--f-background-grid-striped) !default;
 $table-row-foreground: var(--f-text-color-default) !default;
-$table-row-padding: size.$padding-050 !default;
 $table-row-separator: 1px solid var(--f-border-color-grid) !default;
 $table-row-font-weight: var(--f-font-weight-normal) !default;
 $table-row-line-height: 1.5rem !default;
@@ -198,18 +197,17 @@ $table-input-height: size.$padding-125;
 
         td,
         th {
+            padding: var(--f-table-body-row-padding);
             border-bottom: $table-row-separator;
             white-space: nowrap;
         }
 
         td {
-            padding: var(--f-table-body-row-padding);
             line-height: $table-row-line-height;
             font-weight: $table-row-font-weight;
         }
 
         th {
-            padding: $table-row-padding;
             border-right: $table-header-separator;
             font-weight: $table-header-font-weight;
         }

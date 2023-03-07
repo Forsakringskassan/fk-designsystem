@@ -171,7 +171,6 @@ $button--discrete-inverted: (
 
         width: inherit;
         min-width: max-content;
-        mix-blend-mode: multiply;
 
         // workaround for IE11 which has no support for max-content
         @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -196,6 +195,7 @@ $button--discrete-inverted: (
 
         &:hover {
             box-shadow: none;
+            mix-blend-mode: multiply;
         }
         &,
         &:focus,

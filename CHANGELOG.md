@@ -1,5 +1,24 @@
 # CHANGELOG
 
+## 4.18.0 (2023-02-23)
+
+
+### Features
+
+* **@fkui/css-variables, @fkui/design:** fCard
+
+
+### Bug Fixes
+
+* **@fkui/design:** correct table th padding
+
+## 4.17.1 (2023-02-21)
+
+
+### Bug Fixes
+
+* **@fkui/design:** add mix-blend-mode on discrete button hover
+
 ## 4.17.0 (2023-02-14)
 
 

@@ -1,0 +1,21 @@
+@use "../../core/size";
+
+$CARD_SELECTOR: ".card" !default;
+
+#{$CARD_SELECTOR} {
+    padding: size.$padding-100;
+    margin: size.$margin-050 0;
+
+    &--default {
+        border-radius: 2px;
+        border: 2px solid var(--f-border-color-card);
+    }
+
+    &__footer {
+        > .button-group {
+            .button-group__item {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
