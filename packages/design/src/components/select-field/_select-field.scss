@@ -20,6 +20,7 @@ $SELECT_FIELD_SELECTOR: ".select-field" !default;
         box-shadow: var(--f-input-shadow-inset);
         border-radius: var(--f-border-radius-medium);
         border: var(--f-border-width-medium) solid var(--f-border-color-input);
+        color: var(--f-text-color-default);
         cursor: pointer;
         min-height: var(--f-height-large);
         padding: var(--padding-input-fields);

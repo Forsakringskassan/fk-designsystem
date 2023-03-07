@@ -56,6 +56,7 @@ $button--primary: (
     color: var(--f-text-color-button-primary),
     shadow: var(--f-button-shadow),
     shadow-hover: var(--f-button-shadow-hover),
+    padding: var(--f-button-primary-padding),
 ) !default;
 
 /// Secondary button
@@ -66,6 +67,7 @@ $button--secondary: (
     color: var(--f-text-color-button-secondary),
     shadow: var(--f-button-shadow),
     shadow-hover: var(--f-button-shadow-hover),
+    padding: var(--f-button-secondary-padding),
 ) !default;
 
 /// Standard button
@@ -76,6 +78,7 @@ $button--standard: (
     color: var(--f-text-color-button-standard),
     shadow: var(--f-button-shadow),
     shadow-hover: var(--f-button-shadow-hover),
+    padding: var(--f-button-standard-padding),
 ) !default;
 
 /// Discrete button
@@ -90,6 +93,7 @@ $button--discrete: (
     border-width: 0,
     shadow: none,
     shadow-hover: var(--f-button-shadow-hover),
+    padding: var(--f-button-discrete-padding),
 ) !default;
 
 /// Discrete inverted button
@@ -103,6 +107,7 @@ $button--discrete-inverted: (
     border-width: 0,
     shadow: none,
     shadow-hover: var(--f-button-shadow-hover),
+    padding: var(--f-button-discrete-padding),
 ) !default;
 
 /// Button placeholders
@@ -119,15 +124,15 @@ $button--discrete-inverted: (
     line-height: calc(1.25 * var(--f-font-size-standard));
     margin-bottom: size.$margin-150;
     margin-top: size.$margin-025;
-    min-width: 196px;
-    padding: 1.125rem;
+    min-width: var(--f-button-min-width);
+    padding: var(--f-button-default-padding);
     position: relative;
     text-align: center;
     transition: background-color var(--f-animation-duration-medium) ease-out;
 
     @include core.breakpoint-down(sm) {
         max-width: var(--f-width-full);
-        padding: 1.125rem;
+        padding: var(--f-button-default-padding);
         width: var(--f-width-full);
     }
 }
@@ -166,6 +171,7 @@ $button--discrete-inverted: (
 
         width: inherit;
         min-width: max-content;
+        mix-blend-mode: multiply;
 
         // workaround for IE11 which has no support for max-content
         @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -174,14 +180,13 @@ $button--discrete-inverted: (
 
         font-weight: var(--f-font-weight-bold);
         outline-offset: size.$padding-025;
-        padding: 0;
-        padding: var(--f-button-discrete-padding);
 
         @include core.breakpoint-down(sm) {
             width: auto;
         }
 
         &--black {
+            padding: var(--f-button-discrete-black-padding);
             color: var(--f-text-color-default);
 
             & > .button__icon {
@@ -189,6 +194,10 @@ $button--discrete-inverted: (
             }
         }
 
+        &:hover {
+            box-shadow: none;
+        }
+        &,
         &:focus,
         &:active,
         &:hover {
@@ -215,6 +224,7 @@ $button--discrete-inverted: (
             width: auto;
         }
 
+        &,
         &:focus,
         &:active,
         &:hover {

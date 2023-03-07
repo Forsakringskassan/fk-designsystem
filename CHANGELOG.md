@@ -1,5 +1,37 @@
 # CHANGELOG
 
+## 4.17.0 (2023-02-14)
+
+
+### Features
+
+* **@fkui/css-variables:** allow getting css variables as scss mixin
+
+## 4.16.3 (2023-02-14)
+
+
+### Bug Fixes
+
+* **@fkui/design:** set dropdown color
+
+## 4.16.2 (2023-02-08)
+
+
+### Bug Fixes
+
+* **@fkui/css-variables, @fkui/design:** font neue haas in internal theme 14px change to arial
+* **@fkui/design:** no popup max-width when forced inline
+
+## 4.16.1 (2023-02-07)
+
+
+(no changes in public packages)
+
+## 4.16.0 (2023-02-06)
+
+
+(no changes in public packages)
+
 ## 4.15.0 (2023-01-31)
 
 

@@ -53,7 +53,13 @@ $list-input-height: size.$padding-125;
 
         &__itempane {
             width: 100%;
-            padding: $list-padding;
+            padding: var(--f-list-item-itempane-padding);
+
+            --f-margin-component: 0 0 0.5rem 0;
+
+            .button {
+                margin-bottom: 0;
+            }
 
             ul {
                 list-style-type: disc;
@@ -65,7 +71,7 @@ $list-input-height: size.$padding-125;
         }
 
         &__selectpane {
-            padding: $list-padding;
+            padding: var(--f-list-item-itempane-padding);
             padding-right: 0;
 
             &__input {

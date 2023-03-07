@@ -12,8 +12,8 @@ status: Produktionsklar
 
 ```html
 <div class="select-field">
-    <label for="franvaro-anledning" class="label"
-        >Varför var du frånvarande?
+    <label for="franvaro-anledning" class="label">
+        Varför var du frånvarande?
     </label>
 
     <div class="select-field__icon-wrapper">

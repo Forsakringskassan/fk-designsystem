@@ -31,6 +31,7 @@ $table-row-foreground: var(--f-text-color-default) !default;
 $table-row-padding: size.$padding-050 !default;
 $table-row-separator: 1px solid var(--f-border-color-grid) !default;
 $table-row-font-weight: var(--f-font-weight-normal) !default;
+$table-row-line-height: 1.5rem !default;
 
 // Input fields in table cells
 $table-input-margin-top: size.$margin-025;
@@ -198,14 +199,19 @@ $table-input-height: size.$padding-125;
         td,
         th {
             border-bottom: $table-row-separator;
-            font-weight: $table-row-font-weight;
-            padding: $table-row-padding;
             white-space: nowrap;
         }
 
+        td {
+            padding: var(--f-table-body-row-padding);
+            line-height: $table-row-line-height;
+            font-weight: $table-row-font-weight;
+        }
+
         th {
-            font-weight: $table-header-font-weight;
+            padding: $table-row-padding;
             border-right: $table-header-separator;
+            font-weight: $table-header-font-weight;
         }
 
         #{$TABLE_SELECTOR}__column {
@@ -217,8 +223,13 @@ $table-input-height: size.$padding-125;
 
             // remove margin and reduce padding on buttons
             &--action .button--discrete {
-                margin: 0;
-                padding: 0.571rem;
+                border-radius: var(--f-button-discrete-table-column-action-border-radius);
+                margin: var(--f-button-discrete-table-column-action-margin);
+                padding: var(--f-button-discrete-table-column-action-padding);
+            }
+
+            &--action .button__icon {
+                margin: var(--f-button-discrete-table-column-action-icon-margin);
             }
         }
     }
@@ -229,6 +240,8 @@ $table-input-height: size.$padding-125;
         }
 
         &--numeric {
+            font-family: ExpFont;
+            font-variant-numeric: tabular-nums;
             text-align: right;
         }
 

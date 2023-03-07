@@ -20,13 +20,15 @@
     $border-color--hover: $border-color,
     $border-color--focus: $border-color--hover,
     $border-color--disabled: var(--f-border-color-button-disabled),
-    $border-width: var(--f-border-width-medium)
+    $border-width: var(--f-border-width-medium),
+    $padding
 ) {
     background-color: $background-color;
     border-color: $border-color;
     border-width: $border-width;
     box-shadow: $shadow;
     color: $color;
+    padding: $padding;
 
     & > .button__icon {
         color: $icon-color;
