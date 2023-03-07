@@ -115,6 +115,16 @@ $ICON_SELECTOR: ".icon" !default;
         }
     }
 
+    &--success {
+        .f-icon-circle {
+            color: var(--f-icon-color-white);
+            fill: var(--f-icon-color-success);
+        }
+        .f-icon-success {
+            transform: scale(0.6);
+        }
+    }
+
     &--large {
         width: 2.5rem;
         height: 2.5rem;

@@ -97,7 +97,11 @@ status: Produktionsklar
 #### Diskret standard knapp
 
 ```html
-<button class="button button--discrete" type="button">
+<button
+    class="button button--discrete"
+    data-test="button-discrete"
+    type="button"
+>
     <svg aria-hidden="true" class="icon button__icon" focusable="false">
         <use xlink:href="#f-icon-paper-clip" /></svg
     ><span>Diskret standard</span>
@@ -118,7 +122,11 @@ status: Produktionsklar
 
 ```html
 <div style="background-color: gray; padding: 20px">
-    <button class="button button--discrete-inverted" type="button">
+    <button
+        class="button button--discrete-inverted"
+        data-test="button-discrete-inverted"
+        type="button"
+    >
         <svg aria-hidden="true" class="icon button__icon" focusable="false">
             <use xlink:href="#f-icon-paper-clip" /></svg
         ><span>Diskret inverterad</span>

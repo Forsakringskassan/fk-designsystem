@@ -1,5 +1,28 @@
 # CHANGELOG
 
+## 4.19.0 (2023-03-07)
+
+
+### Bug Fixes
+
+* **@fkui/design:** discrete button overflow issue
+* **@fkui/design:** FMessageBox updated icon for positiv feedback
+
+## 4.18.2 (2023-03-02)
+
+
+### Bug Fixes
+
+* **@fkui/design:** label in menu going out of menu
+* **@fkui/design:** fix background margins shrinking on open FModal
+
+## 4.18.1 (2023-02-28)
+
+
+### Bug Fixes
+
+* **@fkui/design:** 1px border for internal theme
+
 ## 4.18.0 (2023-02-23)
 
 

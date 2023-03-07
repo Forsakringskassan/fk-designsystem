@@ -224,6 +224,7 @@ $table-input-height: size.$padding-125;
                 border-radius: var(--f-button-discrete-table-column-action-border-radius);
                 margin: var(--f-button-discrete-table-column-action-margin);
                 padding: var(--f-button-discrete-table-column-action-padding);
+                min-width: max-content;
             }
 
             &--action .button__icon {

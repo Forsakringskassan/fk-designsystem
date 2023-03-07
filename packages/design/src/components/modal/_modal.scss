@@ -22,6 +22,8 @@ $modal-icon-alert-offset: -0.05rem;
             // both of these properties is used to prevent scrolling in the background
             overflow: hidden;
             position: fixed;
+            left: 0;
+            right: 0;
         }
     }
 }

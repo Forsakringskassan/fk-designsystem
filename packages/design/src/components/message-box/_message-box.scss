@@ -34,9 +34,6 @@ $MESSAGE_BOX_SELECTOR: ".message-box" !default;
                 &__exclamation {
                     transform: translateY(-0.05rem);
                 }
-                &__success {
-                    color: var(--f-icon-color-success);
-                }
                 &__banner {
                     fill: var(--f-icon-color-error);
                     color: white;

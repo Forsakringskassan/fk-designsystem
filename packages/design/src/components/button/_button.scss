@@ -170,13 +170,7 @@ $button--discrete-inverted: (
         @include core.make-button-variant($BUTTON_SELECTOR, $button--discrete...);
 
         width: inherit;
-        min-width: max-content;
-
-        // workaround for IE11 which has no support for max-content
-        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-            min-width: 0;
-        }
-
+        min-width: 0;
         font-weight: var(--f-font-weight-bold);
         outline-offset: size.$padding-025;
 
@@ -209,13 +203,7 @@ $button--discrete-inverted: (
         @include core.make-button-variant($BUTTON_SELECTOR, $button--discrete-inverted...);
 
         width: inherit;
-        min-width: max-content;
-
-        // workaround for IE11 which has no support for max-content
-        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-            min-width: 0;
-        }
-
+        min-width: 0;
         font-weight: var(--f-font-weight-bold);
         outline-offset: size.$padding-025;
         padding: var(--f-button-discrete-padding);

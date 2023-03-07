@@ -8,7 +8,7 @@ $CARD_SELECTOR: ".card" !default;
 
     &--default {
         border-radius: 2px;
-        border: 2px solid var(--f-border-color-card);
+        border: var(--f-border-width-medium) solid var(--f-border-color-card);
     }
 
     &__footer {
