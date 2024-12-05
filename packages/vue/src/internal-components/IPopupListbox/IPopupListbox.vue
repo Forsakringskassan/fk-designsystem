@@ -88,7 +88,6 @@ async function calculatePosition(): Promise<void> {
 
     wrapperElement.style.overflowY = "auto";
     wrapperElement.style.left = `0px`;
-    wrapperElement.style.boxShadow = "none";
     const rect = computeListboxRect(anchor, { itemHeight: contentItemHeigth, numOfItems });
     if (rect) {
         const { top, left, width, height } = rect;
@@ -105,7 +104,14 @@ async function calculatePosition(): Promise<void> {
 <template>
     <teleport v-if="isOpen" :to="teleportTarget" :disabled="teleportDisabled">
         <div ref="popup" :class="popupClasses">
-            <div ref="wrapper" v-bind="$attrs" class="popup__wrapper" @keyup.esc.stop="onKeyEsc" @click.stop>
+            <div
+                ref="wrapper"
+                v-bind="$attrs"
+                class="popup__wrapper"
+                tabindex="0"
+                @keyup.esc.stop="onKeyEsc"
+                @click.stop
+            >
                 <div ref="content">
                     <slot></slot>
                 </div>
