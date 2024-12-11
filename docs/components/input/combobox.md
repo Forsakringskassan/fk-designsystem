@@ -17,12 +17,12 @@ ComboboxExample.vue
 
 ## Använd
 
--   Istället för en dropplista när det finns ett stort antal alternativ att välja mellan.
--   När användaren både ska kunna skriva en godtycklig fritext eller välja bland förbestämda förslag i listan.
+- Istället för en dropplista när det finns ett stort antal alternativ att välja mellan.
+- När användaren både ska kunna skriva en godtycklig fritext eller välja bland förbestämda förslag i listan.
 
 ## Använd inte
 
--   Vid färre alternativ, använd en dropplista eller radioknappar.
+- Vid färre alternativ, använd en dropplista eller radioknappar.
 
 ## API
 
