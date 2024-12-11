@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { watchEffect, useTemplateRef, nextTick, computed, onUnmounted } from "vue";
+import { watchEffect, useTemplateRef, nextTick, computed, onUnmounted, watch } from "vue";
 import { debounce } from "@fkui/logic";
 import { useEventListener } from "../../composables";
 import { config } from "../../config";
@@ -48,6 +48,15 @@ watchEffect(() => {
         removeListeners();
     }
 });
+
+watch(
+    () => numOfItems,
+    (oldValue, newValue) => {
+        if (oldValue !== newValue && isOpen) {
+            calculatePosition();
+        }
+    },
+);
 
 onUnmounted(removeListeners);
 
