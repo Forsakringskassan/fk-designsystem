@@ -20,6 +20,7 @@ const content = useTemplateRef("content");
 const teleportDisabled = false;
 const popupClasses = ["popup", "popup--overlay"];
 const teleportTarget = computed(() => config.popupTarget ?? config.teleportTarget);
+let guessedItemHeight: number | undefined = undefined;
 
 useEventListener(anchor, "keyup", onKeyEsc);
 
@@ -92,11 +93,15 @@ async function calculatePosition(): Promise<void> {
 
     let contentItemHeigth = itemHeight;
     if (!contentItemHeigth) {
-        contentItemHeigth = guessItemHeight(numOfItems, contentWrapper);
+        if (!guessedItemHeight) {
+            guessedItemHeight = guessItemHeight(numOfItems, contentWrapper);
+        }
+        contentItemHeigth = guessedItemHeight;
     }
 
     wrapperElement.style.overflowY = "auto";
     wrapperElement.style.left = `0px`;
+
     const rect = computeListboxRect(anchor, { itemHeight: contentItemHeigth, numOfItems });
     if (rect) {
         const { top, left, width, height } = rect;
@@ -105,7 +110,7 @@ async function calculatePosition(): Promise<void> {
         wrapperElement.style.top = `${top}px`;
         wrapperElement.style.left = `${left - offsetLeft}px`;
         wrapperElement.style.minWidth = `${width}px`;
-        wrapperElement.style.maxHeight = `${height}px`;
+        contentWrapper.style.maxHeight = `${height}px`;
     }
 }
 </script>
