@@ -4,17 +4,23 @@
 
 ```ts
 
+import { AllowedComponentProps } from 'vue';
 import { App } from 'vue';
 import { AppContext } from 'vue';
 import { BankAccountNumberString } from '@fkui/logic';
 import { BankgiroString } from '@fkui/logic';
 import { ClearingnumberString } from '@fkui/logic';
 import { Component } from 'vue';
+import { ComponentCustomProperties } from '@vue/runtime-core';
+import { ComponentCustomProps } from 'vue';
+import { ComponentInternalInstance } from 'vue';
 import { ComponentOptions } from 'vue';
+import { ComponentOptionsBase } from 'vue';
 import { ComponentOptionsMixin } from 'vue';
 import { ComponentProvideOptions } from 'vue';
 import { ComponentPublicInstance } from 'vue';
 import { ComputedRef } from 'vue';
+import { DebuggerEvent } from 'vue';
 import { DefineComponent } from 'vue';
 import { ExtractPropTypes } from 'vue';
 import { FDate } from '@fkui/date';
@@ -22,7 +28,11 @@ import { FocusOptions as FocusOptions_2 } from '@fkui/logic';
 import { formatNumber } from '@fkui/logic';
 import { formatPersonnummer } from '@fkui/logic';
 import { formatPostalCode } from '@fkui/logic';
+import { GlobalComponents } from 'vue';
+import { GlobalDirectives } from 'vue';
 import { InjectionKey } from 'vue';
+import { nextTick } from 'vue';
+import { OnCleanup } from '@vue/reactivity';
 import { OrganisationsnummerString } from '@fkui/logic';
 import { parseBankAccountNumber } from '@fkui/logic';
 import { parseBankgiro } from '@fkui/logic';
@@ -44,6 +54,7 @@ import { Reference } from '@fkui/logic';
 import { RouteLocationNamedRaw } from 'vue-router';
 import { RouteLocationPathRaw } from 'vue-router';
 import { ShallowRef } from 'vue';
+import { ShallowUnwrapRef } from 'vue';
 import { Slot } from 'vue';
 import { Slots } from 'vue';
 import { StackHandle } from '@fkui/logic';
@@ -51,6 +62,9 @@ import { ValidatableHTMLElement } from '@fkui/logic';
 import { ValidationConfigUpdateDetail } from '@fkui/logic';
 import { ValidatorConfigs } from '@fkui/logic';
 import { ValidityEvent } from '@fkui/logic';
+import { VNodeProps } from 'vue';
+import { WatchOptions } from 'vue';
+import { WatchStopHandle } from 'vue';
 import { WeekdayNaming } from '@fkui/date';
 
 // @internal (undocumented)
@@ -1137,6 +1151,66 @@ inputNode: HTMLInputElement;
 onClose?: (() => any) | undefined;
 onSelect?: ((option: string) => any) | undefined;
 }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {
+popupListbox: ({
+$: ComponentInternalInstance;
+$data: {};
+$props: {
+readonly isOpen: boolean;
+readonly anchor: HTMLElement | null;
+readonly numOfItems: number;
+readonly itemHeight?: number | undefined;
+readonly activeElement?: HTMLElement | undefined;
+readonly onClose?: (() => any) | undefined;
+} & VNodeProps & AllowedComponentProps & ComponentCustomProps;
+$attrs: {
+[x: string]: unknown;
+};
+$refs: {
+[x: string]: unknown;
+} & {
+popup: HTMLDivElement;
+wrapper: HTMLDivElement;
+content: HTMLDivElement;
+};
+$slots: Readonly<{
+[name: string]: Slot<any> | undefined;
+}>;
+$root: ComponentPublicInstance | null;
+$parent: ComponentPublicInstance | null;
+$host: Element | null;
+$emit: (event: "close") => void;
+$el: any;
+$options: ComponentOptionsBase<Readonly<IPopupListboxProps> & Readonly<{
+onClose?: (() => any) | undefined;
+}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+close: () => any;
+}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & {
+beforeCreate?: (() => void) | (() => void)[];
+created?: (() => void) | (() => void)[];
+beforeMount?: (() => void) | (() => void)[];
+mounted?: (() => void) | (() => void)[];
+beforeUpdate?: (() => void) | (() => void)[];
+updated?: (() => void) | (() => void)[];
+activated?: (() => void) | (() => void)[];
+deactivated?: (() => void) | (() => void)[];
+beforeDestroy?: (() => void) | (() => void)[];
+beforeUnmount?: (() => void) | (() => void)[];
+destroyed?: (() => void) | (() => void)[];
+unmounted?: (() => void) | (() => void)[];
+renderTracked?: ((e: DebuggerEvent) => void) | ((e: DebuggerEvent) => void)[];
+renderTriggered?: ((e: DebuggerEvent) => void) | ((e: DebuggerEvent) => void)[];
+errorCaptured?: ((err: unknown, instance: ComponentPublicInstance | null, info: string) => boolean | void) | ((err: unknown, instance: ComponentPublicInstance | null, info: string) => boolean | void)[];
+};
+$forceUpdate: () => void;
+$nextTick: nextTick;
+$watch<T extends string | ((...args: any) => any)>(source: T, cb: T extends (...args: any) => infer R ? (...args: [R, R, OnCleanup]) => any : (...args: [any, any, OnCleanup]) => any, options?: WatchOptions): WatchStopHandle;
+} & Readonly<{}> & Omit<Readonly<IPopupListboxProps> & Readonly<{
+onClose?: (() => any) | undefined;
+}>, never> & ShallowUnwrapRef<    {}> & {} & ComponentCustomProperties & {} & {
+$slots: {
+default?(_: {}): any;
+};
+}) | null;
 listboxNode: HTMLUListElement;
 }, HTMLDivElement>;
 IComboboxToggleButton: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
@@ -1584,6 +1658,66 @@ inputNode: HTMLInputElement;
 onClose?: (() => any) | undefined;
 onSelect?: ((option: string) => any) | undefined;
 }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {
+popupListbox: ({
+$: ComponentInternalInstance;
+$data: {};
+$props: {
+readonly isOpen: boolean;
+readonly anchor: HTMLElement | null;
+readonly numOfItems: number;
+readonly itemHeight?: number | undefined;
+readonly activeElement?: HTMLElement | undefined;
+readonly onClose?: (() => any) | undefined;
+} & VNodeProps & AllowedComponentProps & ComponentCustomProps;
+$attrs: {
+[x: string]: unknown;
+};
+$refs: {
+[x: string]: unknown;
+} & {
+popup: HTMLDivElement;
+wrapper: HTMLDivElement;
+content: HTMLDivElement;
+};
+$slots: Readonly<{
+[name: string]: Slot<any> | undefined;
+}>;
+$root: ComponentPublicInstance | null;
+$parent: ComponentPublicInstance | null;
+$host: Element | null;
+$emit: (event: "close") => void;
+$el: any;
+$options: ComponentOptionsBase<Readonly<IPopupListboxProps> & Readonly<{
+onClose?: (() => any) | undefined;
+}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+close: () => any;
+}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & {
+beforeCreate?: (() => void) | (() => void)[];
+created?: (() => void) | (() => void)[];
+beforeMount?: (() => void) | (() => void)[];
+mounted?: (() => void) | (() => void)[];
+beforeUpdate?: (() => void) | (() => void)[];
+updated?: (() => void) | (() => void)[];
+activated?: (() => void) | (() => void)[];
+deactivated?: (() => void) | (() => void)[];
+beforeDestroy?: (() => void) | (() => void)[];
+beforeUnmount?: (() => void) | (() => void)[];
+destroyed?: (() => void) | (() => void)[];
+unmounted?: (() => void) | (() => void)[];
+renderTracked?: ((e: DebuggerEvent) => void) | ((e: DebuggerEvent) => void)[];
+renderTriggered?: ((e: DebuggerEvent) => void) | ((e: DebuggerEvent) => void)[];
+errorCaptured?: ((err: unknown, instance: ComponentPublicInstance | null, info: string) => boolean | void) | ((err: unknown, instance: ComponentPublicInstance | null, info: string) => boolean | void)[];
+};
+$forceUpdate: () => void;
+$nextTick: nextTick;
+$watch<T extends string | ((...args: any) => any)>(source: T, cb: T extends (...args: any) => infer R ? (...args: [R, R, OnCleanup]) => any : (...args: [any, any, OnCleanup]) => any, options?: WatchOptions): WatchStopHandle;
+} & Readonly<{}> & Omit<Readonly<IPopupListboxProps> & Readonly<{
+onClose?: (() => any) | undefined;
+}>, never> & ShallowUnwrapRef<    {}> & {} & ComponentCustomProperties & {} & {
+$slots: {
+default?(_: {}): any;
+};
+}) | null;
 listboxNode: HTMLUListElement;
 }, HTMLDivElement>;
 IComboboxToggleButton: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
@@ -2538,6 +2672,66 @@ inputNode: HTMLInputElement;
 onClose?: (() => any) | undefined;
 onSelect?: ((option: string) => any) | undefined;
 }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {
+popupListbox: ({
+$: ComponentInternalInstance;
+$data: {};
+$props: {
+readonly isOpen: boolean;
+readonly anchor: HTMLElement | null;
+readonly numOfItems: number;
+readonly itemHeight?: number | undefined;
+readonly activeElement?: HTMLElement | undefined;
+readonly onClose?: (() => any) | undefined;
+} & VNodeProps & AllowedComponentProps & ComponentCustomProps;
+$attrs: {
+[x: string]: unknown;
+};
+$refs: {
+[x: string]: unknown;
+} & {
+popup: HTMLDivElement;
+wrapper: HTMLDivElement;
+content: HTMLDivElement;
+};
+$slots: Readonly<{
+[name: string]: Slot<any> | undefined;
+}>;
+$root: ComponentPublicInstance | null;
+$parent: ComponentPublicInstance | null;
+$host: Element | null;
+$emit: (event: "close") => void;
+$el: any;
+$options: ComponentOptionsBase<Readonly<IPopupListboxProps> & Readonly<{
+onClose?: (() => any) | undefined;
+}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+close: () => any;
+}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & {
+beforeCreate?: (() => void) | (() => void)[];
+created?: (() => void) | (() => void)[];
+beforeMount?: (() => void) | (() => void)[];
+mounted?: (() => void) | (() => void)[];
+beforeUpdate?: (() => void) | (() => void)[];
+updated?: (() => void) | (() => void)[];
+activated?: (() => void) | (() => void)[];
+deactivated?: (() => void) | (() => void)[];
+beforeDestroy?: (() => void) | (() => void)[];
+beforeUnmount?: (() => void) | (() => void)[];
+destroyed?: (() => void) | (() => void)[];
+unmounted?: (() => void) | (() => void)[];
+renderTracked?: ((e: DebuggerEvent) => void) | ((e: DebuggerEvent) => void)[];
+renderTriggered?: ((e: DebuggerEvent) => void) | ((e: DebuggerEvent) => void)[];
+errorCaptured?: ((err: unknown, instance: ComponentPublicInstance | null, info: string) => boolean | void) | ((err: unknown, instance: ComponentPublicInstance | null, info: string) => boolean | void)[];
+};
+$forceUpdate: () => void;
+$nextTick: nextTick;
+$watch<T extends string | ((...args: any) => any)>(source: T, cb: T extends (...args: any) => infer R ? (...args: [R, R, OnCleanup]) => any : (...args: [any, any, OnCleanup]) => any, options?: WatchOptions): WatchStopHandle;
+} & Readonly<{}> & Omit<Readonly<IPopupListboxProps> & Readonly<{
+onClose?: (() => any) | undefined;
+}>, never> & ShallowUnwrapRef<    {}> & {} & ComponentCustomProperties & {} & {
+$slots: {
+default?(_: {}): any;
+};
+}) | null;
 listboxNode: HTMLUListElement;
 }, HTMLDivElement>;
 IComboboxToggleButton: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
@@ -4569,6 +4763,66 @@ inputNode: HTMLInputElement;
 onClose?: (() => any) | undefined;
 onSelect?: ((option: string) => any) | undefined;
 }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {
+popupListbox: ({
+$: ComponentInternalInstance;
+$data: {};
+$props: {
+readonly isOpen: boolean;
+readonly anchor: HTMLElement | null;
+readonly numOfItems: number;
+readonly itemHeight?: number | undefined;
+readonly activeElement?: HTMLElement | undefined;
+readonly onClose?: (() => any) | undefined;
+} & VNodeProps & AllowedComponentProps & ComponentCustomProps;
+$attrs: {
+[x: string]: unknown;
+};
+$refs: {
+[x: string]: unknown;
+} & {
+popup: HTMLDivElement;
+wrapper: HTMLDivElement;
+content: HTMLDivElement;
+};
+$slots: Readonly<{
+[name: string]: Slot<any> | undefined;
+}>;
+$root: ComponentPublicInstance | null;
+$parent: ComponentPublicInstance | null;
+$host: Element | null;
+$emit: (event: "close") => void;
+$el: any;
+$options: ComponentOptionsBase<Readonly<IPopupListboxProps> & Readonly<{
+onClose?: (() => any) | undefined;
+}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+close: () => any;
+}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & {
+beforeCreate?: (() => void) | (() => void)[];
+created?: (() => void) | (() => void)[];
+beforeMount?: (() => void) | (() => void)[];
+mounted?: (() => void) | (() => void)[];
+beforeUpdate?: (() => void) | (() => void)[];
+updated?: (() => void) | (() => void)[];
+activated?: (() => void) | (() => void)[];
+deactivated?: (() => void) | (() => void)[];
+beforeDestroy?: (() => void) | (() => void)[];
+beforeUnmount?: (() => void) | (() => void)[];
+destroyed?: (() => void) | (() => void)[];
+unmounted?: (() => void) | (() => void)[];
+renderTracked?: ((e: DebuggerEvent) => void) | ((e: DebuggerEvent) => void)[];
+renderTriggered?: ((e: DebuggerEvent) => void) | ((e: DebuggerEvent) => void)[];
+errorCaptured?: ((err: unknown, instance: ComponentPublicInstance | null, info: string) => boolean | void) | ((err: unknown, instance: ComponentPublicInstance | null, info: string) => boolean | void)[];
+};
+$forceUpdate: () => void;
+$nextTick: nextTick;
+$watch<T extends string | ((...args: any) => any)>(source: T, cb: T extends (...args: any) => infer R ? (...args: [R, R, OnCleanup]) => any : (...args: [any, any, OnCleanup]) => any, options?: WatchOptions): WatchStopHandle;
+} & Readonly<{}> & Omit<Readonly<IPopupListboxProps> & Readonly<{
+onClose?: (() => any) | undefined;
+}>, never> & ShallowUnwrapRef<    {}> & {} & ComponentCustomProperties & {} & {
+$slots: {
+default?(_: {}): any;
+};
+}) | null;
 listboxNode: HTMLUListElement;
 }, HTMLDivElement>;
 IComboboxToggleButton: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
@@ -5590,6 +5844,66 @@ inputNode: HTMLInputElement;
 onClose?: (() => any) | undefined;
 onSelect?: ((option: string) => any) | undefined;
 }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {
+popupListbox: ({
+$: ComponentInternalInstance;
+$data: {};
+$props: {
+readonly isOpen: boolean;
+readonly anchor: HTMLElement | null;
+readonly numOfItems: number;
+readonly itemHeight?: number | undefined;
+readonly activeElement?: HTMLElement | undefined;
+readonly onClose?: (() => any) | undefined;
+} & VNodeProps & AllowedComponentProps & ComponentCustomProps;
+$attrs: {
+[x: string]: unknown;
+};
+$refs: {
+[x: string]: unknown;
+} & {
+popup: HTMLDivElement;
+wrapper: HTMLDivElement;
+content: HTMLDivElement;
+};
+$slots: Readonly<{
+[name: string]: Slot<any> | undefined;
+}>;
+$root: ComponentPublicInstance | null;
+$parent: ComponentPublicInstance | null;
+$host: Element | null;
+$emit: (event: "close") => void;
+$el: any;
+$options: ComponentOptionsBase<Readonly<IPopupListboxProps> & Readonly<{
+onClose?: (() => any) | undefined;
+}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+close: () => any;
+}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & {
+beforeCreate?: (() => void) | (() => void)[];
+created?: (() => void) | (() => void)[];
+beforeMount?: (() => void) | (() => void)[];
+mounted?: (() => void) | (() => void)[];
+beforeUpdate?: (() => void) | (() => void)[];
+updated?: (() => void) | (() => void)[];
+activated?: (() => void) | (() => void)[];
+deactivated?: (() => void) | (() => void)[];
+beforeDestroy?: (() => void) | (() => void)[];
+beforeUnmount?: (() => void) | (() => void)[];
+destroyed?: (() => void) | (() => void)[];
+unmounted?: (() => void) | (() => void)[];
+renderTracked?: ((e: DebuggerEvent) => void) | ((e: DebuggerEvent) => void)[];
+renderTriggered?: ((e: DebuggerEvent) => void) | ((e: DebuggerEvent) => void)[];
+errorCaptured?: ((err: unknown, instance: ComponentPublicInstance | null, info: string) => boolean | void) | ((err: unknown, instance: ComponentPublicInstance | null, info: string) => boolean | void)[];
+};
+$forceUpdate: () => void;
+$nextTick: nextTick;
+$watch<T extends string | ((...args: any) => any)>(source: T, cb: T extends (...args: any) => infer R ? (...args: [R, R, OnCleanup]) => any : (...args: [any, any, OnCleanup]) => any, options?: WatchOptions): WatchStopHandle;
+} & Readonly<{}> & Omit<Readonly<IPopupListboxProps> & Readonly<{
+onClose?: (() => any) | undefined;
+}>, never> & ShallowUnwrapRef<    {}> & {} & ComponentCustomProperties & {} & {
+$slots: {
+default?(_: {}): any;
+};
+}) | null;
 listboxNode: HTMLUListElement;
 }, HTMLDivElement>;
 IComboboxToggleButton: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
@@ -6327,6 +6641,66 @@ inputNode: HTMLInputElement;
 onClose?: (() => any) | undefined;
 onSelect?: ((option: string) => any) | undefined;
 }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {
+popupListbox: ({
+$: ComponentInternalInstance;
+$data: {};
+$props: {
+readonly isOpen: boolean;
+readonly anchor: HTMLElement | null;
+readonly numOfItems: number;
+readonly itemHeight?: number | undefined;
+readonly activeElement?: HTMLElement | undefined;
+readonly onClose?: (() => any) | undefined;
+} & VNodeProps & AllowedComponentProps & ComponentCustomProps;
+$attrs: {
+[x: string]: unknown;
+};
+$refs: {
+[x: string]: unknown;
+} & {
+popup: HTMLDivElement;
+wrapper: HTMLDivElement;
+content: HTMLDivElement;
+};
+$slots: Readonly<{
+[name: string]: Slot<any> | undefined;
+}>;
+$root: ComponentPublicInstance | null;
+$parent: ComponentPublicInstance | null;
+$host: Element | null;
+$emit: (event: "close") => void;
+$el: any;
+$options: ComponentOptionsBase<Readonly<IPopupListboxProps> & Readonly<{
+onClose?: (() => any) | undefined;
+}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+close: () => any;
+}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & {
+beforeCreate?: (() => void) | (() => void)[];
+created?: (() => void) | (() => void)[];
+beforeMount?: (() => void) | (() => void)[];
+mounted?: (() => void) | (() => void)[];
+beforeUpdate?: (() => void) | (() => void)[];
+updated?: (() => void) | (() => void)[];
+activated?: (() => void) | (() => void)[];
+deactivated?: (() => void) | (() => void)[];
+beforeDestroy?: (() => void) | (() => void)[];
+beforeUnmount?: (() => void) | (() => void)[];
+destroyed?: (() => void) | (() => void)[];
+unmounted?: (() => void) | (() => void)[];
+renderTracked?: ((e: DebuggerEvent) => void) | ((e: DebuggerEvent) => void)[];
+renderTriggered?: ((e: DebuggerEvent) => void) | ((e: DebuggerEvent) => void)[];
+errorCaptured?: ((err: unknown, instance: ComponentPublicInstance | null, info: string) => boolean | void) | ((err: unknown, instance: ComponentPublicInstance | null, info: string) => boolean | void)[];
+};
+$forceUpdate: () => void;
+$nextTick: nextTick;
+$watch<T extends string | ((...args: any) => any)>(source: T, cb: T extends (...args: any) => infer R ? (...args: [R, R, OnCleanup]) => any : (...args: [any, any, OnCleanup]) => any, options?: WatchOptions): WatchStopHandle;
+} & Readonly<{}> & Omit<Readonly<IPopupListboxProps> & Readonly<{
+onClose?: (() => any) | undefined;
+}>, never> & ShallowUnwrapRef<    {}> & {} & ComponentCustomProperties & {} & {
+$slots: {
+default?(_: {}): any;
+};
+}) | null;
 listboxNode: HTMLUListElement;
 }, HTMLDivElement>;
 IComboboxToggleButton: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
@@ -10885,6 +11259,66 @@ inputNode: HTMLInputElement;
 onClose?: (() => any) | undefined;
 onSelect?: ((option: string) => any) | undefined;
 }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {
+popupListbox: ({
+$: ComponentInternalInstance;
+$data: {};
+$props: {
+readonly isOpen: boolean;
+readonly anchor: HTMLElement | null;
+readonly numOfItems: number;
+readonly itemHeight?: number | undefined;
+readonly activeElement?: HTMLElement | undefined;
+readonly onClose?: (() => any) | undefined;
+} & VNodeProps & AllowedComponentProps & ComponentCustomProps;
+$attrs: {
+[x: string]: unknown;
+};
+$refs: {
+[x: string]: unknown;
+} & {
+popup: HTMLDivElement;
+wrapper: HTMLDivElement;
+content: HTMLDivElement;
+};
+$slots: Readonly<{
+[name: string]: Slot<any> | undefined;
+}>;
+$root: ComponentPublicInstance | null;
+$parent: ComponentPublicInstance | null;
+$host: Element | null;
+$emit: (event: "close") => void;
+$el: any;
+$options: ComponentOptionsBase<Readonly<IPopupListboxProps> & Readonly<{
+onClose?: (() => any) | undefined;
+}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+close: () => any;
+}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & {
+beforeCreate?: (() => void) | (() => void)[];
+created?: (() => void) | (() => void)[];
+beforeMount?: (() => void) | (() => void)[];
+mounted?: (() => void) | (() => void)[];
+beforeUpdate?: (() => void) | (() => void)[];
+updated?: (() => void) | (() => void)[];
+activated?: (() => void) | (() => void)[];
+deactivated?: (() => void) | (() => void)[];
+beforeDestroy?: (() => void) | (() => void)[];
+beforeUnmount?: (() => void) | (() => void)[];
+destroyed?: (() => void) | (() => void)[];
+unmounted?: (() => void) | (() => void)[];
+renderTracked?: ((e: DebuggerEvent) => void) | ((e: DebuggerEvent) => void)[];
+renderTriggered?: ((e: DebuggerEvent) => void) | ((e: DebuggerEvent) => void)[];
+errorCaptured?: ((err: unknown, instance: ComponentPublicInstance | null, info: string) => boolean | void) | ((err: unknown, instance: ComponentPublicInstance | null, info: string) => boolean | void)[];
+};
+$forceUpdate: () => void;
+$nextTick: nextTick;
+$watch<T extends string | ((...args: any) => any)>(source: T, cb: T extends (...args: any) => infer R ? (...args: [R, R, OnCleanup]) => any : (...args: [any, any, OnCleanup]) => any, options?: WatchOptions): WatchStopHandle;
+} & Readonly<{}> & Omit<Readonly<IPopupListboxProps> & Readonly<{
+onClose?: (() => any) | undefined;
+}>, never> & ShallowUnwrapRef<    {}> & {} & ComponentCustomProperties & {} & {
+$slots: {
+default?(_: {}): any;
+};
+}) | null;
 listboxNode: HTMLUListElement;
 }, HTMLDivElement>;
 IComboboxToggleButton: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
@@ -11495,6 +11929,66 @@ inputNode: HTMLInputElement;
 onClose?: (() => any) | undefined;
 onSelect?: ((option: string) => any) | undefined;
 }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {
+popupListbox: ({
+$: ComponentInternalInstance;
+$data: {};
+$props: {
+readonly isOpen: boolean;
+readonly anchor: HTMLElement | null;
+readonly numOfItems: number;
+readonly itemHeight?: number | undefined;
+readonly activeElement?: HTMLElement | undefined;
+readonly onClose?: (() => any) | undefined;
+} & VNodeProps & AllowedComponentProps & ComponentCustomProps;
+$attrs: {
+[x: string]: unknown;
+};
+$refs: {
+[x: string]: unknown;
+} & {
+popup: HTMLDivElement;
+wrapper: HTMLDivElement;
+content: HTMLDivElement;
+};
+$slots: Readonly<{
+[name: string]: Slot<any> | undefined;
+}>;
+$root: ComponentPublicInstance | null;
+$parent: ComponentPublicInstance | null;
+$host: Element | null;
+$emit: (event: "close") => void;
+$el: any;
+$options: ComponentOptionsBase<Readonly<IPopupListboxProps> & Readonly<{
+onClose?: (() => any) | undefined;
+}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+close: () => any;
+}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & {
+beforeCreate?: (() => void) | (() => void)[];
+created?: (() => void) | (() => void)[];
+beforeMount?: (() => void) | (() => void)[];
+mounted?: (() => void) | (() => void)[];
+beforeUpdate?: (() => void) | (() => void)[];
+updated?: (() => void) | (() => void)[];
+activated?: (() => void) | (() => void)[];
+deactivated?: (() => void) | (() => void)[];
+beforeDestroy?: (() => void) | (() => void)[];
+beforeUnmount?: (() => void) | (() => void)[];
+destroyed?: (() => void) | (() => void)[];
+unmounted?: (() => void) | (() => void)[];
+renderTracked?: ((e: DebuggerEvent) => void) | ((e: DebuggerEvent) => void)[];
+renderTriggered?: ((e: DebuggerEvent) => void) | ((e: DebuggerEvent) => void)[];
+errorCaptured?: ((err: unknown, instance: ComponentPublicInstance | null, info: string) => boolean | void) | ((err: unknown, instance: ComponentPublicInstance | null, info: string) => boolean | void)[];
+};
+$forceUpdate: () => void;
+$nextTick: nextTick;
+$watch<T extends string | ((...args: any) => any)>(source: T, cb: T extends (...args: any) => infer R ? (...args: [R, R, OnCleanup]) => any : (...args: [any, any, OnCleanup]) => any, options?: WatchOptions): WatchStopHandle;
+} & Readonly<{}> & Omit<Readonly<IPopupListboxProps> & Readonly<{
+onClose?: (() => any) | undefined;
+}>, never> & ShallowUnwrapRef<    {}> & {} & ComponentCustomProperties & {} & {
+$slots: {
+default?(_: {}): any;
+};
+}) | null;
 listboxNode: HTMLUListElement;
 }, HTMLDivElement>;
 IComboboxToggleButton: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
@@ -12237,6 +12731,66 @@ inputNode: HTMLInputElement;
 onClose?: (() => any) | undefined;
 onSelect?: ((option: string) => any) | undefined;
 }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {
+popupListbox: ({
+$: ComponentInternalInstance;
+$data: {};
+$props: {
+readonly isOpen: boolean;
+readonly anchor: HTMLElement | null;
+readonly numOfItems: number;
+readonly itemHeight?: number | undefined;
+readonly activeElement?: HTMLElement | undefined;
+readonly onClose?: (() => any) | undefined;
+} & VNodeProps & AllowedComponentProps & ComponentCustomProps;
+$attrs: {
+[x: string]: unknown;
+};
+$refs: {
+[x: string]: unknown;
+} & {
+popup: HTMLDivElement;
+wrapper: HTMLDivElement;
+content: HTMLDivElement;
+};
+$slots: Readonly<{
+[name: string]: Slot<any> | undefined;
+}>;
+$root: ComponentPublicInstance | null;
+$parent: ComponentPublicInstance | null;
+$host: Element | null;
+$emit: (event: "close") => void;
+$el: any;
+$options: ComponentOptionsBase<Readonly<IPopupListboxProps> & Readonly<{
+onClose?: (() => any) | undefined;
+}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+close: () => any;
+}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & {
+beforeCreate?: (() => void) | (() => void)[];
+created?: (() => void) | (() => void)[];
+beforeMount?: (() => void) | (() => void)[];
+mounted?: (() => void) | (() => void)[];
+beforeUpdate?: (() => void) | (() => void)[];
+updated?: (() => void) | (() => void)[];
+activated?: (() => void) | (() => void)[];
+deactivated?: (() => void) | (() => void)[];
+beforeDestroy?: (() => void) | (() => void)[];
+beforeUnmount?: (() => void) | (() => void)[];
+destroyed?: (() => void) | (() => void)[];
+unmounted?: (() => void) | (() => void)[];
+renderTracked?: ((e: DebuggerEvent) => void) | ((e: DebuggerEvent) => void)[];
+renderTriggered?: ((e: DebuggerEvent) => void) | ((e: DebuggerEvent) => void)[];
+errorCaptured?: ((err: unknown, instance: ComponentPublicInstance | null, info: string) => boolean | void) | ((err: unknown, instance: ComponentPublicInstance | null, info: string) => boolean | void)[];
+};
+$forceUpdate: () => void;
+$nextTick: nextTick;
+$watch<T extends string | ((...args: any) => any)>(source: T, cb: T extends (...args: any) => infer R ? (...args: [R, R, OnCleanup]) => any : (...args: [any, any, OnCleanup]) => any, options?: WatchOptions): WatchStopHandle;
+} & Readonly<{}> & Omit<Readonly<IPopupListboxProps> & Readonly<{
+onClose?: (() => any) | undefined;
+}>, never> & ShallowUnwrapRef<    {}> & {} & ComponentCustomProperties & {} & {
+$slots: {
+default?(_: {}): any;
+};
+}) | null;
 listboxNode: HTMLUListElement;
 }, HTMLDivElement>;
 IComboboxToggleButton: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
@@ -12703,6 +13257,66 @@ inputNode: HTMLInputElement;
 onClose?: (() => any) | undefined;
 onSelect?: ((option: string) => any) | undefined;
 }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {
+popupListbox: ({
+$: ComponentInternalInstance;
+$data: {};
+$props: {
+readonly isOpen: boolean;
+readonly anchor: HTMLElement | null;
+readonly numOfItems: number;
+readonly itemHeight?: number | undefined;
+readonly activeElement?: HTMLElement | undefined;
+readonly onClose?: (() => any) | undefined;
+} & VNodeProps & AllowedComponentProps & ComponentCustomProps;
+$attrs: {
+[x: string]: unknown;
+};
+$refs: {
+[x: string]: unknown;
+} & {
+popup: HTMLDivElement;
+wrapper: HTMLDivElement;
+content: HTMLDivElement;
+};
+$slots: Readonly<{
+[name: string]: Slot<any> | undefined;
+}>;
+$root: ComponentPublicInstance | null;
+$parent: ComponentPublicInstance | null;
+$host: Element | null;
+$emit: (event: "close") => void;
+$el: any;
+$options: ComponentOptionsBase<Readonly<IPopupListboxProps> & Readonly<{
+onClose?: (() => any) | undefined;
+}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+close: () => any;
+}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & {
+beforeCreate?: (() => void) | (() => void)[];
+created?: (() => void) | (() => void)[];
+beforeMount?: (() => void) | (() => void)[];
+mounted?: (() => void) | (() => void)[];
+beforeUpdate?: (() => void) | (() => void)[];
+updated?: (() => void) | (() => void)[];
+activated?: (() => void) | (() => void)[];
+deactivated?: (() => void) | (() => void)[];
+beforeDestroy?: (() => void) | (() => void)[];
+beforeUnmount?: (() => void) | (() => void)[];
+destroyed?: (() => void) | (() => void)[];
+unmounted?: (() => void) | (() => void)[];
+renderTracked?: ((e: DebuggerEvent) => void) | ((e: DebuggerEvent) => void)[];
+renderTriggered?: ((e: DebuggerEvent) => void) | ((e: DebuggerEvent) => void)[];
+errorCaptured?: ((err: unknown, instance: ComponentPublicInstance | null, info: string) => boolean | void) | ((err: unknown, instance: ComponentPublicInstance | null, info: string) => boolean | void)[];
+};
+$forceUpdate: () => void;
+$nextTick: nextTick;
+$watch<T extends string | ((...args: any) => any)>(source: T, cb: T extends (...args: any) => infer R ? (...args: [R, R, OnCleanup]) => any : (...args: [any, any, OnCleanup]) => any, options?: WatchOptions): WatchStopHandle;
+} & Readonly<{}> & Omit<Readonly<IPopupListboxProps> & Readonly<{
+onClose?: (() => any) | undefined;
+}>, never> & ShallowUnwrapRef<    {}> & {} & ComponentCustomProperties & {} & {
+$slots: {
+default?(_: {}): any;
+};
+}) | null;
 listboxNode: HTMLUListElement;
 }, HTMLDivElement>;
 IComboboxToggleButton: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
@@ -13197,6 +13811,66 @@ inputNode: HTMLInputElement;
 onClose?: (() => any) | undefined;
 onSelect?: ((option: string) => any) | undefined;
 }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {
+popupListbox: ({
+$: ComponentInternalInstance;
+$data: {};
+$props: {
+readonly isOpen: boolean;
+readonly anchor: HTMLElement | null;
+readonly numOfItems: number;
+readonly itemHeight?: number | undefined;
+readonly activeElement?: HTMLElement | undefined;
+readonly onClose?: (() => any) | undefined;
+} & VNodeProps & AllowedComponentProps & ComponentCustomProps;
+$attrs: {
+[x: string]: unknown;
+};
+$refs: {
+[x: string]: unknown;
+} & {
+popup: HTMLDivElement;
+wrapper: HTMLDivElement;
+content: HTMLDivElement;
+};
+$slots: Readonly<{
+[name: string]: Slot<any> | undefined;
+}>;
+$root: ComponentPublicInstance | null;
+$parent: ComponentPublicInstance | null;
+$host: Element | null;
+$emit: (event: "close") => void;
+$el: any;
+$options: ComponentOptionsBase<Readonly<IPopupListboxProps> & Readonly<{
+onClose?: (() => any) | undefined;
+}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+close: () => any;
+}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & {
+beforeCreate?: (() => void) | (() => void)[];
+created?: (() => void) | (() => void)[];
+beforeMount?: (() => void) | (() => void)[];
+mounted?: (() => void) | (() => void)[];
+beforeUpdate?: (() => void) | (() => void)[];
+updated?: (() => void) | (() => void)[];
+activated?: (() => void) | (() => void)[];
+deactivated?: (() => void) | (() => void)[];
+beforeDestroy?: (() => void) | (() => void)[];
+beforeUnmount?: (() => void) | (() => void)[];
+destroyed?: (() => void) | (() => void)[];
+unmounted?: (() => void) | (() => void)[];
+renderTracked?: ((e: DebuggerEvent) => void) | ((e: DebuggerEvent) => void)[];
+renderTriggered?: ((e: DebuggerEvent) => void) | ((e: DebuggerEvent) => void)[];
+errorCaptured?: ((err: unknown, instance: ComponentPublicInstance | null, info: string) => boolean | void) | ((err: unknown, instance: ComponentPublicInstance | null, info: string) => boolean | void)[];
+};
+$forceUpdate: () => void;
+$nextTick: nextTick;
+$watch<T extends string | ((...args: any) => any)>(source: T, cb: T extends (...args: any) => infer R ? (...args: [R, R, OnCleanup]) => any : (...args: [any, any, OnCleanup]) => any, options?: WatchOptions): WatchStopHandle;
+} & Readonly<{}> & Omit<Readonly<IPopupListboxProps> & Readonly<{
+onClose?: (() => any) | undefined;
+}>, never> & ShallowUnwrapRef<    {}> & {} & ComponentCustomProperties & {} & {
+$slots: {
+default?(_: {}): any;
+};
+}) | null;
 listboxNode: HTMLUListElement;
 }, HTMLDivElement>;
 IComboboxToggleButton: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
@@ -13637,6 +14311,66 @@ inputNode: HTMLInputElement;
 onClose?: (() => any) | undefined;
 onSelect?: ((option: string) => any) | undefined;
 }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {
+popupListbox: ({
+$: ComponentInternalInstance;
+$data: {};
+$props: {
+readonly isOpen: boolean;
+readonly anchor: HTMLElement | null;
+readonly numOfItems: number;
+readonly itemHeight?: number | undefined;
+readonly activeElement?: HTMLElement | undefined;
+readonly onClose?: (() => any) | undefined;
+} & VNodeProps & AllowedComponentProps & ComponentCustomProps;
+$attrs: {
+[x: string]: unknown;
+};
+$refs: {
+[x: string]: unknown;
+} & {
+popup: HTMLDivElement;
+wrapper: HTMLDivElement;
+content: HTMLDivElement;
+};
+$slots: Readonly<{
+[name: string]: Slot<any> | undefined;
+}>;
+$root: ComponentPublicInstance | null;
+$parent: ComponentPublicInstance | null;
+$host: Element | null;
+$emit: (event: "close") => void;
+$el: any;
+$options: ComponentOptionsBase<Readonly<IPopupListboxProps> & Readonly<{
+onClose?: (() => any) | undefined;
+}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+close: () => any;
+}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & {
+beforeCreate?: (() => void) | (() => void)[];
+created?: (() => void) | (() => void)[];
+beforeMount?: (() => void) | (() => void)[];
+mounted?: (() => void) | (() => void)[];
+beforeUpdate?: (() => void) | (() => void)[];
+updated?: (() => void) | (() => void)[];
+activated?: (() => void) | (() => void)[];
+deactivated?: (() => void) | (() => void)[];
+beforeDestroy?: (() => void) | (() => void)[];
+beforeUnmount?: (() => void) | (() => void)[];
+destroyed?: (() => void) | (() => void)[];
+unmounted?: (() => void) | (() => void)[];
+renderTracked?: ((e: DebuggerEvent) => void) | ((e: DebuggerEvent) => void)[];
+renderTriggered?: ((e: DebuggerEvent) => void) | ((e: DebuggerEvent) => void)[];
+errorCaptured?: ((err: unknown, instance: ComponentPublicInstance | null, info: string) => boolean | void) | ((err: unknown, instance: ComponentPublicInstance | null, info: string) => boolean | void)[];
+};
+$forceUpdate: () => void;
+$nextTick: nextTick;
+$watch<T extends string | ((...args: any) => any)>(source: T, cb: T extends (...args: any) => infer R ? (...args: [R, R, OnCleanup]) => any : (...args: [any, any, OnCleanup]) => any, options?: WatchOptions): WatchStopHandle;
+} & Readonly<{}> & Omit<Readonly<IPopupListboxProps> & Readonly<{
+onClose?: (() => any) | undefined;
+}>, never> & ShallowUnwrapRef<    {}> & {} & ComponentCustomProperties & {} & {
+$slots: {
+default?(_: {}): any;
+};
+}) | null;
 listboxNode: HTMLUListElement;
 }, HTMLDivElement>;
 IComboboxToggleButton: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
@@ -14086,6 +14820,66 @@ inputNode: HTMLInputElement;
 onClose?: (() => any) | undefined;
 onSelect?: ((option: string) => any) | undefined;
 }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {
+popupListbox: ({
+$: ComponentInternalInstance;
+$data: {};
+$props: {
+readonly isOpen: boolean;
+readonly anchor: HTMLElement | null;
+readonly numOfItems: number;
+readonly itemHeight?: number | undefined;
+readonly activeElement?: HTMLElement | undefined;
+readonly onClose?: (() => any) | undefined;
+} & VNodeProps & AllowedComponentProps & ComponentCustomProps;
+$attrs: {
+[x: string]: unknown;
+};
+$refs: {
+[x: string]: unknown;
+} & {
+popup: HTMLDivElement;
+wrapper: HTMLDivElement;
+content: HTMLDivElement;
+};
+$slots: Readonly<{
+[name: string]: Slot<any> | undefined;
+}>;
+$root: ComponentPublicInstance | null;
+$parent: ComponentPublicInstance | null;
+$host: Element | null;
+$emit: (event: "close") => void;
+$el: any;
+$options: ComponentOptionsBase<Readonly<IPopupListboxProps> & Readonly<{
+onClose?: (() => any) | undefined;
+}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+close: () => any;
+}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & {
+beforeCreate?: (() => void) | (() => void)[];
+created?: (() => void) | (() => void)[];
+beforeMount?: (() => void) | (() => void)[];
+mounted?: (() => void) | (() => void)[];
+beforeUpdate?: (() => void) | (() => void)[];
+updated?: (() => void) | (() => void)[];
+activated?: (() => void) | (() => void)[];
+deactivated?: (() => void) | (() => void)[];
+beforeDestroy?: (() => void) | (() => void)[];
+beforeUnmount?: (() => void) | (() => void)[];
+destroyed?: (() => void) | (() => void)[];
+unmounted?: (() => void) | (() => void)[];
+renderTracked?: ((e: DebuggerEvent) => void) | ((e: DebuggerEvent) => void)[];
+renderTriggered?: ((e: DebuggerEvent) => void) | ((e: DebuggerEvent) => void)[];
+errorCaptured?: ((err: unknown, instance: ComponentPublicInstance | null, info: string) => boolean | void) | ((err: unknown, instance: ComponentPublicInstance | null, info: string) => boolean | void)[];
+};
+$forceUpdate: () => void;
+$nextTick: nextTick;
+$watch<T extends string | ((...args: any) => any)>(source: T, cb: T extends (...args: any) => infer R ? (...args: [R, R, OnCleanup]) => any : (...args: [any, any, OnCleanup]) => any, options?: WatchOptions): WatchStopHandle;
+} & Readonly<{}> & Omit<Readonly<IPopupListboxProps> & Readonly<{
+onClose?: (() => any) | undefined;
+}>, never> & ShallowUnwrapRef<    {}> & {} & ComponentCustomProperties & {} & {
+$slots: {
+default?(_: {}): any;
+};
+}) | null;
 listboxNode: HTMLUListElement;
 }, HTMLDivElement>;
 IComboboxToggleButton: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
@@ -14826,6 +15620,66 @@ inputNode: HTMLInputElement;
 onClose?: (() => any) | undefined;
 onSelect?: ((option: string) => any) | undefined;
 }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {
+popupListbox: ({
+$: ComponentInternalInstance;
+$data: {};
+$props: {
+readonly isOpen: boolean;
+readonly anchor: HTMLElement | null;
+readonly numOfItems: number;
+readonly itemHeight?: number | undefined;
+readonly activeElement?: HTMLElement | undefined;
+readonly onClose?: (() => any) | undefined;
+} & VNodeProps & AllowedComponentProps & ComponentCustomProps;
+$attrs: {
+[x: string]: unknown;
+};
+$refs: {
+[x: string]: unknown;
+} & {
+popup: HTMLDivElement;
+wrapper: HTMLDivElement;
+content: HTMLDivElement;
+};
+$slots: Readonly<{
+[name: string]: Slot<any> | undefined;
+}>;
+$root: ComponentPublicInstance | null;
+$parent: ComponentPublicInstance | null;
+$host: Element | null;
+$emit: (event: "close") => void;
+$el: any;
+$options: ComponentOptionsBase<Readonly<IPopupListboxProps> & Readonly<{
+onClose?: (() => any) | undefined;
+}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+close: () => any;
+}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & {
+beforeCreate?: (() => void) | (() => void)[];
+created?: (() => void) | (() => void)[];
+beforeMount?: (() => void) | (() => void)[];
+mounted?: (() => void) | (() => void)[];
+beforeUpdate?: (() => void) | (() => void)[];
+updated?: (() => void) | (() => void)[];
+activated?: (() => void) | (() => void)[];
+deactivated?: (() => void) | (() => void)[];
+beforeDestroy?: (() => void) | (() => void)[];
+beforeUnmount?: (() => void) | (() => void)[];
+destroyed?: (() => void) | (() => void)[];
+unmounted?: (() => void) | (() => void)[];
+renderTracked?: ((e: DebuggerEvent) => void) | ((e: DebuggerEvent) => void)[];
+renderTriggered?: ((e: DebuggerEvent) => void) | ((e: DebuggerEvent) => void)[];
+errorCaptured?: ((err: unknown, instance: ComponentPublicInstance | null, info: string) => boolean | void) | ((err: unknown, instance: ComponentPublicInstance | null, info: string) => boolean | void)[];
+};
+$forceUpdate: () => void;
+$nextTick: nextTick;
+$watch<T extends string | ((...args: any) => any)>(source: T, cb: T extends (...args: any) => infer R ? (...args: [R, R, OnCleanup]) => any : (...args: [any, any, OnCleanup]) => any, options?: WatchOptions): WatchStopHandle;
+} & Readonly<{}> & Omit<Readonly<IPopupListboxProps> & Readonly<{
+onClose?: (() => any) | undefined;
+}>, never> & ShallowUnwrapRef<    {}> & {} & ComponentCustomProperties & {} & {
+$slots: {
+default?(_: {}): any;
+};
+}) | null;
 listboxNode: HTMLUListElement;
 }, HTMLDivElement>;
 IComboboxToggleButton: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
@@ -15826,6 +16680,66 @@ inputNode: HTMLInputElement;
 onClose?: (() => any) | undefined;
 onSelect?: ((option: string) => any) | undefined;
 }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {
+popupListbox: ({
+$: ComponentInternalInstance;
+$data: {};
+$props: {
+readonly isOpen: boolean;
+readonly anchor: HTMLElement | null;
+readonly numOfItems: number;
+readonly itemHeight?: number | undefined;
+readonly activeElement?: HTMLElement | undefined;
+readonly onClose?: (() => any) | undefined;
+} & VNodeProps & AllowedComponentProps & ComponentCustomProps;
+$attrs: {
+[x: string]: unknown;
+};
+$refs: {
+[x: string]: unknown;
+} & {
+popup: HTMLDivElement;
+wrapper: HTMLDivElement;
+content: HTMLDivElement;
+};
+$slots: Readonly<{
+[name: string]: Slot<any> | undefined;
+}>;
+$root: ComponentPublicInstance | null;
+$parent: ComponentPublicInstance | null;
+$host: Element | null;
+$emit: (event: "close") => void;
+$el: any;
+$options: ComponentOptionsBase<Readonly<IPopupListboxProps> & Readonly<{
+onClose?: (() => any) | undefined;
+}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+close: () => any;
+}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & {
+beforeCreate?: (() => void) | (() => void)[];
+created?: (() => void) | (() => void)[];
+beforeMount?: (() => void) | (() => void)[];
+mounted?: (() => void) | (() => void)[];
+beforeUpdate?: (() => void) | (() => void)[];
+updated?: (() => void) | (() => void)[];
+activated?: (() => void) | (() => void)[];
+deactivated?: (() => void) | (() => void)[];
+beforeDestroy?: (() => void) | (() => void)[];
+beforeUnmount?: (() => void) | (() => void)[];
+destroyed?: (() => void) | (() => void)[];
+unmounted?: (() => void) | (() => void)[];
+renderTracked?: ((e: DebuggerEvent) => void) | ((e: DebuggerEvent) => void)[];
+renderTriggered?: ((e: DebuggerEvent) => void) | ((e: DebuggerEvent) => void)[];
+errorCaptured?: ((err: unknown, instance: ComponentPublicInstance | null, info: string) => boolean | void) | ((err: unknown, instance: ComponentPublicInstance | null, info: string) => boolean | void)[];
+};
+$forceUpdate: () => void;
+$nextTick: nextTick;
+$watch<T extends string | ((...args: any) => any)>(source: T, cb: T extends (...args: any) => infer R ? (...args: [R, R, OnCleanup]) => any : (...args: [any, any, OnCleanup]) => any, options?: WatchOptions): WatchStopHandle;
+} & Readonly<{}> & Omit<Readonly<IPopupListboxProps> & Readonly<{
+onClose?: (() => any) | undefined;
+}>, never> & ShallowUnwrapRef<    {}> & {} & ComponentCustomProperties & {} & {
+$slots: {
+default?(_: {}): any;
+};
+}) | null;
 listboxNode: HTMLUListElement;
 }, HTMLDivElement>;
 IComboboxToggleButton: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
@@ -16808,6 +17722,66 @@ inputNode: HTMLInputElement;
 onClose?: (() => any) | undefined;
 onSelect?: ((option: string) => any) | undefined;
 }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {
+popupListbox: ({
+$: ComponentInternalInstance;
+$data: {};
+$props: {
+readonly isOpen: boolean;
+readonly anchor: HTMLElement | null;
+readonly numOfItems: number;
+readonly itemHeight?: number | undefined;
+readonly activeElement?: HTMLElement | undefined;
+readonly onClose?: (() => any) | undefined;
+} & VNodeProps & AllowedComponentProps & ComponentCustomProps;
+$attrs: {
+[x: string]: unknown;
+};
+$refs: {
+[x: string]: unknown;
+} & {
+popup: HTMLDivElement;
+wrapper: HTMLDivElement;
+content: HTMLDivElement;
+};
+$slots: Readonly<{
+[name: string]: Slot<any> | undefined;
+}>;
+$root: ComponentPublicInstance | null;
+$parent: ComponentPublicInstance | null;
+$host: Element | null;
+$emit: (event: "close") => void;
+$el: any;
+$options: ComponentOptionsBase<Readonly<IPopupListboxProps> & Readonly<{
+onClose?: (() => any) | undefined;
+}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+close: () => any;
+}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & {
+beforeCreate?: (() => void) | (() => void)[];
+created?: (() => void) | (() => void)[];
+beforeMount?: (() => void) | (() => void)[];
+mounted?: (() => void) | (() => void)[];
+beforeUpdate?: (() => void) | (() => void)[];
+updated?: (() => void) | (() => void)[];
+activated?: (() => void) | (() => void)[];
+deactivated?: (() => void) | (() => void)[];
+beforeDestroy?: (() => void) | (() => void)[];
+beforeUnmount?: (() => void) | (() => void)[];
+destroyed?: (() => void) | (() => void)[];
+unmounted?: (() => void) | (() => void)[];
+renderTracked?: ((e: DebuggerEvent) => void) | ((e: DebuggerEvent) => void)[];
+renderTriggered?: ((e: DebuggerEvent) => void) | ((e: DebuggerEvent) => void)[];
+errorCaptured?: ((err: unknown, instance: ComponentPublicInstance | null, info: string) => boolean | void) | ((err: unknown, instance: ComponentPublicInstance | null, info: string) => boolean | void)[];
+};
+$forceUpdate: () => void;
+$nextTick: nextTick;
+$watch<T extends string | ((...args: any) => any)>(source: T, cb: T extends (...args: any) => infer R ? (...args: [R, R, OnCleanup]) => any : (...args: [any, any, OnCleanup]) => any, options?: WatchOptions): WatchStopHandle;
+} & Readonly<{}> & Omit<Readonly<IPopupListboxProps> & Readonly<{
+onClose?: (() => any) | undefined;
+}>, never> & ShallowUnwrapRef<    {}> & {} & ComponentCustomProperties & {} & {
+$slots: {
+default?(_: {}): any;
+};
+}) | null;
 listboxNode: HTMLUListElement;
 }, HTMLDivElement>;
 IComboboxToggleButton: DefineComponent<    {}, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
@@ -18162,6 +19136,66 @@ select: (option: string) => any;
 onClose?: (() => any) | undefined;
 onSelect?: ((option: string) => any) | undefined;
 }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {
+popupListbox: ({
+$: ComponentInternalInstance;
+$data: {};
+$props: {
+readonly isOpen: boolean;
+readonly anchor: HTMLElement | null;
+readonly numOfItems: number;
+readonly itemHeight?: number | undefined;
+readonly activeElement?: HTMLElement | undefined;
+readonly onClose?: (() => any) | undefined;
+} & VNodeProps & AllowedComponentProps & ComponentCustomProps;
+$attrs: {
+[x: string]: unknown;
+};
+$refs: {
+[x: string]: unknown;
+} & {
+popup: HTMLDivElement;
+wrapper: HTMLDivElement;
+content: HTMLDivElement;
+};
+$slots: Readonly<{
+[name: string]: Slot<any> | undefined;
+}>;
+$root: ComponentPublicInstance | null;
+$parent: ComponentPublicInstance | null;
+$host: Element | null;
+$emit: (event: "close") => void;
+$el: any;
+$options: ComponentOptionsBase<Readonly<IPopupListboxProps> & Readonly<{
+onClose?: (() => any) | undefined;
+}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+close: () => any;
+}, string, {}, {}, string, {}, GlobalComponents, GlobalDirectives, string, ComponentProvideOptions> & {
+beforeCreate?: (() => void) | (() => void)[];
+created?: (() => void) | (() => void)[];
+beforeMount?: (() => void) | (() => void)[];
+mounted?: (() => void) | (() => void)[];
+beforeUpdate?: (() => void) | (() => void)[];
+updated?: (() => void) | (() => void)[];
+activated?: (() => void) | (() => void)[];
+deactivated?: (() => void) | (() => void)[];
+beforeDestroy?: (() => void) | (() => void)[];
+beforeUnmount?: (() => void) | (() => void)[];
+destroyed?: (() => void) | (() => void)[];
+unmounted?: (() => void) | (() => void)[];
+renderTracked?: ((e: DebuggerEvent) => void) | ((e: DebuggerEvent) => void)[];
+renderTriggered?: ((e: DebuggerEvent) => void) | ((e: DebuggerEvent) => void)[];
+errorCaptured?: ((err: unknown, instance: ComponentPublicInstance | null, info: string) => boolean | void) | ((err: unknown, instance: ComponentPublicInstance | null, info: string) => boolean | void)[];
+};
+$forceUpdate: () => void;
+$nextTick: typeof nextTick;
+$watch<T extends string | ((...args: any) => any)>(source: T, cb: T extends (...args: any) => infer R ? (...args: [R, R, OnCleanup]) => any : (...args: [any, any, OnCleanup]) => any, options?: WatchOptions): WatchStopHandle;
+} & Readonly<{}> & Omit<Readonly<IPopupListboxProps> & Readonly<{
+onClose?: (() => any) | undefined;
+}>, never> & ShallowUnwrapRef<    {}> & {} & ComponentCustomProperties & {} & {
+$slots: {
+default?(_: {}): any;
+};
+}) | null;
 listboxNode: HTMLUListElement;
 }, HTMLDivElement>;
 
@@ -19101,6 +20135,10 @@ export interface VueLike {
     // (undocumented)
     focusTarget?: VueLike | Element | Array<VueLike | Element> | null;
 }
+
+// Warnings were encountered during analysis:
+//
+// src/components/FTextField/extendedTextFields/FBankAccountNumberTextField/FBankAccountNumberTextField.vue:63:79 - (ae-forgotten-export) The symbol "IPopupListboxProps" needs to be exported by the entry point index.d.ts
 
 // (No @packageDocumentation comment for this package)
 

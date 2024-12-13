@@ -3,6 +3,7 @@ import { watchEffect, useTemplateRef, nextTick, computed, onUnmounted, watch } f
 import { debounce } from "@fkui/logic";
 import { useEventListener } from "../../composables";
 import { config } from "../../config";
+import { getAbsolutePosition } from "../../utils";
 import { computeListboxRect } from "./compute-listbox-rect";
 
 export interface IPopupListboxProps {
@@ -22,6 +23,7 @@ const teleportDisabled = false;
 const popupClasses = ["popup", "popup--overlay"];
 const teleportTarget = computed(() => config.popupTarget ?? config.teleportTarget);
 let guessedItemHeight: number | undefined = undefined;
+let verticalSpacing: number | undefined = undefined;
 
 useEventListener(anchor, "keyup", onKeyEsc);
 
@@ -109,19 +111,26 @@ async function calculatePosition(): Promise<void> {
         }
         contentItemHeigth = guessedItemHeight;
     }
+    if (verticalSpacing === undefined) {
+        const absWrapper = getAbsolutePosition(wrapperElement);
+        const marginTotal = absWrapper.y * 2; // margin-top + margin-bottom
+        verticalSpacing = Math.ceil(absWrapper.height - contentItemHeigth * numOfItems) + marginTotal;
+    }
 
     wrapperElement.style.overflowY = "auto";
-    wrapperElement.style.left = `0px`;
+    wrapperElement.style.overflowX = "hidden";
+    wrapperElement.style.left = "0px";
 
-    const rect = computeListboxRect(anchor, { itemHeight: contentItemHeigth, numOfItems });
+    const rect = computeListboxRect(anchor, { itemHeight: contentItemHeigth, numOfItems, verticalSpacing });
     if (rect) {
         const { top, left, width, height } = rect;
         const offsetRect = wrapperElement?.offsetParent?.getBoundingClientRect();
         const offsetLeft = offsetRect?.x ?? 0;
         wrapperElement.style.top = `${top}px`;
         wrapperElement.style.left = `${left - offsetLeft}px`;
-        wrapperElement.style.minWidth = `${width}px`;
+        wrapperElement.style.width = `${width}px`;
         contentWrapper.style.maxHeight = `${height}px`;
+        contentWrapper.style.width = `${width}px`;
     }
 }
 </script>
