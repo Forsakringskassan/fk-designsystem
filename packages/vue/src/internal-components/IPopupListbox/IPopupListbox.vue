@@ -33,6 +33,11 @@ watchEffect(() => {
             activeElement.offsetTop -
             (wrapper.value.getBoundingClientRect().height - activeElement.getBoundingClientRect().height) / 2;
 
+        if (!isElementInsideVieport(wrapper.value)) {
+            // Scroll wrapper into viewport
+            wrapper.value.scrollIntoView({ behavior: "instant", block: "nearest" });
+        }
+        // Scroll activeElement to center of wrapper.
         wrapper.value.scrollTo({ top: centerPosition, behavior: "instant" });
     }
 });
@@ -45,6 +50,17 @@ function addListeners(): void {
 function removeListeners(): void {
     document.removeEventListener("click", onDocumentClickHandler);
     window.removeEventListener("resize", debounce(onResize, 100));
+}
+
+function isElementInsideVieport(element: Element): boolean {
+    const rect = element.getBoundingClientRect();
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+    const windowWidth = window.innerWidth || document.documentElement.clientWidth;
+
+    const insideX = rect.left >= 0 && rect.left + rect.width <= windowWidth;
+    const insideY = rect.top >= 0 && rect.top + rect.height <= windowHeight;
+
+    return insideX && insideY;
 }
 
 watchEffect(() => {
