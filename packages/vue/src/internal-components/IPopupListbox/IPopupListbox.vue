@@ -10,9 +10,10 @@ export interface IPopupListboxProps {
     anchor: HTMLElement | null;
     numOfItems: number;
     itemHeight?: number;
+    activeElement?: HTMLElement | undefined;
 }
 
-const { isOpen, anchor, numOfItems, itemHeight } = defineProps<IPopupListboxProps>();
+const { isOpen, anchor, numOfItems, itemHeight, activeElement } = defineProps<IPopupListboxProps>();
 const emit = defineEmits<{ close: [] }>();
 const wrapper = useTemplateRef("wrapper");
 const content = useTemplateRef("content");
@@ -23,6 +24,16 @@ const teleportTarget = computed(() => config.popupTarget ?? config.teleportTarge
 let guessedItemHeight: number | undefined = undefined;
 
 useEventListener(anchor, "keyup", onKeyEsc);
+
+watchEffect(() => {
+    if (wrapper.value && activeElement !== undefined) {
+        const centerPosition =
+            activeElement.offsetTop -
+            (wrapper.value.getBoundingClientRect().height - activeElement.getBoundingClientRect().height) / 2;
+
+        wrapper.value.scrollTo({ top: centerPosition, behavior: "instant" });
+    }
+});
 
 function addListeners(): void {
     document.addEventListener("click", onDocumentClickHandler);

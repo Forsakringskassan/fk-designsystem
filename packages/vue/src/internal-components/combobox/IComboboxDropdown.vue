@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { nextTick, useTemplateRef, watchEffect } from "vue";
+import { nextTick, ref, type Ref, useTemplateRef, watchEffect } from "vue";
 import { IPopupListbox } from "../IPopupListbox";
 
 const { id, isOpen, options, activeOption, activeOptionId, inputNode } = defineProps<{
@@ -14,6 +14,7 @@ const { id, isOpen, options, activeOption, activeOptionId, inputNode } = defineP
 const emit = defineEmits<{ select: [option: string]; close: [] }>();
 
 const listboxNode = useTemplateRef("listboxNode");
+const activeElement: Ref<HTMLElement | undefined> = ref();
 
 function isOptionActive(item: string): boolean {
     return item === activeOption;
@@ -30,14 +31,8 @@ function onListboxClose(): void {
 watchEffect(async () => {
     if (activeOption !== null) {
         await nextTick();
-        const activeOptionNode = listboxNode.value?.querySelector(`#${activeOptionId}`);
-
-        if (activeOptionNode) {
-            activeOptionNode.scrollIntoView({
-                behavior: "instant",
-                block: "center",
-            });
-        }
+        const activeOptionNode = listboxNode.value?.querySelector<HTMLElement>(`#${activeOptionId}`);
+        activeElement.value = activeOptionNode ?? undefined;
     }
 });
 </script>
@@ -48,6 +43,7 @@ watchEffect(async () => {
             :is-open
             :anchor="inputNode"
             :num-of-items="options.length"
+            :active-element
             class="combobox__listbox"
             @close="onListboxClose"
         >

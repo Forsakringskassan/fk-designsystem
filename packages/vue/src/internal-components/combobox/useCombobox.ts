@@ -267,6 +267,8 @@ export function useCombobox(
                         flag = true;
                     }
                     close();
+                } else {
+                    openSelected();
                 }
 
                 break;
