@@ -42,7 +42,14 @@ export { FExpandablePanel } from "./FExpandablePanel";
 export { FExpandableParagraph } from "./FExpandableParagraph";
 export { FFieldset } from "./FFieldset";
 export { type FFileItemIconName, FFileItem } from "./FFileItem";
-export { FFileSelector } from "./FFileSelector";
+export * from "./FFileSelector";
+export {
+    type LayoutDefinition,
+    type LayoutAreaDefinition,
+    FPageLayout,
+    registerLayout,
+} from "./FPageLayout";
+export * from "./FSortFilterDataset";
 export {
     type ComponentReferences,
     type ComponentValueTypes,
