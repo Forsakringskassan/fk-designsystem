@@ -52,3 +52,7 @@
         display: none;
     }
 }
+
+::slotted(.page-layout__slot) {
+    display: contents;
+}
