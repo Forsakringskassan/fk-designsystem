@@ -88,7 +88,11 @@ export class PageLayout extends HTMLElement {
         for (const slot of this.#slotNames) {
             const existing = this.#elements[slot];
             const element = existing ?? document.createElement("div");
-            const { attach, direction } = layout.areas[slot];
+            const area = layout.areas[slot];
+            if (!area) {
+                continue;
+            }
+            const { attach, direction } = area;
             element.className = "";
             element.classList.add("page-layout__area");
             element.setAttribute("part", ["area", slot].join(" "));
