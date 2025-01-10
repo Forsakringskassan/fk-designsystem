@@ -1,5 +1,5 @@
 ---
-title: FPageLayout
+title: Applikationsmall
 status: Produktionsklar
 layout: component
 component: FPageLayout
@@ -13,6 +13,10 @@ component: FPageLayout
 	aspect-ratio: 16 / 9;
 }
 </style>
+
+Applikationsmallen erbjuder olika layouter för att dela upp en applikation som täcker hela skärmen i ytor.
+Du kan utgå från en av fyra standardlayouter eller skapa en egen.
+Mallen styr hur ytorna placeras i förhållande till varandra. Storleken på en yta styrs av vad som placeras i ytan.
 
 ## Användning
 
