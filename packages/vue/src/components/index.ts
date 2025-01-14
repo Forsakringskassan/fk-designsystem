@@ -43,6 +43,7 @@ export { FExpandableParagraph } from "./FExpandableParagraph";
 export { FFieldset } from "./FFieldset";
 export { type FFileItemIconName, FFileItem } from "./FFileItem";
 export * from "./FFileSelector";
+export { FPageExpandablePanel } from "./FPageExpandablePanel";
 export {
     type LayoutDefinition,
     type LayoutAreaDefinition,
