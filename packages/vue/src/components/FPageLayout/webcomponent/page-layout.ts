@@ -1,3 +1,8 @@
+import {
+    VAR_NAME_AREA,
+    VAR_NAME_ATTACH,
+    VAR_NAME_DIRECTION,
+} from "../constants";
 import "../default-layout";
 import { defineLayout, type LayoutDefinition } from "../define-layout";
 import { getLayout } from "../layout-register";
@@ -98,9 +103,9 @@ export class PageLayout extends HTMLElement {
             element.setAttribute("part", ["area", slot].join(" "));
             element.setAttribute("data-direction", direction);
             element.style.setProperty("grid-area", slot);
-            element.style.setProperty("--f-layout-area", `"${slot}"`);
-            element.style.setProperty("--f-layout-attach", `"${attach}"`);
-            element.style.setProperty("--f-layout-direction", `"${direction}"`);
+            element.style.setProperty(VAR_NAME_AREA, `"${slot}"`);
+            element.style.setProperty(VAR_NAME_ATTACH, `"${attach}"`);
+            element.style.setProperty(VAR_NAME_DIRECTION, `"${direction}"`);
             if (!existing) {
                 const slotElement = document.createElement("slot");
                 slotElement.name = slot;
