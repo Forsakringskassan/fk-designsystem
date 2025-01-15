@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { computed, ref } from "vue";
+import { computed, ref, useTemplateRef } from "vue";
 import { FIcon } from "../FIcon";
 import { useAreaData } from "../FPageLayout/use-area-data";
 import { usePageWidth } from "./use-page-width";
 
-const { attach } = useAreaData();
+const root = useTemplateRef("root");
+const { attach } = useAreaData(root);
 
 const { isDesktop } = usePageWidth({
     onModeChange() {
@@ -34,7 +35,7 @@ function onToggle(): void {
 </script>
 
 <template>
-    <div class="panel__wrapper">
+    <div ref="root" class="panel__wrapper">
         <div class="panel panel--expandable" :class="[expandedClass, attachClass]">
             <div class="panel__header">
                 <div v-if="isOpen" class="panel__title">
