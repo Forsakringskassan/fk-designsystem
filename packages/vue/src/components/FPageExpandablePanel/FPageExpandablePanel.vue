@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { computed, ref, useTemplateRef, watchEffect } from "vue";
+import { computed, ref } from "vue";
 import { FIcon } from "../FIcon";
+import { useAreaData } from "../FPageLayout/use-area-data";
 import { usePageWidth } from "./use-page-width";
 
-const root = useTemplateRef("root");
-const attach = ref<"left" | "right" | null>(null);
+const { attach } = useAreaData();
 
 const { isDesktop } = usePageWidth({
     onModeChange() {
@@ -28,23 +28,13 @@ const attachClass = computed(() => {
     return undefined;
 });
 
-watchEffect(() => {
-    const element = root.value;
-    if (element) {
-        const value = getComputedStyle(element).getPropertyValue("--f-layout-attach");
-        if (value !== "") {
-            attach.value = JSON.parse(value);
-        }
-    }
-});
-
 function onToggle(): void {
     isOpen.value = !isOpen.value;
 }
 </script>
 
 <template>
-    <div ref="root" class="panel__wrapper">
+    <div class="panel__wrapper">
         <div class="panel panel--expandable" :class="[expandedClass, attachClass]">
             <div class="panel__header">
                 <div v-if="isOpen" class="panel__title">
