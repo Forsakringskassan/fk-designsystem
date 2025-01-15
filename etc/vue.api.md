@@ -19051,8 +19051,10 @@ export function itemEquals<T extends object, K extends keyof T>(item1: ListItem<
 
 // @public (undocumented)
 export interface LayoutAreaDefinition {
-    attach: "none" | "left" | "right";
-    direction: "column" | "row";
+    // Warning: (ae-forgotten-export) The symbol "LayoutAreaAttach" needs to be exported by the entry point index.d.ts
+    attach: LayoutAreaAttach;
+    // Warning: (ae-forgotten-export) The symbol "LayoutAreaDirection" needs to be exported by the entry point index.d.ts
+    direction: LayoutAreaDirection;
 }
 
 // @public
