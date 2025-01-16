@@ -1,6 +1,6 @@
 import { setLayout } from "./layout-register";
 
-export type LayoutAreaAttach = "none" | "left" | "right";
+export type LayoutAreaAttachPanel = "none" | "left" | "right";
 
 export type LayoutAreaDirection = "column" | "row";
 
@@ -9,7 +9,7 @@ export type LayoutAreaDirection = "column" | "row";
  */
 export interface LayoutAreaDefinition {
     /** Where panels will attach to */
-    attach: LayoutAreaAttach;
+    attachPanel: LayoutAreaAttachPanel;
 
     /** What direction content of the area will appear (mapped to `flex-direction`) */
     direction: LayoutAreaDirection;

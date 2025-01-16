@@ -4,15 +4,15 @@ registerLayout({
     name: "simple",
     areas: {
         header: {
-            attach: "none",
+            attachPanel: "none",
             direction: "column",
         },
         content: {
-            attach: "none",
+            attachPanel: "none",
             direction: "column",
         },
         footer: {
-            attach: "none",
+            attachPanel: "none",
             direction: "column",
         },
     },
@@ -22,19 +22,19 @@ registerLayout({
     name: "left-panel",
     areas: {
         header: {
-            attach: "none",
+            attachPanel: "none",
             direction: "column",
         },
         left: {
-            attach: "left",
+            attachPanel: "left",
             direction: "column",
         },
         content: {
-            attach: "none",
+            attachPanel: "none",
             direction: "column",
         },
         footer: {
-            attach: "none",
+            attachPanel: "none",
             direction: "column",
         },
     },
@@ -44,19 +44,19 @@ registerLayout({
     name: "right-panel",
     areas: {
         header: {
-            attach: "none",
+            attachPanel: "none",
             direction: "column",
         },
         right: {
-            attach: "right",
+            attachPanel: "right",
             direction: "column",
         },
         content: {
-            attach: "none",
+            attachPanel: "none",
             direction: "column",
         },
         footer: {
-            attach: "none",
+            attachPanel: "none",
             direction: "column",
         },
     },
@@ -66,23 +66,23 @@ registerLayout({
     name: "three-column",
     areas: {
         header: {
-            attach: "none",
+            attachPanel: "none",
             direction: "column",
         },
         left: {
-            attach: "left",
+            attachPanel: "left",
             direction: "column",
         },
         right: {
-            attach: "right",
+            attachPanel: "right",
             direction: "column",
         },
         content: {
-            attach: "none",
+            attachPanel: "none",
             direction: "column",
         },
         footer: {
-            attach: "none",
+            attachPanel: "none",
             direction: "column",
         },
     },

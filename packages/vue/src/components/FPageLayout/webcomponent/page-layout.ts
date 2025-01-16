@@ -1,6 +1,6 @@
 import {
     VAR_NAME_AREA,
-    VAR_NAME_ATTACH,
+    VAR_NAME_ATTACH_PANEL,
     VAR_NAME_DIRECTION,
 } from "../constants";
 import "../default-layout";
@@ -97,14 +97,14 @@ export class PageLayout extends HTMLElement {
             if (!area) {
                 continue;
             }
-            const { attach, direction } = area;
+            const { attachPanel: attach, direction } = area;
             element.className = "";
             element.classList.add("page-layout__area");
             element.setAttribute("part", ["area", slot].join(" "));
             element.setAttribute("data-direction", direction);
             element.style.setProperty("grid-area", slot);
             element.style.setProperty(VAR_NAME_AREA, `"${slot}"`);
-            element.style.setProperty(VAR_NAME_ATTACH, `"${attach}"`);
+            element.style.setProperty(VAR_NAME_ATTACH_PANEL, `"${attach}"`);
             element.style.setProperty(VAR_NAME_DIRECTION, `"${direction}"`);
             if (!existing) {
                 const slotElement = document.createElement("slot");

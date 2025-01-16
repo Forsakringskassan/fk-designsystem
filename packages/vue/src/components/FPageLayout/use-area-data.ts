@@ -1,10 +1,10 @@
 import { type Ref, getCurrentInstance, onMounted, ref } from "vue";
-import { LayoutAreaAttach, LayoutAreaDirection } from "./define-layout";
+import { LayoutAreaAttachPanel, LayoutAreaDirection } from "./define-layout";
 import { VAR_NAME_AREA, VAR_NAME_DIRECTION } from "./constants";
 
 export interface UseAreaData {
     readonly area: Readonly<Ref<string | null>>;
-    readonly attach: Readonly<Ref<LayoutAreaAttach | null>>;
+    readonly attach: Readonly<Ref<LayoutAreaAttachPanel | null>>;
     readonly direction: Readonly<Ref<LayoutAreaDirection | null>>;
 }
 
@@ -19,7 +19,7 @@ function getProperty<T>(style: CSSStyleDeclaration, key: string): T | null {
 
 export function useAreaData(): UseAreaData {
     const area = ref<string | null>(null);
-    const attach = ref<LayoutAreaAttach | null>(null);
+    const attach = ref<LayoutAreaAttachPanel | null>(null);
     const direction = ref<LayoutAreaDirection | null>(null);
 
     onMounted(() => {

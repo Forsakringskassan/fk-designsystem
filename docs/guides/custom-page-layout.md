@@ -12,23 +12,23 @@ registerLayout({
     name: "my-custom",
     areas: {
         header: {
-            attach: "none",
+            attachPanel: "none",
             direction: "column",
         },
         toolbar: {
-            attach: "none",
+            attachPanel: "none",
             direction: "row",
         },
         sidebar: {
-            attach: "left",
+            attachPanel: "left",
             direction: "row",
         },
         content: {
-            attach: "none",
+            attachPanel: "none",
             direction: "column",
         },
         footer: {
-            attach: "none",
+            attachPanel: "none",
             direction: "column",
         },
     },
@@ -37,7 +37,7 @@ registerLayout({
 
 där:
 
-- `attach` talar om hur en panel ska fästas. Om ytan inte kan ta paneler sätter man `"none"`.
+- `attachPanel` talar om hur en panel ska fästas. Om ytan inte kan ta paneler sätter man `"none"`.
 - `direction` talar om ifall ytan flödar horisontellt eller vertikalt.
 
 Styling använder [CSS grid](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/CSS_layout/Grids) på `::part(grid name)` och kan se ut så här:
