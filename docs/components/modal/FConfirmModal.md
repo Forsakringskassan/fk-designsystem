@@ -14,6 +14,10 @@ En bekräftelsemodal har
 - en knapptext för den destruktiva handlingen, till exempel för att ta bort uppgifter
 - en knapptext för att ångra och gå tillbaka.
 
+```import
+FConfirmModalApiExample.vue
+```
+
 ## Knapparna
 
 En {@link button#sekundar_knapp sekundär knapp} används för att ångra och gå tillbaka.
@@ -28,18 +32,6 @@ På Försäkringskassan.se placeras den sekundära knappen först, följt av den
 För interna system följer vi Windows standard, det primära alternativet placeras först.
 
 Du styr den inbördes ordning som knapparna presenteras i med {@link config#referens konfiguration} i applikationen där modalen används.
-
-## Användning med template
-
-```import
-FConfirmModalExample.vue
-```
-
-## Användning med API
-
-```import
-FConfirmModalApiExample.vue
-```
 
 ## Bekräftelsemodal med tre knappar
 
