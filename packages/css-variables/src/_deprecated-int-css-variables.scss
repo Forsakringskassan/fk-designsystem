@@ -190,4 +190,9 @@ $palette-color-hav-20: #dbe0ec !default;
 
     /// Deprecated since 5.32.0
     --f-tooltip-close-button-padding: 0.5rem;
+
+    /// Deprecated since 5.46.0
+    --f-icon-color-warning: #{$palette-color-yellow-100};
+    --f-background-info: #{$palette-color-bluebell-5};
+    --f-background-warning: #{$palette-color-yellow-5};
 }
