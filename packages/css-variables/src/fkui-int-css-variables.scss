@@ -43,10 +43,7 @@ $global: true !default;
     --f-text-color-chip-hover: #{$palette-color-fk-black-100}; // chip
     --f-text-color-wizard-step-done: #{$palette-color-green-a-85}; // wizard-step
 
-    --f-text-color-button-disabled: #{$palette-color-fk-black-50};
     --f-text-color-button-standard: #{$palette-color-fk-black-100};
-    --f-text-color-button-primary: #{$palette-color-white-100};
-    --f-text-color-button-secondary: #{$palette-color-fk-black-100};
     --f-text-color-button-discrete: #{$palette-color-green-a-100};
     --f-text-color-button-discrete-disabled: #{$palette-color-fk-black-50};
     --f-text-color-button-discrete-hover: #{$palette-color-green-a-100};
@@ -55,9 +52,7 @@ $global: true !default;
     --f-text-color-button-discrete-inverted-disabled: #{$palette-color-bluebell-15};
     --f-text-color-button-tertiary: #{$palette-color-green-a-100};
     --f-text-color-button-tertiary-hover: #{$palette-color-green-a-100};
-    --f-text-color-button-tertiary-disabled: #{$palette-color-fk-black-50};
     --f-text-color-button-tertiary-inverted: #{$palette-color-white-100};
-    --f-text-color-button-tertiary-inverted-hover: #{$palette-color-fk-black-5};
     --f-text-color-button-tertiary-inverted-disabled: #{$palette-color-bluebell-15};
 
     --f-text-color-menu: #{$palette-color-fk-black-100};
@@ -130,13 +125,7 @@ $global: true !default;
     --f-background-chip-hover: #{$palette-color-green-a-5}; // chip
     --f-background-wizard-step-line: #{$palette-color-fk-black-70}; // wizard-step
 
-    --f-background-button-standard: #{$palette-color-bluebell-5};
-    --f-background-button-standard-hover: #{$palette-color-bluebell-15};
     --f-background-button-primary: #{$palette-color-green-a-100};
-    --f-background-button-primary-hover: #{$palette-color-green-a-120};
-    --f-background-button-secondary: #{$palette-color-bluebell-5};
-    --f-background-button-secondary-hover: #{$palette-color-bluebell-15};
-    --f-background-button-disabled: #{$palette-color-fk-black-5};
     --f-background-button-discrete-hover: #{$palette-color-fk-black-5};
     --f-background-button-tertiary-hover: #{$palette-color-fk-black-5};
     --f-background-sidepanel-button-tertiary-hover: #{$palette-color-fk-black-15}; //   FLeftPanel and FRightPanel
@@ -211,8 +200,6 @@ $global: true !default;
     --f-border-color-link-discrete: #{$palette-color-fk-black-50};
     --f-border-color-link-discrete-hover: #{$palette-color-bluebell-100};
 
-    --f-border-color-button-disabled: #{$palette-color-fk-black-50};
-    --f-border-color-button-standard: #{$palette-color-fk-black-50};
     --f-border-color-button-secondary: #{$palette-color-fk-black-50};
 
     --f-border-color-grid: #{$palette-color-fk-black-15}; // list, table
