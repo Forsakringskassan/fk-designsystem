@@ -104,6 +104,7 @@ Specifically, for each pageobject `.trimmedText().should(..)` should be replaced
 - For `FCheckboxFieldPageObject` replace with `.label().should(..)`.
 - For `FLabelPageObject` replace with `.el().should(..)`
 - For `FRadioFieldPageObject` replace with `.label().should(..)`.
+- For `FSelectFieldPageObject` replace with `.selectedOption().should(..)`.
 
 ### `FTooltipPageObject.content()` method
 

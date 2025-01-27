@@ -1,5 +1,4 @@
 import { type DefaultCypressChainable, type BasePageObject } from "./common";
-import "./trimmed-text";
 
 /**
  * @public

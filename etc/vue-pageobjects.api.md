@@ -615,8 +615,6 @@ export class FSelectFieldPageObject implements BasePageObject {
     selector: string;
     // (undocumented)
     tooltip: FTooltipPageObject;
-    // (undocumented)
-    trimmedText(): Cypress.Chainable<string>;
 }
 
 // @public (undocumented)
