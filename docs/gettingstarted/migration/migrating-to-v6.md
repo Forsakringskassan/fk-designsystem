@@ -88,6 +88,21 @@ If you need to dynamically enable/disable skiplink set the value to the empty st
 
 ## Pageobjects
 
+### The `trimmedText()` method
+
+The deprecated `trimmedText()` method has been removed from all pageobjects.
+
+As replacement one of the following methods can be used:
+
+- `cy.get(..).should("have.text", "...")` - assuming there is no leading or trailing whitespace the native `have.text` assertion can be used.
+- `cy.get(..).should("contain.text", "...")` - assuming you are asserting the full text content the native `contain.text` assertion can be used.
+- `cy.get(..).should("trimmedText", "...")` - third-party assertion providing the same functionallity.
+
+Specifically, for each pageobject `.trimmedText().should(..)` should be replaced with:
+
+- For `FLabelPageObject` replace with `.el().should(..)`
+- For `FRadioFieldPageObject` replace with `.label().should(..)`.
+
 ### `FTooltipPageObject.content()` method
 
 The deprecated `FTooltipPageObject.content()` method has been removed and replaced with direct methods on `FTooltipPageObject`.

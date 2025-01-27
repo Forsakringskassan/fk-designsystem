@@ -573,8 +573,6 @@ class FRadioFieldPageObject implements BasePageObject {
     select(): DefaultCypressChainable;
     // (undocumented)
     selector: string;
-    // @deprecated (undocumented)
-    trimmedText(): Cypress.Chainable<string>;
     // (undocumented)
     value(): Cypress.Chainable<string>;
 }
