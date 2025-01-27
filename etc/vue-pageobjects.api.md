@@ -60,8 +60,6 @@ export class FBadgePageObject implements BasePageObject {
     selector: string;
     // (undocumented)
     status(): Cypress.Chainable<string>;
-    // @deprecated (undocumented)
-    trimmedText(): Cypress.Chainable<string>;
 }
 
 // @public (undocumented)

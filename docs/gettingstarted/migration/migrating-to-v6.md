@@ -100,6 +100,7 @@ As replacement one of the following methods can be used:
 
 Specifically, for each pageobject `.trimmedText().should(..)` should be replaced with:
 
+- For `FBadgePageObject` replace with `.el().should(..)`.-
 - For `FCheckboxFieldPageObject` replace with `.label().should(..)`.
 - For `FLabelPageObject` replace with `.el().should(..)`
 - For `FRadioFieldPageObject` replace with `.label().should(..)`.
