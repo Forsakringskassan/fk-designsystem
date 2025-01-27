@@ -9220,13 +9220,9 @@ export interface FInteractiveTableData {
 export interface FKUIConfig {
     // (undocumented)
     buttonOrder: FKUIConfigButtonOrder;
-    // @deprecated (undocumented)
-    modalTarget: string | Element | null;
     // (undocumented)
     get popupContainer(): HTMLElement;
     set popupContainer(value: string | Element);
-    // @deprecated (undocumented)
-    popupTarget: string | Element | null;
     // (undocumented)
     production: boolean;
     // (undocumented)
