@@ -4,6 +4,12 @@ name: migrating-to-v6
 layout: article
 ---
 
+## Summary
+
+The following components have breaking changes:
+
+- `FPageHeader` - the `skipLinkHref` prop has been removed.
+
 ## FFormModal slots
 
 De deprekerade slottarna `submit-button-text` och `cancel-button-text` är borttagna och ersatta med `buttons` propen.
@@ -67,3 +73,15 @@ De deprekerade egenskaperna `FKUIConfig.modalTarget` och `FKUIConfig.popupTarget
 -config.popupTarget = "my > selector";
 +config.teleportTarget = "my > selector";
 ```
+
+## `FPageHeader` skiplink
+
+The deprecated `skipLinkHref` prop has been removed and replaced by the `skipLink` prop.
+
+```diff
+-<f-page-header skip-link skip-link-href="awesome-id">
++<f-page-header skip-link="awesome-id">
+```
+
+The `skipLink` prop used to accept a `boolean` value to enable/disable the skiplink feature but now only accepts a `string` (the id of the element to skip to).
+If you need to dynamically enable/disable skiplink set the value to the empty string `""` to disable.
