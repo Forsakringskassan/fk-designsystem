@@ -118,18 +118,13 @@ The deprecated `FTooltipPageObject.content()` method has been removed and replac
 ```
 
 ```diff
--tooltip.content().heading().text().should("have.text", "Lorem ipsum");
-+tooltip.heading().text().should("have.text", "Lorem ipsum");
+-tooltip.content().heading().should("have.text", "Lorem ipsum");
++tooltip.heading().should("have.text", "Lorem ipsum");
 ```
 
 ```diff
--tooltip.content().brodtext().text().should("have.text", "Lorem ipsum");
-+tooltip.body().text().should("have.text", "Lorem ipsum");
-```
-
-```diff
--tooltip.content().closeButtonBottom().click();
-+tooltip.closeButton().click();
+-tooltip.content().brodtext().should("have.text", "Lorem ipsum");
++tooltip.body().should("have.text", "Lorem ipsum");
 ```
 
 ::: warning Notera
