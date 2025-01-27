@@ -1,12 +1,7 @@
 ---
 title: Fieldset migreringsguide
 name: migrating-to-fieldset
-layout: pattern
-component:
-    - FRadioGroupField
-    - FCheckboxGroup
-    - FCheckboxGroupField
-    - FCheckboxField
+layout: article
 ---
 
 ## Deprekering av gruppkomponenter för radio och kryssruta
@@ -43,8 +38,6 @@ Ersätt `FRadioGroupField` med `FRadioField`.
 -<f-radio-group-field>
 +<f-radio-field>
 ```
-
-Se {@link FRadioGroupDeprecated Radioknapp (deprekerad)} för tidigare API.
 
 ### Kryssruta
 
