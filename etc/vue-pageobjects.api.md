@@ -98,8 +98,6 @@ class FCheckboxFieldPageObject implements BasePageObject {
     select(): DefaultCypressChainable;
     // (undocumented)
     selector: string;
-    // @deprecated (undocumented)
-    trimmedText(): Cypress.Chainable<string>;
     // (undocumented)
     value(): Cypress.Chainable<string>;
 }
@@ -393,7 +391,6 @@ export class FLabelPageObject implements BasePageObject {
     errorMessage(): DefaultCypressChainable;
     // (undocumented)
     selector: string;
-    trimmedText(): Cypress.Chainable<string>;
 }
 
 // @public (undocumented)
