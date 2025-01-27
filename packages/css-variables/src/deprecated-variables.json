@@ -87,5 +87,19 @@
     "--f-button-tertiary-padding",
     "--f-button-discrete-padding",
     "--f-button-discrete-black-padding",
-    "--f-button-discrete-table-column-action-padding"
+    "--f-button-discrete-table-column-action-padding",
+    "--f-text-color-button-disabled",
+    "--f-text-color-button-primary",
+    "--f-text-color-button-tertiary-disabled",
+    "--f-text-color-button-tertiary-inverted-hover",
+    "--f-background-button-standard",
+    "--f-background-button-standard-hover",
+    "--f-background-button-primary-hover",
+    "--f-background-button-secondary",
+    "--f-background-button-secondary-hover",
+    "--f-background-button-disabled",
+    "--f-border-color-button-disabled",
+    "--f-border-color-button-standard",
+    "--f-background-button-primary",
+    "--f-border-color-button-secondary"
 ]
