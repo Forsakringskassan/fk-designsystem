@@ -17,11 +17,13 @@ I din modalkomponent, om du använder någon av dessa slottar ersätt med propen
 +        label: "Submit",
 +        event: "confirm",
 +        type: "primary",
++        submitButton: true,
 +    },
 +    {
 +        label: "Cancel",
 +        event: "dismiss",
 +        type: "secondary",
++        submitButton: false,
 +    },
 +];
 +</script>

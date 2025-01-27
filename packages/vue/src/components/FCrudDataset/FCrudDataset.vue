@@ -224,11 +224,13 @@ export default defineComponent({
                     label: confirmButtonText,
                     event: "confirm",
                     type: "primary",
+                    submitButton: true,
                 },
                 {
                     label: cancelButtonText,
                     event: "dismiss",
                     type: "secondary",
+                    submitButton: false,
                 },
             ];
         },
