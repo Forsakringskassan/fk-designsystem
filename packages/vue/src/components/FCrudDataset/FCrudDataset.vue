@@ -22,6 +22,7 @@
         <f-form-modal
             :is-open="isFormModalOpen"
             :aria-close-text="$t('fkui.crud-dataset.modal.close', 'Stäng')"
+            :buttons="formModalButtons"
             :use-error-list="false"
             :before-submit="beforeSubmit"
             :before-validation="beforeValidation"
