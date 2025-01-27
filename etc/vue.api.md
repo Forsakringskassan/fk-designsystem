@@ -2919,11 +2919,6 @@ required: false;
 validator(value: string): boolean;
 default: string;
 };
-alwaysInline: {
-type: BooleanConstructor;
-required: false;
-default: boolean;
-};
 container: {
 type: PropType<HTMLElement | null | undefined>;
 required: false;
@@ -2982,11 +2977,6 @@ required: false;
 validator(value: string): boolean;
 default: string;
 };
-alwaysInline: {
-type: BooleanConstructor;
-required: false;
-default: boolean;
-};
 container: {
 type: PropType<HTMLElement | null | undefined>;
 required: false;
@@ -3019,7 +3009,6 @@ onOpen?: ((...args: any[]) => any) | undefined;
 anchor: HTMLElement | null | undefined;
 viewport: HTMLElement;
 inline: "auto" | "always" | "never";
-alwaysInline: boolean;
 container: HTMLElement | null | undefined;
 keyboardTrap: boolean;
 focusElement: () => HTMLElement | null;
@@ -3230,8 +3219,7 @@ required: false;
 default: string;
 };
 }>, {}, FCrudDatasetData, {
-confirmButtonText(): string;
-cancelButtonText(): string;
+formModalButtons(): FModalButtonDescriptor[];
 confirmDeleteButtons(): FModalButtonDescriptor[];
 hasAddSlot(): boolean;
 hasDeleteSlot(): boolean;
@@ -3366,7 +3354,6 @@ default: () => FModalButtonDescriptor[];
 };
 }>, {}, {}, {
 preparedButtons(): FModalButton[];
-hasDeprecatedSlots(): boolean;
 }, {
 onClose(): void;
 onSubmit(): Promise<void>;
@@ -4913,12 +4900,12 @@ onChange?: ((...args: any[]) => any) | undefined;
 "onUpdate:modelValue"?: ((...args: any[]) => any) | undefined;
 }>, {
 modelValue: string;
-alwaysInline: boolean;
 disabled: boolean;
 labelWidth: string;
 inputWidth: string;
 initialMonth: FDate | undefined;
 highlightToday: boolean;
+alwaysInline: boolean;
 }, {}, {
 FCalendar: DefineComponent<ExtractPropTypes<    {
 modelValue: {
@@ -5174,11 +5161,6 @@ required: false;
 validator(value: string): boolean;
 default: string;
 };
-alwaysInline: {
-type: BooleanConstructor;
-required: false;
-default: boolean;
-};
 container: {
 type: PropType<HTMLElement | null | undefined>;
 required: false;
@@ -5237,11 +5219,6 @@ required: false;
 validator(value: string): boolean;
 default: string;
 };
-alwaysInline: {
-type: BooleanConstructor;
-required: false;
-default: boolean;
-};
 container: {
 type: PropType<HTMLElement | null | undefined>;
 required: false;
@@ -5274,7 +5251,6 @@ onOpen?: ((...args: any[]) => any) | undefined;
 anchor: HTMLElement | null | undefined;
 viewport: HTMLElement;
 inline: "auto" | "always" | "never";
-alwaysInline: boolean;
 container: HTMLElement | null | undefined;
 keyboardTrap: boolean;
 focusElement: () => HTMLElement | null;
@@ -7895,7 +7871,6 @@ default: () => FModalButtonDescriptor[];
 };
 }>, {}, {}, {
 preparedButtons(): FModalButton[];
-hasDeprecatedSlots(): boolean;
 }, {
 onClose(): void;
 onSubmit(): Promise<void>;
@@ -9223,13 +9198,9 @@ export interface FInteractiveTableData {
 export interface FKUIConfig {
     // (undocumented)
     buttonOrder: FKUIConfigButtonOrder;
-    // @deprecated (undocumented)
-    modalTarget: string | Element | null;
     // (undocumented)
     get popupContainer(): HTMLElement;
     set popupContainer(value: string | Element);
-    // @deprecated (undocumented)
-    popupTarget: string | Element | null;
     // (undocumented)
     production: boolean;
     // (undocumented)
@@ -10492,11 +10463,6 @@ required: false;
 validator(value: string): boolean;
 default: string;
 };
-alwaysInline: {
-type: BooleanConstructor;
-required: false;
-default: boolean;
-};
 container: {
 type: PropType<HTMLElement | null | undefined>;
 required: false;
@@ -10555,11 +10521,6 @@ required: false;
 validator(value: string): boolean;
 default: string;
 };
-alwaysInline: {
-type: BooleanConstructor;
-required: false;
-default: boolean;
-};
 container: {
 type: PropType<HTMLElement | null | undefined>;
 required: false;
@@ -10592,7 +10553,6 @@ onOpen?: ((...args: any[]) => any) | undefined;
 anchor: HTMLElement | null | undefined;
 viewport: HTMLElement;
 inline: "auto" | "always" | "never";
-alwaysInline: boolean;
 container: HTMLElement | null | undefined;
 keyboardTrap: boolean;
 focusElement: () => HTMLElement | null;
@@ -11890,12 +11850,7 @@ required: false;
 validator(value: string): boolean;
 };
 skipLink: {
-type: PropType<string | boolean>;
-required: false;
-default: string;
-};
-skipLinkHref: {
-type: StringConstructor;
+type: PropType<string>;
 required: false;
 default: string;
 };
@@ -11933,12 +11888,7 @@ required: false;
 validator(value: string): boolean;
 };
 skipLink: {
-type: PropType<string | boolean>;
-required: false;
-default: string;
-};
-skipLinkHref: {
-type: StringConstructor;
+type: PropType<string>;
 required: false;
 default: string;
 };
@@ -11965,8 +11915,7 @@ default: string;
 }>> & Readonly<{}>, {
 headerTag: string;
 logoSize: string;
-skipLink: string | boolean;
-skipLinkHref: string;
+skipLink: string;
 routerLinkPath: string;
 routerLinkName: string;
 routerLinkLabel: string;
@@ -18107,9 +18056,6 @@ export const getRef: unique symbol;
 // @public
 export function getSortedHTMLElementsFromVueRef(ref: unknown): HTMLElement[];
 
-// @public @deprecated
-export function getTextFromScopedSlot(slot: Slot): string;
-
 // @public (undocumented)
 export interface GroupValidityEvent {
     // (undocumented)
@@ -18576,11 +18522,6 @@ required: false;
 validator(value: string): boolean;
 default: string;
 };
-alwaysInline: {
-type: BooleanConstructor;
-required: false;
-default: boolean;
-};
 container: {
 type: PropType<HTMLElement | null | undefined>;
 required: false;
@@ -18639,11 +18580,6 @@ required: false;
 validator(value: string): boolean;
 default: string;
 };
-alwaysInline: {
-type: BooleanConstructor;
-required: false;
-default: boolean;
-};
 container: {
 type: PropType<HTMLElement | null | undefined>;
 required: false;
@@ -18676,7 +18612,6 @@ onOpen?: ((...args: any[]) => any) | undefined;
 anchor: HTMLElement | null | undefined;
 viewport: HTMLElement;
 inline: "auto" | "always" | "never";
-alwaysInline: boolean;
 container: HTMLElement | null | undefined;
 keyboardTrap: boolean;
 focusElement: () => HTMLElement | null;
@@ -18938,11 +18873,6 @@ required: false;
 validator(value: string): boolean;
 default: string;
 };
-alwaysInline: {
-type: BooleanConstructor;
-required: false;
-default: boolean;
-};
 container: {
 type: PropType<HTMLElement | null | undefined>;
 required: false;
@@ -19001,11 +18931,6 @@ required: false;
 validator(value: string): boolean;
 default: string;
 };
-alwaysInline: {
-type: BooleanConstructor;
-required: false;
-default: boolean;
-};
 container: {
 type: PropType<HTMLElement | null | undefined>;
 required: false;
@@ -19038,7 +18963,6 @@ onOpen?: ((...args: any[]) => any) | undefined;
 anchor: HTMLElement | null | undefined;
 viewport: HTMLElement;
 inline: "auto" | "always" | "never";
-alwaysInline: boolean;
 container: HTMLElement | null | undefined;
 keyboardTrap: boolean;
 focusElement: () => HTMLElement | null;

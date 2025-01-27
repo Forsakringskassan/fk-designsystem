@@ -1217,14 +1217,7 @@ module.exports = defineMetadata({
         flow: true,
         interactive: true,
         phrasing: false,
-        slots: [
-            "default",
-            "header",
-            "error-message",
-            "input-text-fields",
-            "submit-button-text",
-            "cancel-button-text",
-        ],
+        slots: ["default", "header", "error-message", "input-text-fields"],
         permittedContent: ["@flow", "template"],
         attributes: {
             "aria-close-text": {},
@@ -1378,19 +1371,7 @@ module.exports = defineMetadata({
             },
             "skip-link": {
                 enum: ["/.+/"],
-                /* for backwards compatiblity allow the skiplink value to be
-                 * omitted (e.g. same as setting it to true) */
-                omit: true,
-            },
-            "skip-link-href": {
-                enum: ["/^[#].*/"],
                 required: false,
-                deprecated: "use skip-link prop with string instead",
-                allowed(node) {
-                    return node.hasAttribute("skip-link")
-                        ? null
-                        : "requires skip-link prop to be set";
-                },
             },
             "header-tag": {
                 enum: ["span", "h1"],
