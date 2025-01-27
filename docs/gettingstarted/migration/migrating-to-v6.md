@@ -85,3 +85,40 @@ The deprecated `skipLinkHref` prop has been removed and replaced by the `skipLin
 
 The `skipLink` prop used to accept a `boolean` value to enable/disable the skiplink feature but now only accepts a `string` (the id of the element to skip to).
 If you need to dynamically enable/disable skiplink set the value to the empty string `""` to disable.
+
+## Pageobjects
+
+### `FTooltipPageObject.content()` method
+
+The deprecated `FTooltipPageObject.content()` method has been removed and replaced with direct methods on `FTooltipPageObject`.
+
+```diff
+-tooltip.content().closeButtonTop().click();
++tooltip.closeButton().click();
+```
+
+```diff
+-tooltip.content().closeButtonBottom().click();
++tooltip.closeButton().click();
+```
+
+```diff
+-tooltip.content().heading().text().should("have.text", "Lorem ipsum");
++tooltip.heading().text().should("have.text", "Lorem ipsum");
+```
+
+```diff
+-tooltip.content().brodtext().text().should("have.text", "Lorem ipsum");
++tooltip.body().text().should("have.text", "Lorem ipsum");
+```
+
+```diff
+-tooltip.content().closeButtonBottom().click();
++tooltip.closeButton().click();
+```
+
+::: warning Notera
+
+Både `closeButtonBottom()` och `closeButtonTop()` är ersatt med `closeButton()` då det inte längre finns två separata knappar.
+
+:::

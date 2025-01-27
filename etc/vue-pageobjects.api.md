@@ -713,13 +713,6 @@ export class FTooltipPageObject implements BasePageObject {
     body(): DefaultCypressChainable;
     // (undocumented)
     closeButton(): DefaultCypressChainable;
-    // @deprecated (undocumented)
-    content(): {
-        closeButtonTop: () => DefaultCypressChainable;
-        heading: () => DefaultCypressChainable;
-        brodtext: () => DefaultCypressChainable;
-        closeButtonBottom: () => DefaultCypressChainable;
-    };
     // (undocumented)
     el(): DefaultCypressChainable;
     // (undocumented)
