@@ -1,9 +1,8 @@
 import { type DefineComponent, defineComponent } from "vue";
 import {
-    FCheckboxGroup,
-    FCheckboxGroupField,
+    FCheckboxField,
     FFieldset,
-    FRadioGroupField,
+    FRadioField,
     FTextField,
     FTooltip,
 } from "../components";
@@ -13,10 +12,9 @@ function createComponent(template: string): DefineComponent {
     return defineComponent({
         template,
         components: {
-            FCheckboxGroup,
-            FCheckboxGroupField,
+            FCheckboxField,
             FFieldset,
-            FRadioGroupField,
+            FRadioField,
             FTextField,
             FTooltip,
         },
@@ -59,19 +57,15 @@ describe("FFieldsetPageObject", () => {
                             <template #body> Body </template>
                         </f-tooltip>
                     </template>
-                    <f-radio-group-field v-model="radioModel" :value="true">
+                    <f-radio-field v-model="radioModel" :value="true">
                         Yes
-                    </f-radio-group-field>
-                    <f-radio-group-field v-model="radioModel" :value="false">
+                    </f-radio-field>
+                    <f-radio-field v-model="radioModel" :value="false">
                         No
-                    </f-radio-group-field>
-                    <f-radio-group-field
-                        v-model="radioModel"
-                        :value="true"
-                        disabled
-                    >
+                    </f-radio-field>
+                    <f-radio-field v-model="radioModel" :value="true" disabled>
                         Maybe
-                    </f-radio-group-field>
+                    </f-radio-field>
                 </f-fieldset>
             `;
 
@@ -121,7 +115,7 @@ describe("FFieldsetPageObject", () => {
 
         describe("Checkbox", () => {
             const template = /* HTML */ `
-                <f-checkbox-group name="djur">
+                <f-fieldset name="djur">
                     <template #label> Label text </template>
 
                     <template #tooltip>
@@ -135,31 +129,25 @@ describe("FFieldsetPageObject", () => {
                         <span :class="descriptionClass"> Description </span>
                     </template>
 
-                    <f-checkbox-group-field
-                        v-model="checkboxModel"
-                        value="Hund"
-                    >
+                    <f-checkbox-field v-model="checkboxModel" value="Hund">
                         Hund
-                    </f-checkbox-group-field>
+                    </f-checkbox-field>
 
-                    <f-checkbox-group-field
-                        v-model="checkboxModel"
-                        value="Katt"
-                    >
+                    <f-checkbox-field v-model="checkboxModel" value="Katt">
                         Katt
-                    </f-checkbox-group-field>
+                    </f-checkbox-field>
 
-                    <f-checkbox-group-field
+                    <f-checkbox-field
                         v-model="checkboxModel"
                         value="Fisk"
                         disabled
                     >
                         Fisk
-                    </f-checkbox-group-field>
-                </f-checkbox-group>
+                    </f-checkbox-field>
+                </f-fieldset>
             `;
 
-            const checkboxField = new FFieldsetPageObject(".checkbox-group");
+            const checkboxField = new FFieldsetPageObject("fieldset");
 
             beforeEach(() => {
                 cy.mount(createComponent(template));
@@ -253,19 +241,15 @@ describe("FFieldsetPageObject", () => {
                             Description text
                         </span>
                     </template>
-                    <f-radio-group-field v-model="radioModel" :value="true">
+                    <f-radio-field v-model="radioModel" :value="true">
                         Yes
-                    </f-radio-group-field>
-                    <f-radio-group-field v-model="radioModel" :value="false">
+                    </f-radio-field>
+                    <f-radio-field v-model="radioModel" :value="false">
                         No
-                    </f-radio-group-field>
-                    <f-radio-group-field
-                        v-model="radioModel"
-                        :value="true"
-                        disabled
-                    >
+                    </f-radio-field>
+                    <f-radio-field v-model="radioModel" :value="true" disabled>
                         Maybe
-                    </f-radio-group-field>
+                    </f-radio-field>
                 </f-fieldset>
             `;
 
@@ -314,37 +298,31 @@ describe("FFieldsetPageObject", () => {
 
         describe("Checkbox", () => {
             const template = /* HTML */ `
-                <f-checkbox-group name="djur">
+                <f-fieldset name="djur">
                     <template #label> Label text </template>
 
                     <template #description="{ descriptionClass }">
                         <span :class="descriptionClass"> Description </span>
                     </template>
 
-                    <f-checkbox-group-field
-                        v-model="checkboxModel"
-                        value="Hund"
-                    >
+                    <f-checkbox-field v-model="checkboxModel" value="Hund">
                         Hund
-                    </f-checkbox-group-field>
+                    </f-checkbox-field>
 
-                    <f-checkbox-group-field
-                        v-model="checkboxModel"
-                        value="Katt"
-                    >
+                    <f-checkbox-field v-model="checkboxModel" value="Katt">
                         Katt
-                    </f-checkbox-group-field>
+                    </f-checkbox-field>
 
-                    <f-checkbox-group-field
+                    <f-checkbox-field
                         v-model="checkboxModel"
                         value="Fisk"
                         disabled
                     >
                         Fisk
-                    </f-checkbox-group-field>
-                </f-checkbox-group>
+                    </f-checkbox-field>
+                </f-fieldset>
             `;
-            const checkboxField = new FFieldsetPageObject(".checkbox-group");
+            const checkboxField = new FFieldsetPageObject("fieldset");
 
             beforeEach(() => {
                 cy.mount(createComponent(template));
