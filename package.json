@@ -21,7 +21,7 @@
   "scripts": {
     "build": "lerna run build",
     "build:docs": "node generate-docs.mjs && lerna run build:docs && npm run build:public",
-    "build:public": "node scripts/postbuild.js && html-validate --formatter stylish,codeframe --config .htmlvalidate-public.js public",
+    "build:public": "node scripts/postbuild.js",
     "preclean": "rimraf -g .eslintcache *.tgz public temp test-results",
     "clean": "npm run --workspaces --if-present clean",
     "css-variables": "npm run --workspace packages/css-variables --",

@@ -82,6 +82,9 @@
     --fkds-color-feedback-border-warning: #{$palette-color-yellow-100};
     --fkds-color-feedback-border-negative: #{$palette-color-red-100};
 
+    // FEEDBACK - TEXT
+    --fkds-color-feedback-text-negative: #{$palette-color-red-100};
+
     // SELECT - BACKGROUND
     --fkds-color-select-background-primary-default: #{$palette-color-green-a-85};
     --fkds-color-select-background-primary-hover: #{$palette-color-green-a-15};
@@ -93,6 +96,7 @@
     --fkds-icon-color-background-primary: #{$palette-color-white-100};
     --fkds-icon-color-border-primary: #{$palette-color-fk-black-100};
     --fkds-icon-color-content-disabled: #{$palette-color-fk-black-50};
+    --fkds-icon-color-content-inverted: #{$palette-color-white-100};
 
     // ICON - ACTION
     --fkds-icon-color-action-content-primary-default: #{$palette-color-bluebell-100};
