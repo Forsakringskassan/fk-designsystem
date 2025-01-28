@@ -24,6 +24,59 @@ Modala dialogrutor finns i fyra varianter:
 - varning
 - fel.
 
+## Användning
+
+Skapa en ny Vue-komponent där `f-modal` används:
+
+```vue static
+<script setup lang="ts">
+import { FModal } from "@fkui/vue";
+
+const emit = defineEmits<{ close: [] }>();
+</script>
+
+<template>
+    <f-modal is-open @close="emit('close')">
+        <template #header> My awesome modal </template>
+        <template #content> My awesome content </template>
+        <template #footer>
+            <div class="button-group">
+                <button
+                    type="button"
+                    class="button button--primary button-group__item button--large"
+                    @click="emit('close')"
+                >
+                    Close
+                </button>
+            </div>
+        </template>
+    </f-modal>
+</template>
+```
+
+Du kan sedan öppna din modal genom att använda {@link useModal `useModal()`} (composition API) eller {@link form-modal `openModal()`} (options API).
+
+```vue static
+<script setup lang="ts">
+import { useModal } from "@fkui/vue";
+import MyAwesomeModal from "./MyAwesomeModal.vue";
+
+const { openModal } = useModal();
+
+async function onClick(): Promise<void> {
+    await openModal(MyAwesomeModal);
+}
+</script>
+
+<template>
+    <div>
+        <button type="button" class="button button--secondary" @click="onClick">
+            Open
+        </button>
+    </div>
+</template>
+```
+
 ## Storlek
 
 Modalens höjd anpassas utifrån innehållet. I desktop (>639px) kan modalens bredd anpassas till
