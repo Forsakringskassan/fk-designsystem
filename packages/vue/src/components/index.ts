@@ -50,7 +50,6 @@ export {
     type FFormProvider,
     FForm,
     FFormStep,
-    FFormStepButton,
     cleanUpElements,
     createFFormProvideOptions,
     getRef,
