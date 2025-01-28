@@ -48,24 +48,16 @@ export class FSelectFieldPageObject implements BasePageObject {
             .then(() => listItem);
     }
 
+    /**
+     * Get the currently selected `<option>` element.
+     */
+    public selectedOption(): Cypress.Chainable<JQuery<HTMLOptionElement>> {
+        return cy.get<HTMLOptionElement>(`${this.selector} option:selected`);
+    }
+
     public selectedValue(): Cypress.Chainable<string> {
         return this.dropdown().then((el) => {
             return el.get(0).value;
-        });
-    }
-
-    public trimmedText(): Cypress.Chainable<string> {
-        return this.dropdown().then((el) => {
-            return el.get(0).options.selectedIndex >= 0
-                ? el
-                      .get(0)
-                      [el.get(0).options.selectedIndex].innerText.replace(
-                          /[\n\r]/gm,
-                          "",
-                      )
-                      .replace(/\s+/g, " ")
-                      .replace(/(^\s|\s$)*/g, "")
-                : "";
         });
     }
 }
