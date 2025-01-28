@@ -1,5 +1,5 @@
-import { Reference, documentOrderComparator } from "@fkui/logic";
-import { ComponentValidityEvent, FormErrorList } from "../../types";
+import { Reference } from "@fkui/logic";
+import { ComponentValidityEvent, FormErrorList } from "../types";
 
 /**
  * @public
@@ -41,36 +41,4 @@ export function cleanUpElements(vm: {
             resolve();
         }, 0);
     });
-}
-
-/**
- * Sorts errorlist based on the order of the elements in the DOM
- *
- * @public
- */
-export function sortComponentsWithErrorsOnDOMOrder(
-    componentList: ComponentReferences,
-): ComponentValueTypes[] {
-    const errorList = Object.values(componentList).filter((component) => {
-        const validity =
-            component instanceof Reference
-                ? component.ref.isValid
-                : component.validityMode;
-        return typeof validity === "boolean"
-            ? validity === false
-            : validity === "ERROR";
-    }) as ComponentValueTypes[];
-
-    errorList.sort((a: ComponentValueTypes, b: ComponentValueTypes) => {
-        const elementToCompareA =
-            a instanceof Reference
-                ? document.querySelector(`#${a.ref.id}`)
-                : a.target;
-        const elementToCompareB =
-            b instanceof Reference
-                ? document.querySelector(`#${b.ref.id}`)
-                : b.target;
-        return documentOrderComparator(elementToCompareA, elementToCompareB);
-    });
-    return errorList;
 }

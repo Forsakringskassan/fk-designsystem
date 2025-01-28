@@ -35,3 +35,8 @@ export {
     type Rect,
     getAbsolutePosition,
 } from "./get-absolute-position";
+export {
+    type ComponentReferences,
+    type ComponentValueTypes,
+    cleanUpElements,
+} from "./FormUtils";
