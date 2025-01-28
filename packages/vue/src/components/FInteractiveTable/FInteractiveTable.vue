@@ -396,6 +396,19 @@ export default defineComponent({
                         return includeItem(row, this.rows, this.keyAttribute);
                     });
                 }
+
+                const seenKeys: Record<string, boolean> = {};
+                for (const row of this.rows) {
+                    const rowKey = String(row[this.keyAttribute]);
+                    if (seenKeys[rowKey]) {
+                        const index = this.rows.indexOf(row);
+                        throw new Error(
+                            `Expected each table row to have a unique key attributebut encountered duplicate of "${rowKey}" in row index ${index}.`,
+                        );
+                    }
+
+                    seenKeys[rowKey] = true;
+                }
             },
         },
         active: {
