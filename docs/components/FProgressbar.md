@@ -11,15 +11,11 @@ FProgressbarExample.vue
 
 ## Tänk på att
 
-- Tänk på att
+- Tänk på att förloppsindikatorn kan användas tillsammans med FFileSelector
 
 ## Copy
 
-- Copy
-
-### Exempel på texter till brickor:
-
-- Sekretess
+- XXXXXXX
 
 ## API
 
