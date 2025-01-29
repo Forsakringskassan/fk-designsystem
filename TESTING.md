@@ -96,7 +96,7 @@ Onödig data ökar den kognitiva belastningen för läsaren och gör det svårar
 
 Ibland kan detta orsaka konflikt med datatyper i Typescript:
 
-```ts
+```ts nocompile
 function getFullName(src: MyComplexObject): string {
     /* ... */
 }
@@ -156,11 +156,18 @@ Ytterligare ett alternativ är att skapa en funktion för att skapa upp objektet
 
 Testdata lägger vi i första hand i direkt anslutning till testfallet.
 
-```ts
+```ts nocompile
 it("x should y", () => {
-    const data = [{ ... }, { ... }];
+    const data = [
+        {
+            /* ... */
+        },
+        {
+            /* ... */
+        },
+    ];
     const result = func(data);
-	expect(result).toHaveLength(2);
+    expect(result).toHaveLength(2);
 });
 ```
 
@@ -175,7 +182,14 @@ Om det inte går att minimera storleken på testdata eller den används frekvent
 +import { twoItems } from "./__fixtures__";
 +
  it("x should y", () => {
--    const data = [{ ... }, { ... }];
+-    const data = [
+-        {
+-            /* ... */
+-        },
+-        {
+-            /* ... */
+-        },
+-    ];
 -    const result = func(data);
 +    const result = func(twoItems);
      expect(result).toHaveLength(2);
@@ -203,7 +217,7 @@ Stora mängder testdata distraherar från själva testfallet.
 2. When: när följande inträffar.
 3. Then: vad som förväntas.
 
-```ts
+```ts nocompile
 it("x should y", () => {
     /* given: a button with a click callback */
     const spy = jest.fn();
@@ -233,7 +247,9 @@ Varje `it` (inklusive dess `describe`) ska kunna läsas och förklara vad testet
 Dåligt:
 
 ```ts
-it("propName", () => { ... });
+it("propName", () => {
+    /* ... */
+});
 ```
 
 Förklarar inte vad man förväntar sig av propen
@@ -241,7 +257,9 @@ Förklarar inte vad man förväntar sig av propen
 Bra:
 
 ```ts
-it("should emit submit event when clicked", () => { ... });
+it("should emit submit event when clicked", () => {
+    /* ... */
+});
 ```
 
 Motivering:
@@ -287,7 +305,7 @@ Import-rader ska sorteras enligt följande:
 Typescript funktion, klass osv:
 
 <!-- prettier-ignore -->
-```ts
+```ts nocompile nolint
 import "html-validate/jest";                              // 1. Enbart side-effects
 import path from "path";                                  // 2. NodeJS standardbibiliotek
 import _ from "lodash";                                   // 3. Tredje-parts bibliotek
@@ -299,7 +317,7 @@ import { myFunction } from "./my-function";               // 7. SUT
 
 För en VueJS komponent, importera komponenten sist direkt från `.vue` filen:
 
-```ts
+```ts nocompile nolint
 import MyComponent from "./MyComponent.vue";
 ```
 
@@ -309,16 +327,17 @@ Motivering: ordningen av imports gör det mer överskådligt och snabbare att gr
 
 ```ts
 describe("props", () => {
-    /* v--- denna testas inte här, den ligger under v-model */
-    /*describe("highlight", () => {
-
-	});*/
-
-    describe("items", () => {
-        it("should do something", () => {});
+    describe("foo", () => {
+        it("should do something", () => {
+            /* ... */
+        });
     });
 
-    describe("vertical", () => {});
+    describe("bar", () => {
+        it("should do something else", () => {
+            /* ... */
+        });
+    });
 });
 ```
 
@@ -361,19 +380,19 @@ Motivering: `jest.spyOn` fungerar med `jest.clearAllMocks`
 
 istället för:
 
-```ts
+```ts nocompile
 let wrapper;
 
-it(.., () => {
-    wrapper = shallowMount(..);
+it("should ..", () => {
+    wrapper = shallowMount(AwesomeComponent);
 });
 ```
 
 kör:
 
-```ts
-it(.., () => {
-    const wrapper = shallowMount(..);
+```ts nocompile
+it("should ..", () => {
+    const wrapper = shallowMount(AwesomeComponent);
 });
 ```
 
@@ -402,7 +421,7 @@ Istället för att dölja meddelandet se till att korrigera din kod.
 
 För att korrekt mocka och verifiera `console.log` använder du `jest.spyOn(..)`:
 
-```ts
+```ts nocompile nolint
 import { myFunction } from "./my-function";
 
 /* spy on `console.log` but does not stub the function, i.e. the original console.log will still be called */
