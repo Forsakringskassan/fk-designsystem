@@ -5,7 +5,7 @@ short-title: ariaValueNow()
 layout: article
 ---
 
-Används för att hämta det nuvarande värdet på försloppsindikatorn (0-100)
+Används för att hämta det nuvarande värdet på försloppsindikatorn (0-100).
 
 ## Syntax
 
