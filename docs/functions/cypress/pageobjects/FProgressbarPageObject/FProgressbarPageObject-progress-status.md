@@ -5,7 +5,7 @@ short-title: progressStatus()
 layout: article
 ---
 
-Används för att hämta del av klassnamn på förloppsindikatorns progress
+Används för att hämta del av klassnamn på förloppsindikatorns progress.
 
 ## Syntax
 
