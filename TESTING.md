@@ -96,9 +96,15 @@ Onödig data ökar den kognitiva belastningen för läsaren och gör det svårar
 
 Ibland kan detta orsaka konflikt med datatyper i Typescript:
 
-```ts nocompile
+```ts
+type MyComplexObject = unknown;
+
+/* --- cut above --- */
+
 function getFullName(src: MyComplexObject): string {
-    /* ... */
+    /* do something */
+
+    return "...";
 }
 ```
 
