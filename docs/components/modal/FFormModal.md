@@ -144,7 +144,6 @@ import { useModal } from "@fkui/vue";
 const { formModal } = useModal();
 
 async function onOpen(): Promise<void> {
-    /* eslint-disable-next-line @typescript-eslint/no-unused-vars */
 	const result = await formModal<Person>(PersonFormModal);
 
 	/* do something with result */
