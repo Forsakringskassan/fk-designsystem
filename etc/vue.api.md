@@ -7227,9 +7227,9 @@ default: string;
 validator(value: string): boolean;
 };
 }>> & Readonly<{}>, {
+layout: "standard" | "short";
 banner: boolean;
 provideScreenReaderContext: boolean;
-layout: "standard" | "short";
 }, {}, {
 FIcon: DefineComponent<ExtractPropTypes<    {
 name: {
@@ -9577,9 +9577,9 @@ default: string;
 validator(value: string): boolean;
 };
 }>> & Readonly<{}>, {
+layout: "standard" | "short";
 banner: boolean;
 provideScreenReaderContext: boolean;
-layout: "standard" | "short";
 }, {}, {
 FIcon: DefineComponent<ExtractPropTypes<    {
 name: {
@@ -11690,6 +11690,13 @@ default: string;
 href: string;
 }, {}, {}, {}, string, ComponentProvideOptions, true, {}, any>;
 }, {}, string, ComponentProvideOptions, true, {}, any>;
+
+// Warning: (ae-forgotten-export) The symbol "__VLS_WithTemplateSlots_3" needs to be exported by the entry point index.d.ts
+// Warning: (ae-forgotten-export) The symbol "__VLS_component_3" needs to be exported by the entry point index.d.ts
+// Warning: (ae-forgotten-export) The symbol "__VLS_TemplateResult_3" needs to be exported by the entry point index.d.ts
+//
+// @public (undocumented)
+export const FPageLayout: __VLS_WithTemplateSlots_3<typeof __VLS_component_3, __VLS_TemplateResult_3["slots"]>;
 
 // @public (undocumented)
 export const FPercentTextField: DefineComponent<ExtractPropTypes<    {
@@ -18016,13 +18023,13 @@ rotate: string;
 }, {}, {}, {}, string, ComponentProvideOptions, true, {}, any>;
 }, {}, string, ComponentProvideOptions, true, {}, any>;
 
-// Warning: (ae-forgotten-export) The symbol "__VLS_Props" needs to be exported by the entry point index.d.ts
+// Warning: (ae-forgotten-export) The symbol "__VLS_Props_2" needs to be exported by the entry point index.d.ts
 //
 // @public (undocumented)
-export const IComboboxDropdown: DefineComponent<__VLS_Props, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
+export const IComboboxDropdown: DefineComponent<__VLS_Props_2, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {
 close: () => any;
 select: (option: string) => any;
-}, string, PublicProps, Readonly<__VLS_Props> & Readonly<{
+}, string, PublicProps, Readonly<__VLS_Props_2> & Readonly<{
 onClose?: (() => any) | undefined;
 onSelect?: ((option: string) => any) | undefined;
 }>, {}, {}, {}, {}, string, ComponentProvideOptions, false, {
@@ -18373,12 +18380,12 @@ export interface IPopupErrorData {
     teleportDisabled: boolean;
 }
 
-// Warning: (ae-forgotten-export) The symbol "__VLS_WithTemplateSlots_3" needs to be exported by the entry point index.d.ts
-// Warning: (ae-forgotten-export) The symbol "__VLS_component_3" needs to be exported by the entry point index.d.ts
-// Warning: (ae-forgotten-export) The symbol "__VLS_TemplateResult_3" needs to be exported by the entry point index.d.ts
+// Warning: (ae-forgotten-export) The symbol "__VLS_WithTemplateSlots_4" needs to be exported by the entry point index.d.ts
+// Warning: (ae-forgotten-export) The symbol "__VLS_component_4" needs to be exported by the entry point index.d.ts
+// Warning: (ae-forgotten-export) The symbol "__VLS_TemplateResult_4" needs to be exported by the entry point index.d.ts
 //
 // @public (undocumented)
-export const IPopupListbox: __VLS_WithTemplateSlots_3<typeof __VLS_component_3, __VLS_TemplateResult_3["slots"]>;
+export const IPopupListbox: __VLS_WithTemplateSlots_4<typeof __VLS_component_4, __VLS_TemplateResult_4["slots"]>;
 
 // @public (undocumented)
 export const IPopupMenu: DefineComponent<ExtractPropTypes<    {
@@ -18647,6 +18654,20 @@ href: string;
 // @public (undocumented)
 export function itemEquals<T extends object, K extends keyof T>(item1: ListItem<T> | undefined, item2: ListItem<T> | undefined, compareAttribute: K): boolean;
 
+// @public (undocumented)
+export interface LayoutAreaDefinition {
+    attach: "none" | "left" | "right";
+    direction: "column" | "row";
+}
+
+// @public
+export interface LayoutDefinition {
+    // (undocumented)
+    areas: Record<string, LayoutAreaDefinition>;
+    // (undocumented)
+    name: string;
+}
+
 // @public
 export type ListArray<T extends object = UnknownItem> = Array<ListItem<T>>;
 
@@ -18805,6 +18826,9 @@ export function refIsVue(value: unknown): value is ComponentPublicInstance;
 
 // @public
 export function refIsVueArray(value: unknown): value is ComponentPublicInstance[];
+
+// @public
+export function registerLayout<T extends LayoutDefinition>(definition: T): void;
 
 // @public (undocumented)
 export interface RenderSlotOptions {
