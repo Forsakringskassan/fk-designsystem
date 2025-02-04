@@ -162,7 +162,13 @@ Ytterligare ett alternativ är att skapa en funktion för att skapa upp objektet
 
 Testdata lägger vi i första hand i direkt anslutning till testfallet.
 
-```ts nocompile
+```ts
+import { expect } from "@jest/globals";
+
+declare function func(data: unknown): string[];
+
+/* --- cut above --- */
+
 it("x should y", () => {
     const data = [
         {
@@ -223,7 +229,15 @@ Stora mängder testdata distraherar från själva testfallet.
 2. When: när följande inträffar.
 3. Then: vad som förväntas.
 
-```ts nocompile
+```ts name=given-when-then
+import { defineComponent } from "vue";
+import { expect, jest } from "@jest/globals";
+import { shallowMount } from "@vue/test-utils";
+
+const ButtonComponent = defineComponent({});
+
+/* --- cut above --- */
+
 it("x should y", () => {
     /* given: a button with a click callback */
     const spy = jest.fn();
@@ -234,7 +248,7 @@ it("x should y", () => {
     });
 
     /* when: the buton is clicked */
-    wrapper.click();
+    wrapper.trigger("click");
 
     /* then: the callback should have been called */
     expect(spy).toHaveBeenCalled();
@@ -386,7 +400,15 @@ Motivering: `jest.spyOn` fungerar med `jest.clearAllMocks`
 
 istället för:
 
-```ts nocompile
+```ts
+import { defineComponent } from "vue";
+import { it } from "@jest/globals";
+import { shallowMount } from "@vue/test-utils";
+
+const AwesomeComponent = defineComponent({});
+
+/* --- cut above --- */
+
 let wrapper;
 
 it("should ..", () => {
@@ -396,7 +418,15 @@ it("should ..", () => {
 
 kör:
 
-```ts nocompile
+```ts
+import { defineComponent } from "vue";
+import { it } from "@jest/globals";
+import { shallowMount } from "@vue/test-utils";
+
+const AwesomeComponent = defineComponent({});
+
+/* --- cut above --- */
+
 it("should ..", () => {
     const wrapper = shallowMount(AwesomeComponent);
 });
