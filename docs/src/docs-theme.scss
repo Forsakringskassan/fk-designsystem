@@ -80,3 +80,20 @@ footer {
         margin: 0;
     }
 }
+
+.support-table {
+    .table tbody .table__row &.table__row__removed {
+        background: #e48a8a;
+        color: #1b1e23;
+    }
+
+    .table__row__support {
+        background: #ffdf87;
+        color: #1b1e23;
+    }
+
+    .table__row__active {
+        background: #88b49f;
+        color: #1b1e23;
+    }
+}
