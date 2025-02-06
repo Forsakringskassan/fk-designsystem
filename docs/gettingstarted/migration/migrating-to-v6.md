@@ -46,6 +46,10 @@ Följande komponenter, funktioner och typer är även de borttagna:
 - `getTextFromScopedSlot`: funktionen är borttagen.
 - Konfiguration: `FKUIConfig.modalTarget` och `FKUIConfig.popupTarget` är borttagna.
 
+Ändringar i konfiguration:
+
+- `buttonOrder` byter standardvärde till `RIGHT_TO_LEFT`
+
 För Cypress pageobjekt:
 
 - `trimmedText()` metoden är borttagen från samtliga pageobjekt (ej att förväxla med tredjeparts kommando/assertion med samma namn).
