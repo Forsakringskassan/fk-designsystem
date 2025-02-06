@@ -5,19 +5,27 @@ layout: component
 component: FPageHeader
 ---
 
-Sidhuvud ska visas längst upp på applikationer som öppnas i ett eget webbläsarfönster. Den innehåller alltid Försäkringskassans logotyp och namnet på applikationen
+Sidhuvud ska visas längst upp på applikationer som öppnas i ett eget webbläsarfönster.
+Den kan innehålla en logotyp, applikationsnamn samt användarinformation.
 
 ```import
 FPageHeaderDefault.vue
 ```
 
-Vid större skärmstorlekar visas hela Försäkringskassans logotyp med text och vid mindre visas en komprimerad variant med endast symbol.
+## Logotyp
 
-I fall där applikationen innehåller flera olika sidor kan logotypen göras till en klickbar länk som leder användaren tillbaka till applikationens förstasida
+För att lägga till en logotyp använd slot `logo`.
+Du kan med fördel använda {@link FLogo `FLogo`} för att ange logotyp.
 
-Sidhuvudet kan också visa sekundär information till höger.
+```diff
+ <f-page-header>
++    <template #logo>
++        <f-logo aria-label="awesome logo"></f-logo>
++    </template>
+ </f-page-header>
+```
 
-## Egen logotyp och brytpunkt
+Se även nedan exempel för hur du kan göra en egen logotyp med brytpunkt utan att använda `FLogo`.
 
 ```import
 FPageHeaderCustomLogo.vue

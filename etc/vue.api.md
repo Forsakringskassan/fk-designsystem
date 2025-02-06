@@ -40,8 +40,6 @@ import { PostalCodeString } from '@fkui/logic';
 import { PropType } from 'vue';
 import { PublicProps } from 'vue';
 import { Ref } from 'vue';
-import { RouteLocationNamedRaw } from 'vue-router';
-import { RouteLocationPathRaw } from 'vue-router';
 import { ShallowRef } from 'vue';
 import { Slot } from 'vue';
 import { Slots } from 'vue';
@@ -8614,6 +8612,33 @@ language: string;
 }, {}, {}, {}, string, ComponentProvideOptions, true, {}, any>;
 
 // @public (undocumented)
+export const FLogo: DefineComponent<ExtractPropTypes<    {
+size: {
+type: StringConstructor;
+default: string;
+required: false;
+validator(value: string): boolean;
+};
+"aria-label": {
+type: StringConstructor;
+required: true;
+};
+}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<ExtractPropTypes<    {
+size: {
+type: StringConstructor;
+default: string;
+required: false;
+validator(value: string): boolean;
+};
+"aria-label": {
+type: StringConstructor;
+required: true;
+};
+}>> & Readonly<{}>, {
+size: string;
+}, {}, {}, {}, string, ComponentProvideOptions, true, {}, HTMLSpanElement>;
+
+// @public (undocumented)
 export const FMessageBox: DefineComponent<ExtractPropTypes<    {
 type: {
 type: StringConstructor;
@@ -10651,12 +10676,6 @@ rotate: string;
 
 // @public (undocumented)
 export const FPageHeader: DefineComponent<ExtractPropTypes<    {
-logoSize: {
-type: StringConstructor;
-default: string;
-required: false;
-validator(value: string): boolean;
-};
 skipLink: {
 type: PropType<string>;
 required: false;
@@ -10666,35 +10685,11 @@ headerTag: {
 default: string;
 required: false;
 validator(value: string): boolean;
-};
-routerLinkPath: {
-type: StringConstructor;
-required: false;
-default: string;
-};
-routerLinkName: {
-type: StringConstructor;
-required: false;
-default: string;
-};
-routerLinkLabel: {
-type: StringConstructor;
-required: false;
-default: string;
 };
 }>, {}, {}, {
-logoClass(): string;
-hasRouterLink(): boolean;
-routerLinkTo(): RouteLocationPathRaw | RouteLocationNamedRaw | null;
 skipLinkAnchor(): string | null;
-altLogoText(): string;
-}, {}, ComponentOptions, ComponentOptionsMixin, {}, string, PublicProps, Readonly<ExtractPropTypes<    {
-logoSize: {
-type: StringConstructor;
-default: string;
-required: false;
-validator(value: string): boolean;
-};
+hasLogo(): boolean;
+}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<ExtractPropTypes<    {
 skipLink: {
 type: PropType<string>;
 required: false;
@@ -10704,29 +10699,10 @@ headerTag: {
 default: string;
 required: false;
 validator(value: string): boolean;
-};
-routerLinkPath: {
-type: StringConstructor;
-required: false;
-default: string;
-};
-routerLinkName: {
-type: StringConstructor;
-required: false;
-default: string;
-};
-routerLinkLabel: {
-type: StringConstructor;
-required: false;
-default: string;
 };
 }>> & Readonly<{}>, {
 headerTag: string;
-logoSize: string;
 skipLink: string;
-routerLinkPath: string;
-routerLinkName: string;
-routerLinkLabel: string;
 }, {}, {
 ISkipLink: DefineComponent<ExtractPropTypes<    {
 href: {
