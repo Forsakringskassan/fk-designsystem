@@ -15,6 +15,7 @@ export { FLabelPageObject } from "./FLabel.pageobject";
 export { FListPageObject } from "./FList.pageobject";
 export { FListItemPageObject } from "./FListItem.pageobject";
 export { FLoaderPageObject } from "./FLoader.pageobject";
+export { FLogoPageObject } from "./FLogo.pageobject";
 export { FMessageBoxPageObject } from "./FMessageBox.pageobject";
 export { FModalPageObject } from "./FModal.pageobject";
 export { FFormModalPageObject } from "./FFormModal.pageobject";
