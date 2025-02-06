@@ -10,7 +10,7 @@ import exclude from "./packages/vue/htmlvalidate/cypress";
 
 import config from "./docs.config";
 
-async function getDocsPagesImpl(): Promise<Manifest["pages"]> {
+async function getDocsPages(): Promise<Manifest["pages"]> {
     const docs = new Generator(config);
     const manifest = await docs.manifest(config.sourceFiles);
     return manifest.pages.filter((it) => {
@@ -18,34 +18,12 @@ async function getDocsPagesImpl(): Promise<Manifest["pages"]> {
     });
 }
 
-function memoize<T>(fn: (() => T) & { cache?: T }): () => T {
-    return () => {
-        if (!fn.cache) {
-            fn.cache = fn();
-        }
-        return fn.cache;
-    };
-}
-
-const getDocsPages = memoize(getDocsPagesImpl);
-
 const htmlValidateConfig: ConfigData = {
     rules: {
-        "heading-level": [
-            "error",
-            {
-                /* some examples show how to use custom heading levels which
-                 * often doesn't match the heading outline for the
-                 * documentation */
-                minInitialRank: "any",
-                sectioningRoots: [
-                    "dialog",
-                    '[role="dialog"]',
-                    ".code-preview__preview",
-                    "footer",
-                ],
-            },
-        ],
+        /* some examples show how to use custom heading levels which often
+         * doesn't match the heading outline for the documentation */
+        "heading-level": ["off"],
+
         /* prevents mismatches from disabled rules which does not trigger errors
          * when Cypress tests are running but would yield errors during normal
          * validation */
@@ -70,6 +48,8 @@ const htmlValidateOptions: CypressHtmlValidateOptions = {
         "#__cy_vue_root > div",
         /* @forsakringskassan/docs-generator examples */
         ".code-preview__preview",
+        /* @forsakringskassan/docs-live-example examples */
+        ".live-example__example",
     ],
     exclude,
 };
@@ -89,12 +69,8 @@ export default defineConfig({
     },
     e2e: {
         baseUrl: "http://localhost:8080",
-        setupNodeEvents(on, config) {
-            on("task", {
-                getDocsPages(): Promise<Manifest["pages"]> {
-                    return getDocsPages();
-                },
-            });
+        async setupNodeEvents(on, config) {
+            config.env.pages = await getDocsPages();
 
             getToMatchScreenshotsPlugin(on, config);
             return install(on, config);

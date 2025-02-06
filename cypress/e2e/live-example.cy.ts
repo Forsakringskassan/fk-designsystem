@@ -17,22 +17,29 @@ function isVuePreviewExample(example: ManifestExample): boolean {
     );
 }
 
-it("should visit all pages and ensure examples load properly", () => {
-    cy.task<ManifestPage[]>("getDocsPages").then((pages) => {
-        for (const page of pages) {
-            const { path, examples } = page;
-            const liveExamples = examples.filter(isLiveExample);
-            const vuePreviewExamples = examples.filter(isVuePreviewExample);
+beforeEach(() => {
+    cy.session("cookie-warning", () => {
+        cy.visit("/");
+        cy.setCookie("doc-hide-cookie-warning", "");
+    });
+});
 
-            if (path.endsWith("fpageheader.html")) {
-                //Skip FPageHeader due to known bug in documentation, `Failed to resolve component: router-link`.
-                continue;
-            }
+describe("should visit all pages and ensure examples load properly", () => {
+    Cypress.env("pages").forEach((page: ManifestPage) => {
+        const { path, examples } = page;
+        const liveExamples = examples.filter(isLiveExample);
+        const vuePreviewExamples = examples.filter(isVuePreviewExample);
 
-            if (liveExamples.length === 0 && vuePreviewExamples.length === 0) {
-                continue;
-            }
+        /* Skip FPageHeader due to known bug in documentation, `Failed to resolve component: router-link`. */
+        if (path.endsWith("fpageheader.html")) {
+            return;
+        }
 
+        if (liveExamples.length === 0 && vuePreviewExamples.length === 0) {
+            return;
+        }
+
+        it(path, () => {
             cy.visit(path);
 
             for (const example of liveExamples) {
@@ -80,6 +87,6 @@ it("should visit all pages and ensure examples load properly", () => {
                     expect($el, path).not.to.exist;
                 });
             }
-        }
+        });
     });
 });
