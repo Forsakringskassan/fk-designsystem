@@ -1324,4 +1324,16 @@ module.exports = defineMetadata({
         },
         slots: ["default"],
     },
+
+    "f-logo": {
+        flow: true,
+        attributes: {
+            size: {
+                enum: ["small", "large", "responsive"],
+            },
+            "aria-label": {
+                required: true,
+            },
+        },
+    },
 });

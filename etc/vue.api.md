@@ -8614,6 +8614,33 @@ language: string;
 }, {}, {}, {}, string, ComponentProvideOptions, true, {}, any>;
 
 // @public (undocumented)
+export const FLogo: DefineComponent<ExtractPropTypes<    {
+size: {
+type: StringConstructor;
+default: string;
+required: false;
+validator(value: string): boolean;
+};
+"aria-label": {
+type: StringConstructor;
+required: true;
+};
+}>, {}, {}, {}, {}, ComponentOptionsMixin, ComponentOptionsMixin, {}, string, PublicProps, Readonly<ExtractPropTypes<    {
+size: {
+type: StringConstructor;
+default: string;
+required: false;
+validator(value: string): boolean;
+};
+"aria-label": {
+type: StringConstructor;
+required: true;
+};
+}>> & Readonly<{}>, {
+size: string;
+}, {}, {}, {}, string, ComponentProvideOptions, true, {}, HTMLSpanElement>;
+
+// @public (undocumented)
 export const FMessageBox: DefineComponent<ExtractPropTypes<    {
 type: {
 type: StringConstructor;

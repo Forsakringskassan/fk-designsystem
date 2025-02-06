@@ -395,6 +395,14 @@ export class FLoaderPageObject implements BasePageObject {
 }
 
 // @public (undocumented)
+export class FLogoPageObject implements BasePageObject {
+    constructor(selector?: string);
+    el(): DefaultCypressChainable;
+    // (undocumented)
+    selector: string;
+}
+
+// @public (undocumented)
 export class FMessageBoxPageObject implements BasePageObject {
     constructor(selector: string);
     // (undocumented)
