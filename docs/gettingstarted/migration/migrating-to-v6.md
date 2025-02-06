@@ -42,7 +42,7 @@ Följande komponenter, funktioner och typer är även de borttagna:
 - `@fkui/logic`: funktionen `setCookie(..)` tar inte längre `timeLimitMillis` parametern.
 - `FFormModal`: slottarna `submit-button-text` och `cancel-button-text` är borttagna.
 - `FModal`: CSS klassalias `modal__dialog-container-large` och `modal__dialog-container-fullscreen` är borttagna.
-- `FPageHeader`: propen `skipLinkHref` är borttagen
+- `FPageHeader`: propparna `skipLinkHref`, `logoSize`, `routerLinkPath`, `routerLinkName` och `routerLinkLabel` är borttagna. Slot `logo` har inte längre nåt standardinnehåll.
 - `getTextFromScopedSlot`: funktionen är borttagen.
 - Konfiguration: `FKUIConfig.modalTarget` och `FKUIConfig.popupTarget` är borttagna.
 
@@ -53,6 +53,7 @@ För Cypress pageobjekt:
 - `FLoaderPageobject.loader()` metoden är borttagen.
 - `FNavigationMenuPageobject.menu()` metoden är borttagen.
 - `FTooltipPageObject.content()` metoden är borttagen.
+- `FPageHeader.logoRouterLink` metoden är borttagen.
 
 Följande deprekerade validatorer har tagits bort:
 
@@ -172,7 +173,9 @@ Om du använder {@link form-modal `formModal(..)`} (rekommenderat) för att anro
 
 Om du använder template-syntax för att anropa `FFormModal` direkt och använder någon av dessa slottar ersätt med propen likt en modalkomponent ovan.
 
-## `FPageHeader` skiplink
+## `FPageHeader`
+
+### skiplink
 
 Den deprekerade propen `skipLinkHref` är borttagen och ersatt med propen `skipLink`.
 
@@ -183,6 +186,48 @@ Den deprekerade propen `skipLinkHref` är borttagen och ersatt med propen `skipL
 
 `skipLink` kunde tidigare ta ett `boolean` värde för att stänga av/på skiplink funktionen men accepterar nu bara en sträng (id på elementet att hoppa till).
 Om du behöver stänga av/på skiplink dynamiskt sätt värdet till tom sträng `""` för att stänga av.
+
+### `logo` slot
+
+`FPageHeader` tillhandahåller inte längre en logo eller `router-link` inom `logo` slot som standard.
+Logo och länkning måste därför skapas själv.
+
+Borttaggna props:
+
+- `logoSize`
+- `routerLinkPath`
+- `routerLinkName`
+- `routerLinkLabel`
+
+Om du använt standardlogo med länkning och vill att det ska fungera som tidigare kan du använda {@link FLogo `FLogo`} och göra följande ändringar:
+
+```diff
+ <f-page-header>
++    <template #logo>
++        <router-link :to="logoRoute">
++            <f-logo :aria-label="logoLabel"></f-logo>
++        </router-link>
++    </template>
+ </f-page-header>
+```
+
+Du behöver också ange url till logo-bilden med CSS variabler:
+
+```diff
++--f-logo-image-small: url(path/to/image-small.svg)
++--f-logo-image-large: url(path/to/image-large.svg)
+```
+
+För att ändra storlek på logotypen som med tidigare `logoSize`, använd `size` prop på `FLogo` med samma värden.
+
+```diff
+-<f-page-header logoSize="small">
++<f-page-header>
++    <template #logo>
++        f-logo size="small" :aria-label="logoLabel"></f-logo>
++    </template>
+ </f-page-header>
+```
 
 ## `FModal` deprekerade CSS-klasser
 
